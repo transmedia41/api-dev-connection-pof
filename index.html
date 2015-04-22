@@ -8,20 +8,26 @@
   </head>
   <body>
     <h1>Faire actions</h1>
-    <button id="perso">Action perso</button>
-    <button id="collective">Action collective</button>
+    <!--<button id="perso">Action perso</button>
+    <button id="collective">Action collective</button>-->
     <form id="login">
-      <!--<input type="text" name="username">
-      <input type="text" name="password">-->
-      <input type="submit" value="login">
+      <input type="text" name="username" id="username">
+      <input type="text" name="password" id="password">
+      <input type="submit" value="login" id="loginBtn">
     </form>
+    <form id="logout">
+      <input type="submit" value="logout">
+    </form>
+    
+    <h1>Membres connectés</h1>
+    <ul id="members"></ul>
     
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
       var socket;
+      var data;
       
-      var tockenStatic = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwiaWQiOjEyMywiaWF0IjoxNDI5NjkwMDM2LCJleHAiOjE0Mjk3MDgwMzZ9.ktBoP0JHjqCFXgHysg9upOvhmNmtiB-Z4n2-SJFym1w"
       /*var id;
       
       socket.on('connect', function() {
@@ -43,14 +49,35 @@
       
       
       function connect_socket (token) {
+        
         socket = io.connect('', {
           query: 'token=' + token
         });
 
         socket.on('connect', function () {
           console.log('authenticated');
+          $('#loginBtn').remove();
+          
+          socket.on('membre connect', function(data){
+            console.log(data)
+            var li = $('<li id="'+data.id+'">').html('#' + data.id + ' ' + data.name)
+            $('#members').append(li)
+          })
+          
+          socket.on('membre disconnect', function(data){
+            console.log(data)
+            $('#'+data.id).remove()
+          })
+          
+          
         }).on('disconnect', function () {
           console.log('disconnected');
+          
+          $('#login').append('<input type="submit" value="login" id="loginBtn">');
+          
+          
+          
+          
         }).on("error", function(error) {
           if (error.type == "UnauthorizedError" || error.code == "invalid_token") {
             // redirect user to login page perhaps?
@@ -71,15 +98,15 @@
 
       $('#login').submit(function (e) {
         e.preventDefault();
-        var data = {
-          username: $('username').val(),
-          password: $('password').val()
+        data = {
+          username: $('#username').val(),
+          password: $('#password').val()
         }
-        
+        console.log(JSON.stringify(data))
         $.ajax({
           type: "POST",
           url: '/login',
-          data: '{"username":"joel", "password":"admin1234"}',
+          data: JSON.stringify(data),
           success: suc,
           dataType: 'json',
           contentType:"application/json; charset=utf-8"
@@ -92,6 +119,11 @@
         });
         */
       });
+      
+      $('#logout').submit(function (e) {
+        e.preventDefault()
+        socket.emit('want close')
+      })
     </script>
   </body>
 </html>

@@ -8,6 +8,7 @@ var socketioJwt = require('socketio-jwt');
 var jwtSecret = 'jkfdosajkovdiosavos';
 
 var clients = [];
+var sid = 1;
 
 app.use(bodyParser.json()); // for parsing application/json
 
@@ -19,50 +20,62 @@ app.post('/login', function (req, res) {
   
   var password = 'admin1234'
 
-  // TODO: validate the actual user user
+  // TODO: validate the actual user
   var profile = {
-    first_name: 'John',
-    last_name: 'Doe',
-    email: 'john@doe.com',
-    id: 123
+    name: req.body.username,
+    id: sid++
   }
   
-  if(req.body.username == 'joel' && req.body.password == 'admin1234') {
+  if(true) {
     // we are sending the profile in the token
-    console.info('auth successed')
+    //console.info('auth successed')
     var token = jwt.sign(profile, jwtSecret, { expiresInMinutes: 60*5 });
     res.json({token: token}); // res.status(401).end(); 
   } else {
-    console.info('auth failed')
+    //console.info('auth failed')
     res.status(401).end(); 
   }
   
-});
+})
 
 io.use(socketioJwt.authorize({
   secret: jwtSecret,
   handshake: true
-}));
+}))
 
 // io represente toute les sockets
 io.on('connection', function(socket){
   // la socket recue represente le client qui vient de se connecte
-  console.log(socket.decoded_token.first_name, ' connected! (id=' + socket.id + ')');
+  console.log(socket.decoded_token.name, ' connected! (id=' + socket.id + ')');
   /*
   clients.push(socket);
   console.info(_.size(clients))
   */
+  var data = {
+    id: socket.decoded_token.id,
+    name: socket.decoded_token.name
+  }
+  io.emit('membre connect', data)
+  
   /*
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
     console.info(msg)
   });
-  
-  
   socket.on('action perso', function(id){
     console.info('action perso (id='+id+')')
   })
   */
+  
+  socket.on('want close', function(){
+    var data = {
+      id: socket.decoded_token.id,
+      name: socket.decoded_token.name
+    }
+    io.emit('membre disconnect', data)
+    socket.disconnect()
+  })
+  
   // When socket disconnects, remove it from the list:
   socket.on('disconnect', function() {
     // remove socket from clients
@@ -71,7 +84,8 @@ io.on('connection', function(socket){
       clients.splice(index, 1);
     }
     console.info(_.size(clients))*/
-    console.log(socket.decoded_token.first_name, ' deconnected! (id=' + socket.id + ')');
+    console.log(socket.decoded_token.name, ' disconnect! (id=' + socket.id + ')')
+    
   });
 });
 
