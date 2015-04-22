@@ -11,7 +11,7 @@ db.on('error', function () {
 });
 
 
-var models = glob.sync(config.root + '/app/models/*.js');
+var models = glob.sync(config.rootPath + '/app/models/*.js');
 models.forEach(function (model) {
   require(model);
 })
@@ -23,7 +23,7 @@ http.listen(3000, function(){
   console.log('listening on *:3000');
 })
 
-require('./config/express')(app, config)
 require('./app/sockets/socket')(app, http)
+require('./config/express')(app, config)
 
 

@@ -27,6 +27,14 @@
     <script>
       var socket;
       var data;
+      var tocken;
+      
+      if(localStorage) {
+        var t = localStorage.getItem('wstocken')
+        if(t){
+          connect_socket(t)
+        }
+      }
       
       /*var id;
       
@@ -48,34 +56,44 @@
       */
       
       
-      function connect_socket (token) {
-        
+      function connect_socket (t) {
+        tocken = t
+        if(localStorage) {
+          localStorage.setItem('wstocken',t)
+        }
         socket = io.connect('', {
-          query: 'token=' + token
-        });
+          query: 'token=' + t,
+          'force new connection': true
+        })
 
         socket.on('connect', function () {
           console.log('authenticated');
           $('#loginBtn').remove();
           
-          socket.on('membre connect', function(data){
+          socket.emit('get member list')
+          socket.on('member list', function(data){
             console.log(data)
-            var li = $('<li id="'+data.id+'">').html('#' + data.id + ' ' + data.name)
+          })
+          
+          /*
+          socket.on('membre connect', function(data){
+            var li = $('<li id="'+data._id+'">').html('#' + data._id + ' ' + data.name)
             $('#members').append(li)
           })
           
           socket.on('membre disconnect', function(data){
-            console.log(data)
-            $('#'+data.id).remove()
-          })
+            $('#'+data._id).remove()
+          })*/
           
           
         }).on('disconnect', function () {
+          
+          //socket.close(); 
+          if(localStorage) {
+            localStorage.removeItem('wstocken')
+          }
           console.log('disconnected');
-          
           $('#login').append('<input type="submit" value="login" id="loginBtn">');
-          
-          
           
           
         }).on("error", function(error) {
@@ -92,8 +110,10 @@
       }
       
       var suc = function (result) {
-        console.log('login succesfull')
-        connect_socket(result.token);
+        connect_socket(result.token)
+      }
+      var logout = function (result) {
+        // ...
       }
 
       $('#login').submit(function (e) {
@@ -102,7 +122,6 @@
           username: $('#username').val(),
           password: $('#password').val()
         }
-        console.log(JSON.stringify(data))
         $.ajax({
           type: "POST",
           url: '/login',
@@ -122,7 +141,19 @@
       
       $('#logout').submit(function (e) {
         e.preventDefault()
-        socket.emit('want close')
+        //socket.emit('want close')
+        var o = {
+          tocken: tocken
+        }
+        $.ajax({
+          type: "POST",
+          url: '/logout',
+          data: JSON.stringify(o),
+          success: logout,
+          dataType: 'json',
+          contentType:"application/json; charset=utf-8"
+        })
+        
       })
     </script>
   </body>
