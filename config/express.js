@@ -1,5 +1,5 @@
-var bodyParser = require('body-parser');
-var glob = require('glob');
+var bodyParser = require('body-parser'),
+    glob = require('glob')
 
 
 module.exports = function(app, config) {
