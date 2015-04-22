@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 var socketioJwt = require('socketio-jwt');
 var jwtSecret = 'jkfdosajkovdiosavos';
-var jwtSecret2 = '123456789fdsafdafs';
 
 var clients = [];
 
@@ -48,13 +47,12 @@ io.use(socketioJwt.authorize({
 // io represente toute les sockets
 io.on('connection', function(socket){
   // la socket recue represente le client qui vient de se connecte
-  console.log('hello! ', socket.decoded_token.first_name);
-  //console.log(socket.handshake.decoded_token.email, 'connected');
-  
-  console.info('New client connected (id=' + socket.id + ').');
+  console.log(socket.decoded_token.first_name, ' connected! (id=' + socket.id + ')');
+  /*
   clients.push(socket);
   console.info(_.size(clients))
-  
+  */
+  /*
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
     console.info(msg)
@@ -64,16 +62,16 @@ io.on('connection', function(socket){
   socket.on('action perso', function(id){
     console.info('action perso (id='+id+')')
   })
-  
+  */
   // When socket disconnects, remove it from the list:
   socket.on('disconnect', function() {
     // remove socket from clients
-    var index = clients.indexOf(socket);
+    /*var index = clients.indexOf(socket);
     if (index > -1) {
       clients.splice(index, 1);
     }
-    console.info(_.size(clients))
-    console.info('Client gone (id=' + socket.id + ').');
+    console.info(_.size(clients))*/
+    console.log(socket.decoded_token.first_name, ' deconnected! (id=' + socket.id + ')');
   });
 });
 
