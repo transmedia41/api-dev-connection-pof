@@ -12,9 +12,9 @@ module.exports = function (app) {
 
 var sid = 1;
 
-router.get('/', function(req, res, next){
+/*router.get('/', function(req, res, next){
   res.sendFile(__dirname + '/index.html');
-})
+})*/
 
 router.post('/login', function (req, res, next) {
   var user = User.find({name: req.body.username}).exec(function(err, user) {
