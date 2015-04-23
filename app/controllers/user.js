@@ -3,6 +3,7 @@ var express = require('express'),
     jwt = require('jsonwebtoken'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
+    _ = require('underscore'),
     config = require('../../config/config')
 
 module.exports = function (app) {
@@ -18,10 +19,14 @@ router.get('/', function(req, res, next){
 router.post('/login', function (req, res, next) {
   var user = User.find({name: req.body.username}).exec(function(err, user) {
     if(err) res.status(401).end()
-    u = user[0]
-    if(u.password == req.body.password) {
-      var token = jwt.sign(u, config.jwtSecret, { expiresInMinutes: 60*5 });
-      res.json({token: token});
+    if(_.size(user) > 0) {
+      u = user[0]
+      if(u.password == req.body.password) {
+        var token = jwt.sign(u, config.jwtSecret, { expiresInMinutes: 60*5 });
+        res.json({token: token});
+      } else {
+        res.status(401).end();
+      }
     } else {
       res.status(401).end();
     }
@@ -30,7 +35,7 @@ router.post('/login', function (req, res, next) {
 
 router.post('/register', function (req, res, next) {
   var user = new User({
-    name: req.body.name,
+    name: req.body.username,
     password: req.body.password
   })
   user.save(function(err, userSaved) {
