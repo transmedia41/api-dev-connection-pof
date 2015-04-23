@@ -25,10 +25,10 @@ router.post('/login', function (req, res, next) {
         var token = jwt.sign(u, config.jwtSecret, { expiresInMinutes: 60*5 });
         res.json({token: token});
       } else {
-        res.status(401).end();
+        res.status(401).end()
       }
     } else {
-      res.status(401).end();
+      res.status(401).end()
     }
   })
 })
@@ -39,11 +39,16 @@ router.post('/register', function (req, res, next) {
     password: req.body.password
   })
   user.save(function(err, userSaved) {
-    res.status(201).json(userSaved);
+    res.status(201).json(userSaved)
   })
 })
 
 router.post("/logout", function(req, res, next){
-  var decoded = jwt.decode(req.body.token)
-  io.disconnectUser(decoded._id)
+  if(jwt.decode(req.body.token)) {
+    var decoded = jwt.decode(req.body.token)
+    io.disconnectUser(decoded._id)
+    res.status(200).end()
+  } else {
+    res.status(200).end()
+  }
 })
