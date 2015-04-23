@@ -1,0 +1,112 @@
+[
+{
+	"id":"1",
+    "name": "Dénoncer les mafieux",
+    "description": "Vise à faire tomber le mafieux responsable de la zone",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"2",
+    "name": "Reprendre le contrôle des canalisations",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"3",
+    "name": "Reprendre le contrôle des installations",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"4",
+    "name": "Reprendre le contrôle des canaux",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"5",
+    "name": "Reprendre le contrôle de la step",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"6",
+    "name": "Lancer une initiative de loi bloquant l'agissement de la mafia",
+    "description": "Vise à contenir l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"7",
+    "name": "Bloquer la production d'eau par la mafia",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"8",
+    "name": "Bloquer la production d'eau par la mafia",
+    "description": "Vise à diminuer l'influence mafieuse",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"9",
+    "name": "Réaliser une campagne de pub",
+    "description": "Vise à aider une organisation active pour la sauvegarde de l'eau",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+},
+{
+	"id":"10",
+    "name": "Réaliser une campagne de pub",
+    "description": "Vise à promouvoir un label éco l'eau",
+    "smallIcon": "http://...",
+    "bigIcon": "http://...",
+    "accessLevel": "5",
+    "maxXp": "10",
+    "coolDown": "3600",
+    "lastPerformed": ""
+}
+]
