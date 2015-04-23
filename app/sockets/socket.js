@@ -1,5 +1,10 @@
 var config = require('../../config/config'),
     _ = require('underscore'),
+    mongoose = require('mongoose'),
+    User = mongoose.model('User'),
+    Sector = mongoose.model('Sector'),
+    Character = mongoose.model('Character'),
+    ActionPoint = mongoose.model('ActionPoint'),
     socketioJwt = require('socketio-jwt')
 
 
@@ -49,7 +54,7 @@ module.exports = function (app, http) {
       users.push(socket.decoded_token)
     }
     
-    socket.broadcast.emit('membre connect', socket.decoded_token)
+    //socket.broadcast.emit('membre connect', socket.decoded_token)
     
     /*
     clients.push(socket);
@@ -62,12 +67,23 @@ module.exports = function (app, http) {
     io.emit('membre connect', data)
     */
     
-    socket.on('get member list', function(){
-      //console.log(clients)
+    //console.log(clients)
       /*_.each(users, function(data) {
         console.log(data)
       })*/
-      socket.emit('member list', users)
+    
+    socket.on('get user', function(){
+      User.findById(socket.decoded_token._id).exec(function(err, res){
+        if(!err) socket.emit('user responce', res)
+        else socket.emit('user responce 404')
+      })
+    })
+    
+    socket.on('get sectors', function(){
+      Sector.find().exec(function(err, res){ //.populate('properties.actionsPoint').populate('properties.character') les ID ne joue pas... probleme seeder j'imagine
+        if(!err) socket.emit('sectors responce', res)
+        else socket.emit('sectors responce 404')
+      })
     })
 
     /*
