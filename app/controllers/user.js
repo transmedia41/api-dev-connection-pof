@@ -44,6 +44,6 @@ router.post('/register', function (req, res, next) {
 })
 
 router.post("/logout", function(req, res, next){
-  var decoded = jwt.decode(req.body.tocken)
+  var decoded = jwt.decode(req.body.token)
   io.disconnectUser(decoded._id)
 })
