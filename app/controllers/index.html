@@ -24,6 +24,7 @@
     
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
     <script>
       var socket;
       var data;
@@ -73,9 +74,13 @@
           socket.emit('get member list')
           socket.on('member list', function(data){
             console.log(data)
+            _.each(data, function(client){
+              var li = $('<li id="'+client._id+'">').html('#' + client._id + ' ' + client.name)
+              $('#members').append(li)
+            })
           })
           
-          /*
+          
           socket.on('membre connect', function(data){
             var li = $('<li id="'+data._id+'">').html('#' + data._id + ' ' + data.name)
             $('#members').append(li)
@@ -83,7 +88,7 @@
           
           socket.on('membre disconnect', function(data){
             $('#'+data._id).remove()
-          })*/
+          })
           
           
         }).on('disconnect', function () {
@@ -95,6 +100,7 @@
           console.log('disconnected');
           $('#login').append('<input type="submit" value="login" id="loginBtn">');
           
+          $('#members').empty()
           
         }).on("error", function(error) {
           if (error.type == "UnauthorizedError" || error.code == "invalid_token") {
