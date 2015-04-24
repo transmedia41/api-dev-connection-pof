@@ -1,13 +1,12 @@
 var _ = require('underscore'),
-    express = require('express'),
-    router = express.Router(),
-    mongoose = require('mongoose'),
-    Sector = mongoose.model('Sector'),
-    ActionPoint = mongoose.model('ActionPoint'),
-    ActionPolygon = mongoose.model('ActionPolygon'),
-    Character = mongoose.model('Character'),
-    PolygonProperties = mongoose.model('PolygonProperties'),
-    fs = require('fs')
+        express = require('express'),
+        router = express.Router(),
+        mongoose = require('mongoose'),
+        Sector = mongoose.model('Sector'),
+        ActionPoint = mongoose.model('ActionPoint'),
+        ActionPolygon = mongoose.model('ActionPolygon'),
+        Character = mongoose.model('Character'),
+        fs = require('fs')
 
 
 module.exports = function (app) {
@@ -51,8 +50,6 @@ function populateDatabase() {
             apoly.save();
             actionPolygon.push(apoly);
         }
-
-        polp.actionsPolygon = actionPolygon;
         readJSONFile('app/resources/characters.json', function (err, characters) {
             for (var i = 0; i < characters.length; i++) {
                 var c = new Character();
@@ -72,49 +69,72 @@ function populateDatabase() {
                 c.family = characters[i].family;
                 c.weapon = characters[i].weapon;
                 c.save();
-                polp.character = c._id;
-                populateSector(characters[i], polp);
+             
+                populateSector(characters[i], c, actionPolygon);
             }
             return {};
-            
+
         });
     });
- 
+
 }
 
-function populateSector(character, polp) {
+function populateSector(character, c, actionPolygon) {
     var s = new Sector();
     readJSONFile('app/resources/sectors.json', function (err, sectors) {
+
         for (var i = 0; i < sectors.length; i++) {
+
             if (sectors[i].properties.character === character.id) {
-                polp.nbActions = sectors[i].properties.nbActions;
-                polp.influence = sectors[i].properties.influence;
-                polp.nomsquart = sectors[i].properties.nomsquart;
+                s.geometry.atype = sectors[i].geometry.type;
+                s.geometry.coordinates = sectors[i].geometry.coordinates;
+                s.type = sectors[i].type;
+                
+                populateActionPoints(sectors[i], s, c, actionPolygon)
 
-                s.type = 'Feature';
-                s.geometry = sectors[i].geometry;
-
-                readJSONFile('app/resources/' + sectors[i].properties.actionsPoint[0], function (err, points) {
-
-                    var actionPoints = [];
-                    for (var j = 0; j < points.length; j++) {
-                        var apoint = new ActionPoint();
-                        apoint.type = "Feature";
-                        apoint.geometry = points[j].geometry;
-                        apoint.properties = points[j].properties;
-                        apoint.save();
-                        actionPoints.push(apoint._id);
-                    }
-                    polp.actionsPoint = actionPoints;
-                    s.properties = polp;
-                    s.save();
-                });
             }
         }
     });
 
 }
 
+function populateActionPoints(sector, s, c, actionPolygon) {
+    readJSONFile('app/resources/' + sector.properties.actionsPoint[0], function (err, points) {
+        var actionPoints = [];
+        for (var j = 0; j < points.length; j++) {
+            var apoint = new ActionPoint();
+            apoint.type = points[j].type;
+            apoint.geometry.atype = points[j].geometry.type;
+            apoint.geometry.coordinates = points[j].geometry.coordinates;
+            apoint.properties.atype = points[j].properties.type;
+            apoint.properties.name = points[j].properties.name;
+            apoint.properties.description = points[j].properties.description;
+            apoint.properties.smallIcon = points[j].properties.smallIcon;
+            apoint.properties.bigIcon = points[j].properties.bigIcon;
+            apoint.properties.accessLevel = points[j].properties.accessLevel;
+            apoint.properties.maxXp = points[j].properties.maxXp;
+            apoint.properties.coolDown = points[j].properties.coolDown;
+            apoint.properties.lastPerformed = points[j].properties.lastPerformed;
+            apoint.properties.actionRadius = points[j].properties.actionRadius;
+            apoint.save();
+            actionPoints.push(apoint._id);
+        }
+        s.properties.actionsPoint = actionPoints;
+        s.properties.actionsPolygon = actionPolygon;
+        s.properties.character = c._id;
+        s.properties.nbActions = sector.properties.nbActions;
+        s.properties.influence = sector.properties.influence;
+        s.properties.nomsquart = sector.properties.nomsquart;
+
+        s.save();
+    });
+}
+
+
+
+
+
+populateDatabase()
 router.route('/populate')
         .post(function (req, res, next) {
             res.json(populateDatabase());

@@ -3,8 +3,22 @@ var mongoose = require('mongoose'),
 
 var ActionPointSchema = new Schema({
     type: String,
-    geometry: {type: Schema.Types, ref: 'Point'},
-    properties: {type: Schema.Types, ref: 'PointProperties'}
+    geometry: {
+        atype: String,
+        coordinates: []
+    },
+    properties: {
+        atype: String,
+        name: String,
+        description: String,
+        smallIcon: String,
+        bigIcon: String,
+        accessLevel: {type: Number},
+        maxXp: {type: Number},
+        coolDown: {type: Number},
+        lastPerformed: {type: Date},
+        actionRadius: {type: Number}
+    }
 });
 
 mongoose.model('ActionPoint', ActionPointSchema);

@@ -80,7 +80,7 @@ module.exports = function (app, http) {
     })
     
     socket.on('get sectors', function(){
-      Sector.find().exec(function(err, res){ //.populate('properties.actionsPoint').populate('properties.character') les ID ne joue pas... probleme seeder j'imagine
+      Sector.find().populate('properties.character properties.actionsPoint').exec(function(err, res){ //.populate('properties.actionsPoint').populate('properties.character') les ID ne joue pas... probleme seeder j'imagine
         if(!err) socket.emit('sectors responce', res)
         else socket.emit('sectors responce 404')
       })

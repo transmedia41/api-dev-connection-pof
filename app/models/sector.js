@@ -3,8 +3,17 @@ var mongoose = require('mongoose'),
 
 var SectorSchema = new Schema({
     type: String,
-    geometry: {type: Schema.Types, ref: 'Polygon'},
-    properties: {type: Schema.Types, ref: 'PolygonProperties'}
+    geometry: {
+        atype: String,
+        coordinates: []
+    },
+    properties: {
+        nbActions: {type: Number},
+        influence: {type: Number},
+        nomsquart: String,
+        character: {type: Schema.Types.ObjectId, ref: 'Character'},
+        actionsPolygon: [{type: Schema.Types.ObjectId, ref: 'ActionPolygon'}],
+        actionsPoint: [{type: Schema.Types.ObjectId, ref: 'ActionPoint'}]}
 });
 
 mongoose.model('Sector', SectorSchema);
