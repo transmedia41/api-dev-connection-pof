@@ -6,6 +6,8 @@ var _ = require('underscore'),
         ActionPoint = mongoose.model('ActionPoint'),
         ActionPolygon = mongoose.model('ActionPolygon'),
         Character = mongoose.model('Character'),
+        Event = mongoose.model('Event'),
+        Document = mongoose.model('Document'),
         fs = require('fs')
 
 
@@ -29,12 +31,11 @@ function readJSONFile(filename, callback) {
 }
 
 
-function populateDatabase() {
+function populateSectors() {
     Sector.find().remove().exec();
     Character.find().remove().exec();
     ActionPoint.find().remove().exec();
     ActionPolygon.find().remove().exec();
-    var polp = {};
     readJSONFile('app/resources/actionPolygon.json', function (err, polygons) {
         var actionPolygon = [];
         for (var k = 0; k < polygons.length; k++) {
@@ -69,10 +70,9 @@ function populateDatabase() {
                 c.family = characters[i].family;
                 c.weapon = characters[i].weapon;
                 c.save();
-             
+
                 populateSector(characters[i], c, actionPolygon);
             }
-            return {};
 
         });
     });
@@ -89,7 +89,6 @@ function populateSector(character, c, actionPolygon) {
                 s.geometry.atype = sectors[i].geometry.type;
                 s.geometry.coordinates = sectors[i].geometry.coordinates;
                 s.type = sectors[i].type;
-                
                 populateActionPoints(sectors[i], s, c, actionPolygon)
 
             }
@@ -130,11 +129,60 @@ function populateActionPoints(sector, s, c, actionPolygon) {
     });
 }
 
+function populateEvents() {
+    Document.find().remove().exec();
+    Event.find().remove().exec();
+    readJSONFile('app/resources/events.json', function (err, events) {
+    
+        for (var i = 0; i < events.length; i++) {
+            populateDocuments(events[i]);     
+        }
+
+    });
+
+}
+
+function populateDocuments(event) {
+    readJSONFile('app/resources/'+event.documents, function (err, documents) {
+        var documentList = [];
+        for (var i = 0; i<documents.length; i++) {
+            var document = new Document();
+            document.title = documents[i].title;
+            document.thumbnail = documents[i].thumbnail;
+            document.versionUrl = documents[i].versionUrl;
+            document.src = documents[i].src;
+            document.type = documents[i].type;
+            document.templateHtml = documents[i].templateHtml;
+            document.xp = documents[i].xp;
+            document.save();
+            documentList.push(document)
+        }
+        var e = new Event();
+        e.order = event.order;
+        e.date = event.date;
+        e.description = event.description;
+        e.xp = event.xp;
+        e.documents = documentList;
+        e.save();
+       
+    
+
+
+    });
+    
+}
 
 
 
+function populateDatabase() {
+    populateSectors();
+    populateEvents();
+}
 
-populateDatabase()
+
+populateDatabase();
+
+
 router.route('/populate')
         .post(function (req, res, next) {
             res.json(populateDatabase());

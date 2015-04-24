@@ -1,0 +1,20 @@
+[
+{
+    "title": "Facture de plomberie",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Note de la résistance",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

@@ -1,0 +1,20 @@
+[
+{
+    "title": "Photo scandaleuse",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "photo",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Article de journal",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

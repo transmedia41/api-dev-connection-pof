@@ -1,0 +1,29 @@
+[
+{
+    "title": "Mugshot Daniele",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "photo",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Rapport de police",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+},
+{
+    "title": "Rapport de police",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

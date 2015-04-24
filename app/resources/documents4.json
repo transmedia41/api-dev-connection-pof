@@ -1,0 +1,29 @@
+[
+{
+    "title": "Billet de train sur carte",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Lettre Alberto",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+},
+{
+    "title": "Lettre Alberto",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

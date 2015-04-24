@@ -1,0 +1,29 @@
+[
+{
+    "title": "Photo de veillée funèbre",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "photo",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Rapport d'autopsie",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+},
+{
+    "title": "Rapport d'autopsie",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

@@ -1,0 +1,20 @@
+[
+{
+    "title": "Photo fourgonette avec noms",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "photo",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Cartes de visite",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]

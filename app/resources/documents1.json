@@ -1,0 +1,29 @@
+[
+{
+    "title": "Photo de naissance",
+    "thumbnail": "",
+    "versionUrl": "",
+    "src": "http://...",
+    "type": "photo",
+    "templateHtml":"http://",		
+    "xp": "15"
+},
+{
+    "title": "Acte de naissance",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+},
+{
+    "title": "Acte de naissance",
+    "thumbnail": "",
+    "versionUrl": "http://...",
+    "src": "",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "15"
+}
+]
