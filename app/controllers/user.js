@@ -42,7 +42,7 @@ router.post('/register', function (req, res, next) {
     password: sha1(req.body.password)
   })
   user.save(function(err, userSaved) {
-    res.status(201).json(userSaved)
+    res.status(201).json(Converter.user(userSaved))
   })
 })
 

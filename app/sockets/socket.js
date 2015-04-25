@@ -4,6 +4,7 @@ var config = require('../../config/config'),
     User = mongoose.model('User'),
     Sector = mongoose.model('Sector'),
     Event = mongoose.model('Event'),
+    Converter = require('../services/converter'),
     socketioJwt = require('socketio-jwt')
 
 
@@ -46,10 +47,10 @@ module.exports = function (app, http) {
   // io represente toute les sockets
   io.on('connection', function(socket){
     // la socket recue represente le client qui vient de se connecte
-    console.log(socket.decoded_token.name, ' connected! (id=' + socket.id + ')')
-    clients[socket.decoded_token._id] = socket
+    console.log(socket.decoded_token.username, ' connected! (id=' + socket.id + ')')
+    clients[socket.decoded_token.id] = socket
     
-    if(typeof _.findWhere(users, {_id: socket.decoded_token._id}) == 'undefined') {
+    if(typeof _.findWhere(users, {_id: socket.decoded_token.id}) == 'undefined') {
       users.push(socket.decoded_token)
     }
     
@@ -120,7 +121,7 @@ module.exports = function (app, http) {
       }
       console.info(_.size(clients))*/
       io.emit('membre disconnect', socket.decoded_token)
-      console.log(socket.decoded_token.name, ' disconnect! (id=' + socket.id + ')')
+      console.log(socket.decoded_token.username, ' disconnect! (id=' + socket.id + ')')
 
     })
   })
