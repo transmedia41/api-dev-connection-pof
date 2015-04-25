@@ -7,6 +7,7 @@ var _ = require('underscore'),
         ActionPolygon = mongoose.model('ActionPolygon'),
         Character = mongoose.model('Character'),
         Event = mongoose.model('Event'),
+        Rank = mongoose.model('Rank'),
         Document = mongoose.model('Document'),
         fs = require('fs')
 
@@ -173,14 +174,32 @@ function populateDocuments(event) {
 }
 
 
+function populateRanks() {
+    Rank.find().remove().exec()
+    readJSONFile('app/resources/ranks.json', function (err, ranks) {
+        for (var i = 0; i < ranks.length; i++) {
+          
+            var rank = new Rank()
+            rank.level = ranks[i].level
+            rank.rankName = ranks[i].rankName
+            rank.xp = ranks[i].xp
+            rank.xpMax = ranks[i].xpMax
+            rank.save()
+            
+        }
+    })
+}
+
+
 
 function populateDatabase() {
     populateSectors();
     populateEvents();
+    populateRanks()
 }
 
 
-populateDatabase();
+//populateDatabase();
 
 
 router.route('/populate')
