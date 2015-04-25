@@ -3,8 +3,7 @@ var config = require('../../config/config'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Sector = mongoose.model('Sector'),
-    Character = mongoose.model('Character'),
-    ActionPoint = mongoose.model('ActionPoint'),
+    Event = mongoose.model('Event'),
     socketioJwt = require('socketio-jwt')
 
 
@@ -80,9 +79,16 @@ module.exports = function (app, http) {
     })
     
     socket.on('get sectors', function(){
-      Sector.find().populate('properties.character properties.actionsPoint').exec(function(err, res){ //.populate('properties.actionsPoint').populate('properties.character') les ID ne joue pas... probleme seeder j'imagine
+      Sector.find().populate('properties.character properties.actionsPoint properties.actionsPolygon').exec(function(err, res){
         if(!err) socket.emit('sectors responce', res)
         else socket.emit('sectors responce 404')
+      })
+    })
+    
+    socket.on('get events', function(){
+      Event.find().populate('documents').exec(function(err, res){
+        if(!err) socket.emit('events responce', res)
+        else socket.emit('events responce 404')
       })
     })
 
