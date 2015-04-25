@@ -4,7 +4,10 @@ var express = require('express'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     _ = require('underscore'),
-    config = require('../../config/config')
+    config = require('../../config/config'),
+    Converter = require('../services/converter'),
+    sha1 = require('sha1')
+
 
 module.exports = function (app) {
   app.use('/', router);
@@ -21,8 +24,8 @@ router.post('/login', function (req, res, next) {
     if(err) res.status(401).end()
     if(_.size(user) > 0) {
       u = user[0]
-      if(u.password == req.body.password) {
-        var token = jwt.sign(u, config.jwtSecret, { expiresInMinutes: 60*5 });
+      if(u.password == sha1(req.body.password)) {
+        var token = jwt.sign(Converter.user(u), config.jwtSecret, { expiresInMinutes: 60*5 });
         res.json({token: token});
       } else {
         res.status(401).end()
@@ -36,7 +39,7 @@ router.post('/login', function (req, res, next) {
 router.post('/register', function (req, res, next) {
   var user = new User({
     name: req.body.username,
-    password: req.body.password
+    password: sha1(req.body.password)
   })
   user.save(function(err, userSaved) {
     res.status(201).json(userSaved)
@@ -46,7 +49,7 @@ router.post('/register', function (req, res, next) {
 router.post("/logout", function(req, res, next){
   if(jwt.decode(req.body.token)) {
     var decoded = jwt.decode(req.body.token)
-    io.disconnectUser(decoded._id)
+    io.disconnectUser(decoded.id)
     res.status(200).end()
   } else {
     res.status(200).end()

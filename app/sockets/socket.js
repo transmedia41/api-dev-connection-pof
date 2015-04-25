@@ -72,8 +72,8 @@ module.exports = function (app, http) {
       })*/
     
     socket.on('get user', function(){
-      User.findById(socket.decoded_token._id).exec(function(err, res){
-        if(!err) socket.emit('user responce', res)
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('user responce', Converter.user(res))
         else socket.emit('user responce 404')
       })
     })
