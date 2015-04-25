@@ -6,6 +6,7 @@ var express = require('express'),
     _ = require('underscore'),
     config = require('../../config/config'),
     Converter = require('../services/converter'),
+    GameCore = require('../services/gameCore'),
     sha1 = require('sha1')
 
 
@@ -13,7 +14,6 @@ module.exports = function (app) {
   app.use('/', router);
 }
 
-var sid = 1;
 
 /*router.get('/', function(req, res, next){
   res.sendFile(__dirname + '/index.html');
@@ -39,10 +39,15 @@ router.post('/login', function (req, res, next) {
 router.post('/register', function (req, res, next) {
   var user = new User({
     name: req.body.username,
-    password: sha1(req.body.password)
+    password: sha1(req.body.password),
+    xp: 0
   })
-  user.save(function(err, userSaved) {
-    res.status(201).json(Converter.user(userSaved))
+  GameCore.getRank(user, function(err, rank){
+    if(err) console.log(err)
+    user.level = rank._id
+    user.save(function(err, userSaved) {
+      res.status(201).json(Converter.user(userSaved))
+    })
   })
 })
 
