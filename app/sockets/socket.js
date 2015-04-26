@@ -81,7 +81,7 @@ module.exports = function (app, http) {
     
     socket.on('get sectors', function(){
       Sector.find().populate('properties.character properties.actionsPoint properties.actionsPolygon').exec(function(err, res){
-        if(!err) socket.emit('sectors responce', res)
+        if(!err) socket.emit('sectors responce', Converter.sector(res))
         else socket.emit('sectors responce 404')
       })
     })

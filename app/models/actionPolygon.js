@@ -10,7 +10,6 @@ var ActionPolygonSchema = new Schema({
     maxXp: {type:Number},
     coolDown: {type:Number},
     lastPerformed: {type:Date}
-    
 });
 
 mongoose.model('ActionPolygon', ActionPolygonSchema);

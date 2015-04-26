@@ -40,7 +40,7 @@ router.post('/register', function (req, res, next) {
   var user = new User({
     name: req.body.username,
     password: sha1(req.body.password),
-    xp: 0
+    xp: 48
   })
   GameCore.getRank(user, function(err, rank){
     if(err) console.log(err)

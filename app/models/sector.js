@@ -8,12 +8,13 @@ var SectorSchema = new Schema({
         coordinates: []
     },
     properties: {
-        nbActions: {type: Number},
-        influence: {type: Number},
+        nbActions: Number,
+        influence: Number,
         nomsquart: String,
         character: {type: Schema.Types.ObjectId, ref: 'Character'},
         actionsPolygon: [{type: Schema.Types.ObjectId, ref: 'ActionPolygon'}],
-        actionsPoint: [{type: Schema.Types.ObjectId, ref: 'ActionPoint'}]}
-});
+        actionsPoint: [{type: Schema.Types.ObjectId, ref: 'ActionPoint'}]
+    }
+})
 
 mongoose.model('Sector', SectorSchema);

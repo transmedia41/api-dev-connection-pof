@@ -39,7 +39,7 @@ function populateSectors() {
     ActionPolygon.find().remove().exec();
     readJSONFile('app/resources/actionPolygon.json', function (err, polygons) {
         var actionPolygon = [];
-        for (var k = 0; k < polygons.length; k++) {
+        for (var k = 0; k < _.size(polygons); k++) {
             var apoly = new ActionPolygon();
             apoly.name = polygons[k].name;
             apoly.description = polygons[k].description;
@@ -53,7 +53,7 @@ function populateSectors() {
             actionPolygon.push(apoly);
         }
         readJSONFile('app/resources/characters.json', function (err, characters) {
-            for (var i = 0; i < characters.length; i++) {
+            for (var i = 0; i < _.size(characters); i++) {
                 var c = new Character();
                 c.status = characters[i].status;
                 c.lastname = characters[i].lastname;
@@ -71,7 +71,7 @@ function populateSectors() {
                 c.family = characters[i].family;
                 c.weapon = characters[i].weapon;
                 c.save();
-
+                //console.log(characters[i])
                 populateSector(characters[i], c, actionPolygon);
             }
 
@@ -81,15 +81,20 @@ function populateSectors() {
 }
 
 function populateSector(character, c, actionPolygon) {
-    var s = new Sector();
+    
+  
     readJSONFile('app/resources/sectors.json', function (err, sectors) {
-
-        for (var i = 0; i < sectors.length; i++) {
-
-            if (sectors[i].properties.character === character.id) {
-                s.geometry.atype = sectors[i].geometry.type;
-                s.geometry.coordinates = sectors[i].geometry.coordinates;
-                s.type = sectors[i].type;
+        
+        for (var i = 0; i < _.size(sectors); i++) {
+            
+            if (sectors[i].properties.character == character.id) {
+                
+                var s = new Sector()
+                s.geometry = {}
+                s.geometry.atype = sectors[i].geometry.type
+                s.geometry.coordinates = sectors[i].geometry.coordinates
+                
+                s.type = sectors[i].type
                 populateActionPoints(sectors[i], s, c, actionPolygon)
 
             }
@@ -101,7 +106,7 @@ function populateSector(character, c, actionPolygon) {
 function populateActionPoints(sector, s, c, actionPolygon) {
     readJSONFile('app/resources/' + sector.properties.actionsPoint[0], function (err, points) {
         var actionPoints = [];
-        for (var j = 0; j < points.length; j++) {
+        for (var j = 0; j < _.size(points); j++) {
             var apoint = new ActionPoint();
             apoint.type = points[j].type;
             apoint.geometry.atype = points[j].geometry.type;
@@ -125,7 +130,7 @@ function populateActionPoints(sector, s, c, actionPolygon) {
         s.properties.nbActions = sector.properties.nbActions;
         s.properties.influence = sector.properties.influence;
         s.properties.nomsquart = sector.properties.nomsquart;
-
+        //console.log(s)
         s.save();
     });
 }
@@ -146,7 +151,7 @@ function populateEvents() {
 function populateDocuments(event) {
     readJSONFile('app/resources/'+event.documents, function (err, documents) {
         var documentList = [];
-        for (var i = 0; i<documents.length; i++) {
+        for (var i = 0; i < documents.length; i++) {
             var document = new Document();
             document.title = documents[i].title;
             document.thumbnail = documents[i].thumbnail;
