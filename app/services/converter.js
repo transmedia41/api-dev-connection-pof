@@ -35,7 +35,8 @@ module.exports = {
         id: rank._id,
         rankName: rank.rankName,
         xp: rank.xp,
-        xpMax: rank.xpMax
+        xpMax: rank.xpMax,
+        level: rank.level
       }
     } else {
       return null
