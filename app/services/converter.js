@@ -161,10 +161,10 @@ module.exports = {
           type: ap.properties.atype,
           name: ap.properties.name,
           description: ap.properties.description,
-          smallIcon: ap.properties.smallIcon,
-          bigIcon: ap.properties.bigIcon,
+          icon: ap.properties.smallIcon,
           accessLevel: ap.properties.accessLevel,
           maxXp: ap.properties.maxXp,
+          influence: ap.properties.influence,
           coolDown: ap.properties.coolDown,
           lastPerformed: ap.properties.lastPerformed,
           actionRadius: ap.properties.actionRadius

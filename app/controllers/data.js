@@ -114,10 +114,10 @@ function populateActionPoints(sector, s, c, actionPolygon) {
             apoint.properties.atype = points[j].properties.type;
             apoint.properties.name = points[j].properties.name;
             apoint.properties.description = points[j].properties.description;
-            apoint.properties.smallIcon = points[j].properties.smallIcon;
-            apoint.properties.bigIcon = points[j].properties.bigIcon;
+            apoint.properties.icon = points[j].properties.icon;
             apoint.properties.accessLevel = points[j].properties.accessLevel;
             apoint.properties.maxXp = points[j].properties.maxXp;
+            apoint.properties.influence = points[j].properties.influence;
             apoint.properties.coolDown = points[j].properties.coolDown;
             apoint.properties.lastPerformed = points[j].properties.lastPerformed;
             apoint.properties.actionRadius = points[j].properties.actionRadius;
@@ -204,7 +204,7 @@ function populateDatabase() {
 }
 
 
-//populateDatabase();
+populateDatabase();
 
 
 router.route('/populate')
