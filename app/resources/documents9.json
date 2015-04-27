@@ -1,18 +1,18 @@
 [
 {
     "title": "Photo scandaleuse",
-    "thumbnail": "",
+    "thumbnail": "09_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "http://...",
+    "src": "09_01_TXT_FR.jpg",
     "type": "photo",
     "templateHtml":"http://",		
     "xp": "15"
 },
 {
     "title": "Article de journal",
-    "thumbnail": "",
+    "thumbnail": "09_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "http://...",
+    "src": "09_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://...",		
     "xp": "15"
