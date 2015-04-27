@@ -1,8 +1,8 @@
 [{
-    "title": "Article de journal économique",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "title": "Extrait d'interview de Paolo",
+    "thumbnail": "23_01_TXT_FR.jpg",
+    "versionUrl": "",
+    "src": "23_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"

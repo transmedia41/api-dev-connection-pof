@@ -7,7 +7,7 @@
 	},
 	{
 		"level": 2,
-		"rankName": "Première classe",
+		"rankName": "Premiere classe",
 		"xp": 90,
 		"xpMax": 189
 	},
@@ -67,7 +67,7 @@
 	},
 	{
 		"level": 12,
-		"rankName": "Général",
+		"rankName": "General",
 		"xp": 1540,
 		"xpMax": null
 	}

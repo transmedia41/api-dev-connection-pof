@@ -1,17 +1,17 @@
 [{
-    "title": "Extrait d'interview de Paolo",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
-    "type": "audio",
+    "title": "Vidéo chef de la résistance",
+    "thumbnail": "24_01_VID_FR.mp4",
+    "versionUrl": "",
+    "src": "24_01_VID_FR.mp4",
+    "type": "video",
     "templateHtml":"http://",		
     "xp": "15"
 },
 {
-    "title": "Nouvelles affiches",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "title": "Transcription de la vidéo",
+    "thumbnail": "24_01_TXT_FR.jpg",
+    "versionUrl": "",
+    "src": "24_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"
