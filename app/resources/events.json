@@ -3,35 +3,35 @@
 	"order":1,
 	"date":"",
 	"description":"Naissance de Paolo Salvatore",
-	"xp":"",
+	"xp":90,
 	"documents":"documents1.json"
 },
 {
 	"order":2,
 	"date":"",
 	"description":"Emprisonnement de Daniele Salvatore",
-	"xp":"",
+	"xp":90,
 	"documents":"documents2.json"
 },
 {
 	"order":3,
 	"date":"",
 	"description":"Mort de Julia Salvatore",
-	"xp":"",
+	"xp":90,
 	"documents":"documents3.json"
 },
 {
 	"order":4,
 	"date":"",
 	"description":"Départ de Paolo Salvatore à Yverdon",
-	"xp":"",
+	"xp":90,
 	"documents":"documents4.json"
 },
 {
 	"order":5,
 	"date":"",
 	"description":"Paolo Salvatore travaille dans la plomberie de son oncle",
-	"xp":"",
+	"xp":90,
 	"documents":"documents5.json"
 },
 {
@@ -45,14 +45,14 @@
 	"order":7,
 	"date":"",
 	"description":"Reprise de la plomberie Salvatore par Paolo et Antonio",
-	"xp":"",
+	"xp":90,
 	"documents":"documents7.json"
 },
 {
 	"order":8,
 	"date":"",
 	"description":"Paolo et Antonio Salvatore reprennent le trafic d'héroïne",
-	"xp":"",
+	"xp":190,
 	"documents":"documents8.json"
 },
 {
@@ -66,28 +66,28 @@
 	"order":10,
 	"date":"",
 	"description":"Mariage de Paolo et Olivia",
-	"xp":"",
+	"xp":190,
 	"documents":"documents10.json"
 },
 {
 	"order":11,
 	"date":"",
 	"description":"Naissance de Lucas et Alessandra Salvatore",
-	"xp":"",
+	"xp":190,
 	"documents":"documents11.json"
 },
 {
 		"order":26,
 		"date":"",
 		"description":"Introduction dans la résistance",
-		"xp":"",
+		"xp":300,
 		"documents":"documents26.json"
 	},
 	{
 		"order":25,
 		"date":"",
 		"description":"Contrôle du traitement des eaux",
-		"xp":"",
+		"xp":300,
 		"documents":"documents25.json"
 	},
 	{
@@ -101,84 +101,84 @@
 		"order":23,
 		"date":"",
 		"description":"Contrôle du réseau de distribution",
-		"xp":"",
+		"xp":300,
 		"documents":"documents23.json"
 	},
 	{
 		"order":22,
 		"date":"",
 		"description":"Plan d'extension du contrôle des installations",
-		"xp":"",
+		"xp":300,
 		"documents":"documents22.json"
 	},
 	{
 		"order":21,
 		"date":"",
 		"description":"Des voix s'élèvent contre le monopole d'Hydromerta",
-		"xp":"",
+		"xp":300,
 		"documents":"documents21.json"
 	},
 	{
 		"order":20,
 		"date":"",
 		"description":"Plan d'expansion au canton de Vaud",
-		"xp":"",
+		"xp":300,
 		"documents":"documents20.json"
 	},
 	{
 		"order":19,
 		"date":"",
 		"description":"Lancement d'Hydromerta",
-		"xp":"",
+		"xp":300,
 		"documents":"documents19.json"
 	},
 	{
 		"order":18,
 		"date":"",
 		"description":"ccords commerciaux pour le lancement d'Hydromerta",
-		"xp":"",
+		"xp":300,
 		"documents":"documents18.json"
 	},
 	{
 		"order":17,
 		"date":"",
 		"description":"Chantage auprès des citoyens",
-		"xp":"",
+		"xp":300,
 		"documents":"documents17.json"
 	},
 	{
 		"order":16,
 		"date":"",
 		"description":"Détournement des canalisations",
-		"xp":"",
+		"xp":300,
 		"documents":"documents16.json"
 	},
 	{
 		"order":15,
 		"date":"",
 		"description":"Recherche d'un nouveau business",
-		"xp":"",
+		"xp":190,
 		"documents":"documents15.json"
 	},
 	{
 		"order":14,
 		"date":"",
 		"description":"Adoption de Lucas et Alessandra",
-		"xp":"",
+		"xp":190,
 		"documents":"documents14.json"
 	},
 	{
 		"order":13,
 		"date":"",
 		"description":"Internement de Mathilda Salvatore",
-		"xp":"",
+		"xp":190,
 		"documents":"documents13.json"
 	},
 	{
 		"order":12,
 		"date":"",
 		"description":"Mort d'Antonio suite à une overdose d'héroïne",
-		"xp":"",
+		"xp":190,
 		"documents":"documents12.json"
 	}
 ]

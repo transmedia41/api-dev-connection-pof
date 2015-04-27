@@ -4,7 +4,9 @@ var config = require('../../config/config'),
     User = mongoose.model('User'),
     Sector = mongoose.model('Sector'),
     Event = mongoose.model('Event'),
+    ActionPolygon = mongoose.model('ActionPolygon'),
     Converter = require('../services/converter'),
+    GameCore = require('../services/gameCore'),
     socketioJwt = require('socketio-jwt')
 
 
@@ -92,6 +94,67 @@ module.exports = function (app, http) {
         else socket.emit('events responce 404')
       })
     })
+    
+    
+    /*socket.emit('update nav bar', {document: 3, mafia: 1})
+    
+
+    User.findById(socket.decoded_token.id).populate('level').exec(function(err, res){
+      if(!err) socket.emit('update user', Converter.userFull(res))
+      else socket.emit('user responce 404')
+    })*/
+    
+    socket.on('make action', function(data){
+      
+      var data = {
+        id : "553e1a8b5efd0484b02e86ba",
+        sector_id : "553e1a8b5efd0484b02e872b"
+      }
+      
+      ActionPolygon.findById(data.id).exec(function(err, resAction){
+        if(err) {
+          socket.emit('action error')
+        } else {
+          Sector.findById(data.sector_id).exec(function(err, resSector){
+            if(err) {
+              socket.emit('action error')
+            } else {
+              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                if(err) {
+                  socket.emit('action error')
+                } else {
+                  console.log(resAction)
+                  if(resPlayer.level.level >= resAction.accessLevel) {
+                    // have infos
+                    // make process
+                    
+                    // Modifier influence
+                    GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
+                      // socket broadcast all client updatedSector on 'sector update'
+                      //console.log(updatedSector)
+                      //io.sockets.emit('message', updatedSector)
+                      
+                      GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
+                        // ...
+                        //console.log(updatedPlayer)
+                        io.sockets.emit('user update', updatedPlayer)
+                        
+                      })
+                      
+                    })
+                    
+                    // return res
+                  } else {
+                    socket.emit('not access level')
+                  }
+                }
+              })
+            }
+          })
+        }
+      })
+    })
+    
 
     /*
     socket.on('chat message', function(msg){
