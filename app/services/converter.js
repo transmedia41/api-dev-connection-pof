@@ -122,6 +122,7 @@ module.exports = {
     if (ap != null) {
       return {
         id: ap._id,
+        type: ap.name,
         name: ap.name,
         description: ap.description,
         icon: ap.icon,

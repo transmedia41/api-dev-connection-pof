@@ -41,6 +41,7 @@ function populateSectors() {
         var actionPolygon = [];
         for (var k = 0; k < _.size(polygons); k++) {
             var apoly = new ActionPolygon();
+            apoly.type = polygons[k].type;
             apoly.name = polygons[k].name;
             apoly.description = polygons[k].description;
             apoly.icon = polygons[k].icon;
