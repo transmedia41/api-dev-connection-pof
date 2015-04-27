@@ -1,16 +1,16 @@
 [{
     "title": "Faire-part Lucas",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "11_01_IMG_FR.jpg",
+    "versionUrl": "",
+    "src": "11_01_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"
 },{
     "title": "Faire-part Alessandra",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "11_02_IMG_FR.jpg",
+    "versionUrl": "",
+    "src": "11_02_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"
