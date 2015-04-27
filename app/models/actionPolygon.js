@@ -3,13 +3,14 @@ var mongoose = require('mongoose'),
 
 var ActionPolygonSchema = new Schema({
     name: String,
+    type: String,
     description: String,
-    smallIcon: String,
-    bigIcon: String,
-    accessLevel: {type:Number},
-    maxXp: {type:Number},
-    coolDown: {type:Number},
-    lastPerformed: {type:Date}
+    icon: String,
+    accessLevel: Number,
+    maxXp: Number,
+    coolDown: Number,
+    influence: Number,
+    lastPerformed: Date
 });
 
 mongoose.model('ActionPolygon', ActionPolygonSchema);

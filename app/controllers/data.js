@@ -41,14 +41,15 @@ function populateSectors() {
         var actionPolygon = [];
         for (var k = 0; k < _.size(polygons); k++) {
             var apoly = new ActionPolygon();
+            apoly.type = polygons[k].type;
             apoly.name = polygons[k].name;
             apoly.description = polygons[k].description;
-            apoly.smallIcon = polygons[k].smallIcon;
-            apoly.bigIcon = polygons[k].bigIcon;
+            apoly.icon = polygons[k].icon;
             apoly.accessLevel = polygons[k].accessLevel;
             apoly.maxXp = polygons[k].maxXp;
             apoly.coolDown = polygons[k].coolDown;
             apoly.lastPerformed = polygons[k].lastPerformed;
+            apoly.influence = polygons[k].influence;
             apoly.save();
             actionPolygon.push(apoly);
         }

@@ -1,17 +1,17 @@
 [{
     "title": "Carte de la ville",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "15_01_IMG_FR.jpg",
+    "versionUrl": "",
+    "src": "15_01_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"
 },
 {
     "title": "Extrait de journal du Don",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "15_02_TXT_FR.jpg",
+    "versionUrl": "",
+    "src": "15_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"

@@ -1,38 +1,19 @@
 [{
     "title": "Certificat adoption Alessandra",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "14_01_TXT_FR.jpg",
+    "versionUrl": "",
+    "src": "14_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
     "xp": "15"
 },
 {
     "title": "Certificat adoption Lucas",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
+    "thumbnail": "14_02_TXT_FR.jpg",
+    "versionUrl": "",
+    "src": "14_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
-},
-{
-    "title": "Photo Alessandra",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
-    "type": "photo",
-    "templateHtml":"http://",       
-    "xp": "15"
-}
-,
-{
-    "title": "Photo Lucas",
-    "thumbnail": "",
-    "versionUrl": "http://...",
-    "src": "http://...",
-    "type": "photo",
-    "templateHtml":"http://",       
     "xp": "15"
 }
 ]

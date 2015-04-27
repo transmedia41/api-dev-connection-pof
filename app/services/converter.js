@@ -122,14 +122,15 @@ module.exports = {
     if (ap != null) {
       return {
         id: ap._id,
+        type: ap.name,
         name: ap.name,
         description: ap.description,
-        smallIcon: ap.smallIcon,
-        bigIcon: ap.bigIcon,
+        icon: ap.icon,
         accessLevel: ap.accessLevel,
         maxXp: ap.maxXp,
         coolDown: ap.coolDown,
-        lastPerformed: ap.lastPerformed
+        lastPerformed: ap.lastPerformed,
+        influence: ap.influence
       }
     } else {
       return null
