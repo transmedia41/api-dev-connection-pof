@@ -122,14 +122,15 @@ module.exports = {
     if (ap != null) {
       return {
         id: ap._id,
+        type: ap.name,
         name: ap.name,
         description: ap.description,
-        smallIcon: ap.smallIcon,
-        bigIcon: ap.bigIcon,
+        icon: ap.icon,
         accessLevel: ap.accessLevel,
         maxXp: ap.maxXp,
         coolDown: ap.coolDown,
-        lastPerformed: ap.lastPerformed
+        lastPerformed: ap.lastPerformed,
+        influence: ap.influence
       }
     } else {
       return null
@@ -161,10 +162,10 @@ module.exports = {
           type: ap.properties.atype,
           name: ap.properties.name,
           description: ap.properties.description,
-          smallIcon: ap.properties.smallIcon,
-          bigIcon: ap.properties.bigIcon,
+          icon: ap.properties.smallIcon,
           accessLevel: ap.properties.accessLevel,
           maxXp: ap.properties.maxXp,
+          influence: ap.properties.influence,
           coolDown: ap.properties.coolDown,
           lastPerformed: ap.properties.lastPerformed,
           actionRadius: ap.properties.actionRadius

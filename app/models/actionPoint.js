@@ -11,10 +11,10 @@ var ActionPointSchema = new Schema({
         atype: String,
         name: String,
         description: String,
-        smallIcon: String,
-        bigIcon: String,
+        icon: String,
         accessLevel: {type: Number},
         maxXp: {type: Number},
+        influence: {type: Number},
         coolDown: {type: Number},
         lastPerformed: {type: Date},
         actionRadius: {type: Number}

@@ -41,14 +41,15 @@ function populateSectors() {
         var actionPolygon = [];
         for (var k = 0; k < _.size(polygons); k++) {
             var apoly = new ActionPolygon();
+            apoly.type = polygons[k].type;
             apoly.name = polygons[k].name;
             apoly.description = polygons[k].description;
-            apoly.smallIcon = polygons[k].smallIcon;
-            apoly.bigIcon = polygons[k].bigIcon;
+            apoly.icon = polygons[k].icon;
             apoly.accessLevel = polygons[k].accessLevel;
             apoly.maxXp = polygons[k].maxXp;
             apoly.coolDown = polygons[k].coolDown;
             apoly.lastPerformed = polygons[k].lastPerformed;
+            apoly.influence = polygons[k].influence;
             apoly.save();
             actionPolygon.push(apoly);
         }
@@ -114,10 +115,10 @@ function populateActionPoints(sector, s, c, actionPolygon) {
             apoint.properties.atype = points[j].properties.type;
             apoint.properties.name = points[j].properties.name;
             apoint.properties.description = points[j].properties.description;
-            apoint.properties.smallIcon = points[j].properties.smallIcon;
-            apoint.properties.bigIcon = points[j].properties.bigIcon;
+            apoint.properties.icon = points[j].properties.icon;
             apoint.properties.accessLevel = points[j].properties.accessLevel;
             apoint.properties.maxXp = points[j].properties.maxXp;
+            apoint.properties.influence = points[j].properties.influence;
             apoint.properties.coolDown = points[j].properties.coolDown;
             apoint.properties.lastPerformed = points[j].properties.lastPerformed;
             apoint.properties.actionRadius = points[j].properties.actionRadius;
@@ -204,7 +205,7 @@ function populateDatabase() {
 }
 
 
-//populateDatabase();
+populateDatabase();
 
 
 router.route('/populate')

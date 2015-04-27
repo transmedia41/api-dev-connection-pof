@@ -7,15 +7,15 @@
         ]
     },
     "properties": {
-        "type": "Wc public",
-        "name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
+        "type": "toilettes",
+        "name":"Installation écologique",
+        "icon": "&#xe607;",
+        "influence": 1,
+        "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
+        "accessLevel": 46,
+        "maxXp": 68,
+        "coolDown": 3000,
+        "lastPerformed": "",
         "actionRadius": 50
     }
 },
@@ -28,15 +28,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 7,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -47,16 +48,17 @@
             6.62481197781, 46.7822854783
         ]
     },
-    "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+   "properties": {
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -67,16 +69,17 @@
         6.62888196006, 46.7807697607
         ]
     },
-    "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+     "properties": {
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -88,15 +91,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -108,15 +112,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -128,15 +133,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },
 {
@@ -147,16 +153,17 @@
            6.62802218884, 46.782808438
         ]
     },
-    "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+     "properties": {
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -167,15 +174,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -185,16 +193,17 @@
            6.62742785685, 46.7837580029
         ]
     },
-    "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+     "properties": {
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -205,15 +214,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -224,15 +234,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -243,15 +254,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -262,15 +274,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 },{
     "type": "Feature",
@@ -281,15 +294,16 @@
         ]
     },
     "properties": {
-        "type": "Hydrant","name":"",
-        "description": "Fermer les robinets restés ouverts",
-        "smallIcon": "http://...",
-        "bigIcon": "http://...",
-        "accessLevel": "5",
-        "maxXp": "10",
-        "coolDown": "3600",
-        "lastPerformed": "2015-04-21T15:35:27+02:00",
-        "actionRadius": 50
+        "type": "hydrante",
+        "name":"Protéger les bouches hydrantes.",
+        "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+        "influence":1,
+        "icon":"&#xe618;",
+        "accessLevel": 37,
+        "maxXp": 46,
+        "coolDown": 600,
+        "lastPerformed": "",
+        "actionRadius": 30
     }
 }
 ]

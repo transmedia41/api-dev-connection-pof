@@ -2,16 +2,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -23,16 +23,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -44,16 +44,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -65,16 +65,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -86,16 +86,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -107,16 +107,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Arrosages",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "arrosage",
+            "name": "Réglage des arrosages",
+            "description": "Règle les arrosages communaux dans lce parc. Nous savons que la mafia les dérègle pour pousser la ville à lui acheter plus d'eau. Cela permettra de diminuer ses recettes et son influence.",
+            "icon": "&#xe608;",
+            "accessLevel": 34,
+            "maxXp": 50,
+            "influence": 2,
+            "coolDown": 1200,
             "lastPerformed": "",
-            "actionRadius": 150
+            "actionRadius": 70
         },
         "geometry": {
             "type": "Point",
@@ -128,16 +128,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -149,16 +149,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -170,16 +170,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -191,16 +191,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -212,16 +212,16 @@
     {
         "type": "Feature",
         "properties": {
-            "type":"Fontaine",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "fontaine",
+            "name": "Libérer la fontaine",
+            "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
+            "icon": "&#xe60b;",
+            "accessLevel": 34,
+            "maxXp": 50,
+            "influence": 3,
+            "coolDown": 1200,
             "lastPerformed": "",
-            "actionRadius": 150
+            "actionRadius": 70
         },
         "geometry": {
             "type": "Point",
@@ -233,14 +233,14 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"WC public",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "toilettes",
+            "name": "Installation écologique",
+            "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
+            "icon": "&#xe607;",
+            "accessLevel": 46,
+            "maxXp": 57,
+            "influence": 1,
+            "coolDown": 3000,
             "lastPerformed": "",
             "actionRadius": 50
         },
@@ -254,16 +254,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -275,16 +275,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -296,16 +296,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -317,16 +317,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -338,16 +338,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -359,16 +359,16 @@
      {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
@@ -379,16 +379,16 @@
     }, {
         "type": "Feature",
         "properties": {
-            "type":"Hydrant",
-            "name": "Protéger une bouche d'égoût",
-            "description": "Vise à éviter la pollution des égoûts",
-            "smallIcon": "http://...",
-            "bigIcon": "http://...",
-            "accessLevel": "5",
-            "maxXp": "10",
-            "coolDown": "3600",
+            "type": "hydrante",
+            "name": "Protection d'une bouche hydrante",
+            "description": "Protège cette bouche hydrante car la mafia s'en emparre pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaire. Et c'est tes impôts qui comblent les manques.",
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "influence": 1,
+            "coolDown": 600,
             "lastPerformed": "",
-            "actionRadius": 50
+            "actionRadius": 30
         },
         "geometry": {
             "type": "Point",
