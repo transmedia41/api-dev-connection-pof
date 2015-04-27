@@ -804,7 +804,7 @@
             ]
         },
         "properties": {
-            "nbActions": "2",
+            "nbActions": 2,
             "influence": "",
             "nomsquart": "Quartier 1",
             "character": "9",
@@ -1369,7 +1369,7 @@
             ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 2",
             "character": "5",
@@ -2502,7 +2502,7 @@
             ]
         },
         "properties": {
-            "nbActions": "2",
+            "nbActions": 2,
             "influence": "",
             "nomsquart": "Quartier 3",
             "character": "8",
@@ -6131,7 +6131,7 @@
             ]
         },
         "properties": {
-            "nbActions": "4",
+            "nbActions": 4,
             "influence": "",
             "nomsquart": "Quartier 4",
             "character": "2",
@@ -8504,7 +8504,7 @@
             ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 5",
             "character": "10",
@@ -9322,7 +9322,7 @@
             ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 6",
             "character": "4",
@@ -10359,7 +10359,7 @@
             ]
         },
         "properties": {
-            "nbActions": "4",
+            "nbActions": 4,
             "influence": "",
             "nomsquart": "Quartier 7",
             "character": "3",
@@ -11044,7 +11044,7 @@
             ]
         },
         "properties": {
-            "nbActions": "2",
+            "nbActions": 2,
             "influence": "",
             "nomsquart": "Quartier 8",
             "character": "7",
@@ -14670,7 +14670,7 @@
             ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 9",
             "character": "6",
@@ -15675,7 +15675,7 @@
             ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 10",
             "character": "11",
@@ -17032,7 +17032,7 @@
            ]
         },
         "properties": {
-            "nbActions": "3",
+            "nbActions": 3,
             "influence": "",
             "nomsquart": "Quartier 11",
             "character": "12",
