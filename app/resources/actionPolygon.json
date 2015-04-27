@@ -8,8 +8,7 @@
         "accessLevel": 18,
         "maxXp": 29,
         "coolDown": 19800,
-        "influence": 4,
-        "lastPerformed": ""
+        "influence": 4
     },
     {
         "id": "2",
@@ -20,8 +19,7 @@
         "accessLevel": 14,
         "maxXp": 23,
         "coolDown": 16200,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     },
     {
         "id": "3",
@@ -32,8 +30,7 @@
         "accessLevel": 14,
         "maxXp": 23,
         "coolDown": 16200,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     },
     {
         "id": "4",
@@ -44,8 +41,7 @@
         "accessLevel": 14,
         "maxXp": 23,
         "coolDown": 16200,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     },
     {
         "id": "5",
@@ -56,8 +52,7 @@
         "accessLevel": 16,
         "maxXp": 26,
         "coolDown": 18000,
-        "influence": 3,
-        "lastPerformed": ""
+        "influence": 3
     },
     {
         "id": "6",
@@ -68,8 +63,7 @@
         "accessLevel": 19,
         "maxXp": 31,
         "coolDown": 21600,
-        "influence": 4,
-        "lastPerformed": ""
+        "influence": 4
     },
     {
         "id": "7",
@@ -80,8 +74,7 @@
         "accessLevel": 13,
         "maxXp": 21,
         "coolDown": 14400,
-        "influence": 3,
-        "lastPerformed": ""
+        "influence": 3
     },
     {
         "id": "8",
@@ -92,8 +85,7 @@
         "accessLevel": 18,
         "maxXp": 29,
         "coolDown": 19800,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     },
     {
         "id": "9",
@@ -104,8 +96,7 @@
         "accessLevel": 16,
         "maxXp": 26,
         "coolDown": 18000,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     },
     {
         "id": "10",
@@ -116,7 +107,6 @@
         "accessLevel": 16,
         "maxXp": 26,
         "coolDown": 18000,
-        "influence": 2,
-        "lastPerformed": ""
+        "influence": 2
     }
 ]

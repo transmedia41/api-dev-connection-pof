@@ -163,6 +163,7 @@ module.exports = {
    * Peut emmetre 'new character'
    */
   updateNbActionToPerformedInSector: function(action, sector, player, socket, callback) {
+    console.log(socket)
     var test = _.find(player.sectors, function(sectorPlayer){
       return sectorPlayer.sector_id.toString() == sector._id.toString()
     })
@@ -192,6 +193,13 @@ module.exports = {
     }
     player.save(function(err, playerSaved) {
       callback(playerSaved)
+    })
+  },
+  
+  makeActionPolygon: function(action, callback) {
+    action.lastPerformed = Math.round((new Date()).getTime() / 1000)
+    action.save(function(err, actionSaved) {
+      callback(actionSaved)
     })
   }
   

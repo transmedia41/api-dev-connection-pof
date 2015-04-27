@@ -48,7 +48,6 @@ function populateSectors() {
             apoly.accessLevel = polygons[k].accessLevel;
             apoly.maxXp = polygons[k].maxXp;
             apoly.coolDown = polygons[k].coolDown;
-            apoly.lastPerformed = polygons[k].lastPerformed;
             apoly.influence = polygons[k].influence;
             apoly.save();
             actionPolygon.push(apoly);
