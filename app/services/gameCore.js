@@ -1,7 +1,14 @@
+
+// ***************************
 // ******** Game Core ********
+// ***************************
+
 /**
  * Module contenant les méthodes core de la logique du
  * jeu.
+ * 
+ * @author: Joel Gugger
+ * v1.0
  */
 
 var _ = require('underscore'),
@@ -12,46 +19,44 @@ var _ = require('underscore'),
     Document = mongoose.model('Document'),
     Rank = mongoose.model('Rank')
 
+
+
 /**
- * NOT YET IMPLEMENTED
+ * Met à jour la liste si de nouveaux documents sont
+ * disponible pour le joueur
+ *
+ * Peut emmetre 'new documents'
  */
 function hasNewDocuments (player, socket, callback) {
-  // ...
   getDocuments(player, function(err, data){
     if(err) console.log(err)
-    //console.log(data)
     var listPlayerDocuments = _.map(player.documents, function(doc){ return doc.document_id })
-    var listDocuments = _.map(data, function(doc){ return doc._id }) // list des documents disponibles
+    var listDocuments = _.map(data, function(doc){ return doc._id })
     _.each(listDocuments, function(newDocPossible){
-      var test = _.find(listPlayerDocuments, function(docAlreadyAdded){ 
-        //console.log(typeof docAlreadyAdded.toString(), typeof newDocPossible.toString())
+      var test = _.find(listPlayerDocuments, function(docAlreadyAdded) {
         return docAlreadyAdded.toString() == newDocPossible.toString()
       })
       if(typeof test == 'undefined') {
-        // nouveau document disponible
         var newDoc = {
           document_id: newDocPossible,
           yetVisited: false
         }
-        console.log(newDoc)
-        // on l'ajoute a la liste du joueur en non vu
         player.documents.push(newDoc)
+        socket.emit('new documents')
       }
-      
     })
-    
     player.save(function(err, playerSaved) {
-      console.log(getDocumentsNotYetVisited(playerSaved))
-      callback(playerSaved)
+      callback(playerSaved, getDocumentsNotYetVisited(playerSaved))
     })
   })
 }
 
+
+/**
+ * Récupere la liste des documents disponible pour le joueur
+ * 
+ */
 function getDocuments (player, callback) {
-  // ...
-  //console.log(player)
-  //callback(player)
-  
   if (player != null) {
     Document.find({ xp: { $lte: player.xp } })
       .exec(function(err, data){
@@ -62,6 +67,12 @@ function getDocuments (player, callback) {
   }
 }
 
+
+/**
+ * Récupere la liste des documents du joueur qu'il
+ * n'a pas encore regarder
+ * 
+ */
 function getDocumentsNotYetVisited (player) {
   if (player != null) {
     return _.size(_.where(player.documents, { yetVisited: false }))
@@ -72,6 +83,16 @@ function getDocumentsNotYetVisited (player) {
 
 
 module.exports = {
+  
+  _getInfluence: function(action, sector, player) {
+    return 5
+  },
+  
+  _getXP: function(action, sector, player) {
+    return 15
+  },
+  
+  
   
   /**
    * Retourne l'objet rank qui doit être lié au joueur
@@ -90,18 +111,31 @@ module.exports = {
     }
   },
   
+  
+  /**
+   * Met à jour l'influence du secteur passer en parametre
+   * selon le joueur et l'action associcée
+   * Prend un callback quand l'opération est terminée
+   * retourne le secteur sauver
+   */
   updateInfluence: function(action, sector, player, callback) {
     var down = this._getInfluence(action, sector, player)
     var newInfluence = Math.max(sector.properties.influence - down, 0)
     sector.properties.influence = newInfluence
-    sector.save()
-    callback(sector)
+    sector.save(function(err, sectorSaved){
+      callback(sectorSaved)
+    })
   },
   
-  _getInfluence: function(action, sector, player) {
-    return 5
-  },
   
+  /**
+   * Met à jour l'experience du joueur en fonction de l'action et
+   * du secteur de celle-ci
+   * Prend un callback en parametre avec le joueur mis à jour et
+   * le nombre de nouvaux documents disponible
+   *
+   * Peut emmetre 'new rank'
+   */
   updateXP: function(action, sector, player, socket, callback) {
     var newXP = this._getXP(action, sector, player)
     player.xp += newXP
@@ -109,19 +143,57 @@ module.exports = {
       if(err) console.log(err)
       if(player.level.level != rank.level) {
         player.level = rank._id
+        socket.emit('new rank')
       }
       player.save(function(err, playerSaved) {
-        hasNewDocuments(playerSaved, socket, function(playerUpdated){
-          callback(playerUpdated)
+        hasNewDocuments(playerSaved, socket, function(playerUpdated, nbNewDocuments){
+          callback(playerUpdated, nbNewDocuments)
         })
       })
     })
   },
   
-  _getXP: function(action, sector, player) {
-    return 15
-  }
   
+  /**
+   * Met à jour le nombre d'action faite par le joueur dans le secteur
+   * donner.
+   * Débloque le charactère lié si le nombre d'actions nécessaire est
+   * atteint
+   *
+   * Peut emmetre 'new character'
+   */
+  updateNbActionToPerformedInSector: function(action, sector, player, socket, callback) {
+    var test = _.find(player.sectors, function(sectorPlayer){
+      return sectorPlayer.sector_id.toString() == sector._id.toString()
+    })
+    if(typeof test == 'undefined') {
+      var newSector = {
+        sector_id: sector._id.toString(),
+        actionsPerformed: 1
+      }
+      player.sectors.push(newSector)
+    } else {
+      var sectPlayer
+      _.each(player.sectors, function(sect) {
+        if(sect.sector_id.toString() == sector._id.toString()) {
+          sect.actionsPerformed++
+          sectPlayer = sect
+          return true
+        }
+      })
+      if(sectPlayer.actionsPerformed == sector.properties.nbActions) {
+        var newCharacter = {
+          character_id: sector.properties.character.toString(),
+          yetVisited: false
+        }
+        player.characters.push(newCharacter)
+        socket.emit('new character')
+      }
+    }
+    player.save(function(err, playerSaved) {
+      callback(playerSaved)
+    })
+  }
   
   
 }

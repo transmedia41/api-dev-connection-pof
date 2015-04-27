@@ -106,54 +106,74 @@ module.exports = function (app, http) {
     
     socket.on('make action', function(data){
       
-      var data = {
-        id : "553e1a8b5efd0484b02e86ba",
-        sector_id : "553e1a8b5efd0484b02e872b"
-      }
-      
-      ActionPolygon.findById(data.id).exec(function(err, resAction){
-        if(err) {
-          socket.emit('action error')
-        } else {
-          Sector.findById(data.sector_id).exec(function(err, resSector){
-            if(err) {
-              socket.emit('action error')
-            } else {
-              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                if(err) {
-                  socket.emit('action error')
-                } else {
-                  console.log(resAction)
-                  if(resPlayer.level.level >= resAction.accessLevel) {
-                    // have infos
-                    // make process
-                    
-                    // Modifier influence
-                    GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
-                      // socket broadcast all client updatedSector on 'sector update'
-                      //console.log(updatedSector)
-                      //io.sockets.emit('message', updatedSector)
-                      
-                      GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
-                        // ...
-                        //console.log(updatedPlayer)
-                        io.sockets.emit('user update', updatedPlayer)
-                        
-                      })
-                      
-                    })
-                    
-                    // return res
-                  } else {
-                    socket.emit('not access level')
-                  }
-                }
-              })
-            }
-          })
+      Sector.find().exec(function(err, data){
+        var s = data[0]
+        var ap = s.properties.actionsPolygon[0]
+        
+        var data = {
+          id : ap,
+          sector_id : s._id
         }
+        
+        
+        ActionPolygon.findById(data.id).exec(function(err, resAction){
+          if(err) {
+            socket.emit('action error')
+          } else {
+            Sector.findById(data.sector_id).exec(function(err, resSector){
+              if(err) {
+                socket.emit('action error')
+              } else {
+                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                  if(err) {
+                    socket.emit('action error')
+                  } else {
+                    if(resAction == null || resSector == null || resPlayer == null) {
+                      socket.emit('action error')
+                    } else {
+                      if(resPlayer.level.level >= 1) { //resAction.accessLevel
+                        // have infos
+                        // make process
+
+                        // Modifier influence
+                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
+                          // socket broadcast all client updatedSector on 'sector update'
+                          //console.log(updatedSector)
+                          //io.sockets.emit('message', updatedSector)
+
+                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer, nbNewDocuments){
+                            // ...
+                            //console.log(updatedPlayer)
+                            //io.sockets.emit('user update', updatedPlayer)
+
+                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
+                              //...
+
+                            })
+
+                          })
+
+                        })
+
+                        // return res
+                      } else {
+                        socket.emit('not access level')
+                      }
+                    }
+                  }
+                })
+              }
+            })
+          }
+        })
+        
+        
+        })
+      
+      
       })
-    })
+      
+      
     
 
     /*
