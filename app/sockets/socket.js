@@ -95,6 +95,20 @@ module.exports = function (app, http) {
       })
     })
     
+    socket.on('get character count', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
+        else socket.emit('character count 404')
+      })
+    })
+    
+    socket.on('get document count', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
+        else socket.emit('document count 404')
+      })
+    })
+    
     
     /*socket.emit('update nav bar', {document: 3, mafia: 1})
     
@@ -148,7 +162,7 @@ module.exports = function (app, http) {
                           //console.log(updatedSector)
                           //io.sockets.emit('message', updatedSector)
 
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer, nbNewDocuments){
+                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
                             // ...
                             //console.log(updatedPlayer)
                             //io.sockets.emit('user update', updatedPlayer)
