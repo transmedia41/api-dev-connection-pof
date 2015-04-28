@@ -55,11 +55,17 @@ function populateSectors() {
         readJSONFile('app/resources/characters.json', function (err, characters) {
             for (var i = 0; i < _.size(characters); i++) {
                 var c = new Character();
+ 
+                var life = [];
                 c.status = characters[i].status;
                 c.lastname = characters[i].lastname;
                 c.firstname = characters[i].firstname;
                 c.nickname = characters[i].nickname;
-                c.life = characters[i].life;
+                console.log(characters[i].life.length)
+                for (var j = 0; j < characters[i].life.length; j++) {
+                    c.life[j] = characters[i].life[j];
+                }
+
                 c.personality = characters[i].personality;
                 c.twitch = characters[i].twitch;
                 c.vice = characters[i].vice;
