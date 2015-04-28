@@ -79,6 +79,7 @@ function populateSectors() {
                 c.family = characters[i].family;
                 c.weapon = characters[i].weapon;
                 c.portrait = characters[i].portrait;
+                c.sectorDescription = characters[i].sectorDescription;
                 c.save();
                 //console.log(characters[i])
                 populateSector(characters[i], c, actionPolygon);

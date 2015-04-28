@@ -18,7 +18,8 @@ var CharacterSchema = new Schema({
     body: String,
     family: String,
     weapon: String,
-    portrait: String
+    portrait: String,
+    sectorDescription: String
 });
 
 mongoose.model('Character', CharacterSchema);

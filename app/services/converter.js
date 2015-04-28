@@ -23,7 +23,7 @@ module.exports = {
         username: user.name,
         xp: user.xp,
         level: this.rank(user.level),
-        characters: user.characters,
+        characters: this.character(user.characters),
         sectors: user.sectors,
         documents: user.documents
       }
@@ -131,7 +131,8 @@ module.exports = {
         body: character.body,
         family: character.family,
         weapon: character.weapon,
-        portrait: character.portrait
+        portrait: character.portrait,
+        sectorDescription: character.sectorDescription
       }
     } else {
       return null
