@@ -5,7 +5,7 @@
     "versionUrl": "",
     "src": "04_01_IMG_NA.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"http://...",		
     "xp": "15"
 },
 {
@@ -13,15 +13,6 @@
     "thumbnail": "04_02_TXT_IT.jpg",
     "versionUrl": "04_02_TXT_FR.jpg",
     "src": "04_02_TXT_IT.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
-},
-{
-    "title": "Lettre Alberto",
-    "thumbnail": "04_02_TXT_FR.jpg",
-    "versionUrl": "04_02_TXT_IT.jpg",
-    "src": "04_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://...",		
     "xp": "15"

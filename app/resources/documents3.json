@@ -16,14 +16,5 @@
     "type": "image",
     "templateHtml":"http://...",		
     "xp": "15"
-},
-{
-    "title": "Rapport d'autopsie",
-    "thumbnail": "03_01_TXT_FR.jpg",
-    "versionUrl": "03_01_TXT_IT.jpg",
-    "src": "03_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
 }
 ]

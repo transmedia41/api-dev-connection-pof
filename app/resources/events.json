@@ -81,14 +81,14 @@
       "date":"01/01/2107",
       "description":"Introduction dans la résistance",
       "xp":"",
-      "documents":"documents26.json"
+      "documents":"documents24.json"
   },
   {
       "order":23,
       "date":"2099",
       "description":"Campagne de propagande en réponse aux actions de la résistance",
       "xp":"",
-      "documents":"documents25.json"
+      "documents":"documents23.json"
   },
   {
       "order":22,

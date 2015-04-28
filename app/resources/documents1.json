@@ -16,14 +16,5 @@
     "type": "image",
     "templateHtml":"http://...",		
     "xp": "15"
-},
-{
-    "title": "Acte de naissance",
-    "thumbnail": "01_01_TXT_FR.jpg",
-    "versionUrl": "01_01_TXT_IT.jpg",
-    "src": "01_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
 }
 ]

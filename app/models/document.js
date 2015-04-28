@@ -8,7 +8,7 @@ var DocumentSchema = new Schema({
     src: String,
     type: String,
     templateHtml: String,
-    xp: {type:Number},
+    xp: Number
 });
 
 mongoose.model('Document', DocumentSchema);
