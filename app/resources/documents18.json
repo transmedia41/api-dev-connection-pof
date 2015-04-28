@@ -1,11 +1,11 @@
 [
 {
     "title": "Article de journal",
-    "thumbnail": "18_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/18_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "18_01_TXT_FR.jpg",
+    "src": "documents/18_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"18_01_HTML_FR.html",		
+    "templateHtml":"sources/18_01_HTML_FR.html",		
     "xp": "330"
 }
 ]

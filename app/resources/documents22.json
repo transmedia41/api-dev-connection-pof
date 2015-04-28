@@ -1,17 +1,17 @@
 [{
     "title": "Transcription de la conversation",
-    "thumbnail": "22_02_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/22_02_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "22_02_TXT_FR.jpg",
+    "src": "documents/22_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "210"
 },
 {
     "title": "Conversation entre Don et Le Dé",
-    "thumbnail": "22_01_AUD_FR.mp3",
+    "thumbnail": "documents/thumbnails/22_01_AUD_FR.jpg",
     "versionUrl": "",
-    "src": "22_01_AUD_FR.mp3",
+    "src": "documents/22_01_AUD_FR.mp3",
     "type": "audio",
     "templateHtml":"",		
     "xp": "210"

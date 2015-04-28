@@ -1,10 +1,10 @@
 [{
     "title": "Notes de mafieux sur la carte",
-    "thumbnail": "20_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/20_01_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "20_01_IMG_FR.jpg",
+    "src": "documents/20_01_IMG_FR.jpg",
     "type": "image",
-    "templateHtml":"20_01_HTML_FR.html",		
+    "templateHtml":"sources/20_01_HTML_FR.html",		
     "xp": "15"
 }
 ]

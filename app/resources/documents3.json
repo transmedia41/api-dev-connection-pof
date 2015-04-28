@@ -1,20 +1,20 @@
 [
 {
     "title": "Photo de veillée funèbre",
-    "thumbnail": "03_02_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/03_02_IMG_NA.jpg",
     "versionUrl": "",
-    "src": "03_02_IMG_NA.jpg",
+    "src": "documents/03_02_IMG_NA.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "700"
 },
 {
     "title": "Rapport d'autopsie",
-    "thumbnail": "03_01_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/03_01_TXT_IT.jpg",
     "versionUrl": "03_01_TXT_FR.jpg",
-    "src": "03_01_TXT_IT.jpg",
+    "src": "documents/03_01_TXT_IT.jpg",
     "type": "image",
-    "templateHtml":"03_01_HTML_FR.html",		
+    "templateHtml":"sources/03_01_HTML_FR.html",		
     "xp": "700"
 }
 ]
