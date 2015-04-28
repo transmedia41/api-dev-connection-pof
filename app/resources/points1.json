@@ -3,7 +3,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -26,7 +26,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -49,7 +49,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -72,7 +72,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -95,7 +95,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -118,7 +118,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -141,7 +141,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -164,7 +164,7 @@
         "type": "Feature",
         "properties": {
             "type": "arrosage",
-            "name": "Réglage des arrosages",
+            "name": "Reglage des arrosages",
             "description": "Règle les arrosages communaux dans lce parc. Nous savons que la mafia les dérègle pour pousser la ville à lui acheter plus d'eau. Cela permettra de diminuer ses recettes et son influence.",
             "icon": "&#xe608;",
             "accessLevel": 34,
@@ -187,7 +187,7 @@
         "type": "Feature",
         "properties": {
             "type": "arrosage",
-            "name": "Réglage des arrosages",
+            "name": "Reglage des arrosages",
             "description": "Règle les arrosages communaux dans lce parc. Nous savons que la mafia les dérègle pour pousser la ville à lui acheter plus d'eau. Cela permettra de diminuer ses recettes et son influence.",
             "icon": "&#xe608;",
             "accessLevel": 34,
@@ -210,7 +210,7 @@
         "type": "Feature",
         "properties": {
             "type": "arrosage",
-            "name": "Réglage des arrosages",
+            "name": "Reglage des arrosages",
             "description": "Règle les arrosages communaux dans lce parc. Nous savons que la mafia les dérègle pour pousser la ville à lui acheter plus d'eau. Cela permettra de diminuer ses recettes et son influence.",
             "icon": "&#xe608;",
             "accessLevel": 34,
@@ -348,7 +348,7 @@
         "type": "Feature",
         "properties": {
             "type": "toilettes",
-            "name": "Installation écologique",
+            "name": "Installation ecologique",
             "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
             "icon": "&#xe607;",
             "accessLevel": 46,
@@ -370,7 +370,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -392,7 +392,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,
@@ -414,7 +414,7 @@
         "type": "Feature",
         "properties": {
             "type": "bouche_egout",
-            "name": "Protection d'une bouche d’égouts",
+            "name": "Protection d'une bouche d’egouts",
             "description": "Protège cette bouche d'égouts car la mafia s'en emparre pour rediriger l'eau et accroître son trafic. Nous savons que si l'irrigation des eaux  est bien gérée, elle permettra à la ville d'en consommer moins et de baisser l'influence de la mafia.",
             "icon": "&#xe609;",
             "accessLevel": 37,

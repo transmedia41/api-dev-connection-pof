@@ -165,7 +165,7 @@
         "type": "Feature",
         "properties": {
             "type": "fontaine",
-            "name": "Libérer la fontaine",
+            "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
             "icon": "&#xe60b;",
             "accessLevel": 34,
@@ -188,7 +188,7 @@
         "type": "Feature",
         "properties": {
             "type": "fontaine",
-            "name": "Libérer la fontaine",
+            "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
             "icon": "&#xe60b;",
             "accessLevel": 34,
@@ -211,7 +211,7 @@
         "type": "Feature",
         "properties": {
             "type": "fontaine",
-            "name": "Libérer la fontaine",
+            "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
             "icon": "&#xe60b;",
             "accessLevel": 34,
@@ -234,7 +234,7 @@
         "type": "Feature",
         "properties": {
             "type": "fontaine",
-            "name": "Libérer la fontaine",
+            "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
             "icon": "&#xe60b;",
             "accessLevel": 34,
@@ -257,7 +257,7 @@
         "type": "Feature",
         "properties": {
             "type": "fontaine",
-            "name": "Libérer la fontaine",
+            "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
             "icon": "&#xe60b;",
             "accessLevel": 34,
@@ -280,7 +280,7 @@
         "type": "Feature",
         "properties": {
             "type": "toilettes",
-            "name": "Installation écologique",
+            "name": "Installation ecologique",
             "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
             "icon": "&#xe607;",
             "accessLevel": 46,
@@ -303,7 +303,7 @@
         "type": "Feature",
         "properties": {
             "type": "toilettes",
-            "name": "Installation écologique",
+            "name": "Installation ecologique",
             "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
             "icon": "&#xe607;",
             "accessLevel": 46,
@@ -326,7 +326,7 @@
         "type": "Feature",
         "properties": {
             "type": "toilettes",
-            "name": "Installation écologique",
+            "name": "Installation ecologique",
             "description": "Remplace les toilettes et robinets publics par des installations écologiques pour permettres aux habitants de ne pas consommer l'eau inutilement. De cette manière nous diminuerons gentiment l'emprise de la mafia sur les installations publiques.",
             "icon": "&#xe607;",
             "accessLevel": 46,
