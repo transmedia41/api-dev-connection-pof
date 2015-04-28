@@ -2,6 +2,7 @@ var mongoose = require('mongoose'),
         Schema = mongoose.Schema;
 
 var CharacterSchema = new Schema({
+    char_id: Number,
     status: String,
     lastname: String,
     firstname: String,
@@ -16,7 +17,8 @@ var CharacterSchema = new Schema({
     distinctive: String,
     body: String,
     family: String,
-    weapon: String
+    weapon: String,
+    portrait: String
 });
 
 mongoose.model('Character', CharacterSchema);

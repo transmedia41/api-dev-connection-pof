@@ -115,7 +115,8 @@ module.exports = {
     if (character != null) {
       return {
         id: character._id,
-        status: character._id,
+        char_id: character.char_id,
+        status: character.status,
         lastname: character.lastname,
         firstname: character.firstname,
         nickname: character.nickname,
@@ -129,7 +130,8 @@ module.exports = {
         distinctive: character.distinctive,
         body: character.body,
         family: character.family,
-        weapon: character.weapon
+        weapon: character.weapon,
+        portrait: character.portrait
       }
     } else {
       return null

@@ -110,6 +110,17 @@ module.exports = function (app, http) {
     })
     
     
+    
+    socket.on('get my character', function(){
+      // ...
+    })
+    
+    socket.on('get my documents', function(){
+      // ...
+    })
+    
+    
+    
     /*socket.emit('update nav bar', {document: 3, mafia: 1})
     
 
