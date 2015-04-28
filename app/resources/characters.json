@@ -1,7 +1,7 @@
 [
     {
         "id":"1",
-        "portrait": "donpellegrino.png",
+        "portrait": "portraits/donpellegrino.png",
         "status": "Boss",
         "lastname": "Salvatore",
         "firstname": "Paolo",
@@ -33,11 +33,12 @@
         "distinctive": "Ne porte jamais de chapeau. Trop cliché.",
         "body": "Toujours nickel dans son costume trois pièces bien taillé. Rasé de près en toute occasion. Il est grand, fin, athlétique.",
         "family": "Père adoptif de Lucas 'Chicco' et Alessandra 'Coscienza' Salvatore",
-        "weapon": "Pas d'arme, il ne se salit pas les mains."
+        "weapon": "Pas d'arme, il ne se salit pas les mains.",
+        "sectorDescription": "" 
     },
     {
         "id":"2",
-        "portrait": "chicco.png",
+        "portrait": "portraits/chicco.png",
         "status": "Underboss",
         "lastname": "Salvatore",
         "firstname": "Lucas",
@@ -60,7 +61,7 @@
     },
     {
         "id":"3",
-        "portrait": "coscienza.png",
+        "portrait": "portraits/coscienza.png",
         "status": "Conseillère",
         "lastname": "Salvatore",
         "firstname": "Alessandra",
@@ -83,7 +84,7 @@
     },
     {
         "id":"4",
-        "portrait": "luigigrasdoigts.png",
+        "portrait": "portraits/luigigrasdoigts.png",
         "status": "Capo",
         "lastname": "Salvatore",
         "firstname": "Luigi",
@@ -107,7 +108,7 @@
     },
     {
         "id":"5",
-        "portrait": "lede.png",
+        "portrait": "portraits/lede.png",
         "status": "Capo",
         "lastname": "Drucci",
         "firstname": "Tino",
@@ -130,7 +131,7 @@
     },
     {
         "id":"6",
-        "portrait": "lenadeuxlames.png",
+        "portrait": "portraits/lenadeuxlames.png",
         "status": "Capo",
         "lastname": "Gambino",
         "firstname": "Eleonora",
@@ -152,7 +153,7 @@
     },
     {
         "id":"7",
-        "portrait": "lagachette.png",
+        "portrait": "portraits/lagachette.png",
         "status": "Soldat",
         "lastname": "Ferlichi",
         "firstname": "Ruccio",
@@ -175,7 +176,7 @@
     },
     {
         "id":"8",
-        "portrait": "leduc.png",
+        "portrait": "portraits/leduc.png",
         "status": "Soldat",
         "lastname": "Delua",
         "firstname": "Pietro",
@@ -199,7 +200,7 @@
     },
     {
         "id":"9",
-        "portrait": "leparleur.png",
+        "portrait": "portraits/leparleur.png",
         "status": "Soldat",
         "lastname": "Agnello",
         "firstname": "Emilio",
@@ -221,7 +222,7 @@
     },
     {
         "id":"10",
-        "portrait": "lasalamandre.png",
+        "portrait": "portraits/lasalamandre.png",
         "status": "Associé",
         "lastname": "Pravadelli",
         "firstname": "Hector",
@@ -245,7 +246,7 @@
     },
     {
         "id":"11",
-        "portrait": "ragazzina.png",
+        "portrait": "portraits/ragazzina.png",
         "status": "Associé",
         "lastname": "Ferlichi (ex Melda)",
         "firstname": "Marina",
@@ -270,7 +271,7 @@
     },
     {
         "id":"12",
-        "portrait": "lindo.png",
+        "portrait": "portraits/lindo.png",
         "status": "Associé",
         "lastname": "Berazino",
         "firstname": "Fabio",
