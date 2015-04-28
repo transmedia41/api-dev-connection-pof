@@ -188,7 +188,7 @@ module.exports = function (app, http) {
                                   .populate('properties.actionsPoint')
                                   .populate(' properties.actionsPolygon')
                                   .exec(function(err, resSector){
-                                    console.log(resSector)
+                                    //console.log(resSector)
                                     io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
                                 })
                                 
