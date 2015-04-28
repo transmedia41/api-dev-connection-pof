@@ -1,6 +1,6 @@
 [
     {
-        "id":"1",
+        "id": 1,
         "portrait": "portraits/donpellegrino.png",
         "status": "Boss",
         "lastname": "Salvatore",
@@ -37,7 +37,7 @@
         "sectorDescription": "" 
     },
     {
-        "id":"2",
+        "id": 2,
         "portrait": "portraits/chicco.png",
         "status": "Underboss",
         "lastname": "Salvatore",
@@ -60,7 +60,7 @@
         "weapon": "Vieux Colt 1911 gravé et sa crosse en bois précieux appartenant à son père. Il s'en sert comme d'une relique."
     },
     {
-        "id":"3",
+        "id": 3,
         "portrait": "portraits/coscienza.png",
         "status": "Conseillère",
         "lastname": "Salvatore",
@@ -83,7 +83,7 @@
         "weapon": "Aucune, la connaissance c'est le pouvoir."
     },
     {
-        "id":"4",
+        "id": 4,
         "portrait": "portraits/luigigrasdoigts.png",
         "status": "Capo",
         "lastname": "Salvatore",
@@ -107,7 +107,7 @@
         "weapon": "Il délègue le sale boulot à 'La Gâchette'."
     },
     {
-        "id":"5",
+        "id": 5,
         "portrait": "portraits/lede.png",
         "status": "Capo",
         "lastname": "Drucci",
@@ -130,7 +130,7 @@
         "weapon": "Son dé : 1 - 'T'as du bol' / 2 - Mort par électrocution / 3 - Balle dans la tête / 4 - Pétage de rotules à coups de batte de baseball / 5 - Noyade / 6 - Il te fait croire que tu peux t'enfuir et te tire dans le dos"
     },
     {
-        "id":"6",
+        "id": 6,
         "portrait": "portraits/lenadeuxlames.png",
         "status": "Capo",
         "lastname": "Gambino",
@@ -152,7 +152,7 @@
         "weapon": "Une paire de couteaux à crans d'arrêt."
     },
     {
-        "id":"7",
+        "id": 7,
         "portrait": "portraits/lagachette.png",
         "status": "Soldat",
         "lastname": "Ferlichi",
@@ -175,7 +175,7 @@
         "weapon": "Un Beretta 92 (et son silencieux) ainsi qu'un fusil de sniper pour les éliminations à distance."
     },
     {
-        "id":"8",
+        "id": 8,
         "portrait": "portraits/leduc.png",
         "status": "Soldat",
         "lastname": "Delua",
@@ -199,7 +199,7 @@
         "weapon": "Un poing américain."
     },
     {
-        "id":"9",
+        "id": 9,
         "portrait": "portraits/leparleur.png",
         "status": "Soldat",
         "lastname": "Agnello",
@@ -221,7 +221,7 @@
         "weapon": "Matraque télescopique électrique. Utilise plus souvent ses belles paroles."
     },
     {
-        "id":"10",
+        "id": 10,
         "portrait": "portraits/lasalamandre.png",
         "status": "Associé",
         "lastname": "Pravadelli",
@@ -245,7 +245,7 @@
         "weapon": "Pas d'arme si ce n'est son autorité."
     },
     {
-        "id":"11",
+        "id": 11,
         "portrait": "portraits/ragazzina.png",
         "status": "Associé",
         "lastname": "Ferlichi (ex Melda)",
@@ -270,7 +270,7 @@
         "weapon": "La loi. Sinon son petit Revolver (offert par son mari) gravé d'une fleur de cerisier sur la crosse, toujours fourré dans son sac à main."
     },
     {
-        "id":"12",
+        "id": 12,
         "portrait": "portraits/lindo.png",
         "status": "Associé",
         "lastname": "Berazino",
