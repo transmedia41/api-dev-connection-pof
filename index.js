@@ -20,6 +20,8 @@ models.forEach(function (model) {
 
 var app = express()
 app.use(cors())
+app.use(express.static('public'))
+
 http = require('http').Server(app)
 http.listen(3000, function(){
   console.log('listening on *:3000');
