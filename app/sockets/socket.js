@@ -5,6 +5,7 @@ var config = require('../../config/config'),
     Sector = mongoose.model('Sector'),
     Event = mongoose.model('Event'),
     ActionPolygon = mongoose.model('ActionPolygon'),
+    Character = mongoose.model('Character'),
     Converter = require('../services/converter'),
     GameCore = require('../services/gameCore'),
     socketioJwt = require('socketio-jwt')
@@ -111,12 +112,51 @@ module.exports = function (app, http) {
     
     
     
-    socket.on('get my character', function(){
-      // ...
+    socket.on('get my characters', function(){
+      User.findById(socket.decoded_token.id).populate('characters.character_id').exec(function(err, res){
+        var characters = []
+        var counter = 0
+        for(var i = 1; i <= 12; i++) {
+          if (!_.find(res.characters, function(char){ return char.character_id.char_id == i })) {
+            characters.push({
+              char_id: i,
+              status: 'Inconnu',
+              lastname: 'Inconnu',
+              firstname: 'Inconnu',
+              nickname: 'Inconnu',
+              life: [],
+              personality: 'Inconnu',
+              twitch: 'Inconnu',
+              vice: 'Inconnu',
+              drink: 'Inconnu',
+              strength: 'Inconnu',
+              weakness: 'Inconnu',
+              distinctive: 'Inconnu',
+              body: 'Inconnu',
+              family: 'Inconnu',
+              weapon: 'Inconnu',
+              portrait: 'portraits/unknown.png'
+            })
+          } else {
+            counter++
+            var char = _.find(res.characters, function(char){ return char.character_id.char_id == i })
+            characters.push(char.character_id)
+          }
+        }
+        if (counter > 11) {
+          characters = _.sortBy(characters, 'char_id')
+          Character.findOne().where('char_id').equals(1).exec(function(err, res){
+            characters[11] = res
+            socket.emit('my character responce', Converter.characterArray(characters))
+          })
+        } else {
+          socket.emit('my character responce', Converter.characterArray(characters))
+        }
+      })
     })
     
     socket.on('get my documents', function(){
-      // ...
+      socket.emit('my documents responce', {})
     })
     
     
