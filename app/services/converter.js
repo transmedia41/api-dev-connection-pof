@@ -22,7 +22,10 @@ module.exports = {
         id: user._id,
         username: user.name,
         xp: user.xp,
-        level: this.rank(user.level)
+        level: this.rank(user.level),
+        characters: user.characters,
+        sectors: user.sectors,
+        documents: user.documents
       }
     } else {
       return null
