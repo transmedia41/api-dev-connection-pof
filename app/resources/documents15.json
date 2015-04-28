@@ -5,7 +5,7 @@
     "src": "15_01_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "1550"
 },
 {
     "title": "Extrait de journal du Don",
@@ -14,6 +14,6 @@
     "src": "15_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "1550"
 }
 ]

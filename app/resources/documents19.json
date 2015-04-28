@@ -5,7 +5,7 @@
     "src": "19_02_IMG_NA.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "400"
 },
 {
     "title": "Photo camion livraison",
@@ -14,6 +14,6 @@
     "src": "19_01_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "400"
 }
 ]

@@ -5,7 +5,7 @@
     "src": "12_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "1330"
 },
 {
     "title": "Photo du Don sur la tombe",
@@ -14,7 +14,7 @@
     "src": "12_02_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "1330"
 }
 
 ]

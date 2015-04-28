@@ -5,7 +5,7 @@
     "src": "11_01_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "210"
 },{
     "title": "Faire-part Alessandra",
     "thumbnail": "11_02_IMG_FR.jpg",
@@ -13,6 +13,6 @@
     "src": "11_02_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "210"
 }
 ]

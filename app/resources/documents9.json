@@ -6,7 +6,7 @@
     "src": "09_01_TXT_FR.jpg",
     "type": "photo",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "1130"
 },
 {
     "title": "Article de journal",
@@ -15,6 +15,6 @@
     "src": "09_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://...",		
-    "xp": "15"
+    "xp": "1130"
 }
 ]

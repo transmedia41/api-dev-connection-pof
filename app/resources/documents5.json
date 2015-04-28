@@ -6,7 +6,7 @@
     "src": "05_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "850"
 },
 {
     "title": "Note de la résistance",
@@ -15,6 +15,6 @@
     "src": "http://...",
     "type": "image",
     "templateHtml":"http://...",		
-    "xp": "15"
+    "xp": "850"
 }
 ]
