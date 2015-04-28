@@ -95,6 +95,20 @@ module.exports = function (app, http) {
       })
     })
     
+    socket.on('get character count', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
+        else socket.emit('character count 404')
+      })
+    })
+    
+    socket.on('get document count', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
+        else socket.emit('document count 404')
+      })
+    })
+    
     
     /*socket.emit('update nav bar', {document: 3, mafia: 1})
     
@@ -131,7 +145,14 @@ module.exports = function (app, http) {
                     if(resAction == null || resSector == null || resPlayer == null) {
                       socket.emit('action error')
                     } else {
-                      if(resPlayer.level.level >= 1) { //resAction.accessLevel
+                      if(false) {
+                        // resPlayer.level.level < resAction.accessLevel
+                        socket.emit('not access level')
+                      } else if (false) {
+                        //(resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)
+                        socket.emit('action in cooldown')
+                      } else {
+                        
                         // have infos
                         // make process
 
@@ -141,13 +162,23 @@ module.exports = function (app, http) {
                           //console.log(updatedSector)
                           //io.sockets.emit('message', updatedSector)
 
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer, nbNewDocuments){
+                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
                             // ...
                             //console.log(updatedPlayer)
                             //io.sockets.emit('user update', updatedPlayer)
 
                             GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
                               //...
+
+                              GameCore.makeActionPolygon(resAction, function(actionPerformed){
+                                //...
+                                io.sockets.emit('action polygon performed', actionPerformed)
+                                
+                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                                  socket.emit('user update', Converter.userFull(resPlayer))
+                                })
+                                
+                              })
 
                             })
 
@@ -156,8 +187,6 @@ module.exports = function (app, http) {
                         })
 
                         // return res
-                      } else {
-                        socket.emit('not access level')
                       }
                     }
                   }

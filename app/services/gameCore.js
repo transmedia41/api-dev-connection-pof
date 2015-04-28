@@ -46,7 +46,9 @@ function hasNewDocuments (player, socket, callback) {
       }
     })
     player.save(function(err, playerSaved) {
-      callback(playerSaved, getDocumentsNotYetVisited(playerSaved))
+      var count = getDocumentsNotYetVisited(playerSaved)
+      socket.emit('update document count', count)
+      callback(playerSaved)
     })
   })
 }
@@ -81,6 +83,14 @@ function getDocumentsNotYetVisited (player) {
   }
 }
 
+
+function getCharactersNotYetVisited (player) {
+  if (player != null) {
+    return _.size(_.where(player.characters, { yetVisited: false }))
+  } else {
+    return 0
+  }
+}
 
 module.exports = {
   
@@ -146,8 +156,8 @@ module.exports = {
         socket.emit('new rank')
       }
       player.save(function(err, playerSaved) {
-        hasNewDocuments(playerSaved, socket, function(playerUpdated, nbNewDocuments){
-          callback(playerUpdated, nbNewDocuments)
+        hasNewDocuments(playerSaved, socket, function(playerUpdated){
+          callback(playerUpdated)
         })
       })
     })
@@ -163,6 +173,7 @@ module.exports = {
    * Peut emmetre 'new character'
    */
   updateNbActionToPerformedInSector: function(action, sector, player, socket, callback) {
+    console.log(socket)
     var test = _.find(player.sectors, function(sectorPlayer){
       return sectorPlayer.sector_id.toString() == sector._id.toString()
     })
@@ -191,7 +202,23 @@ module.exports = {
       }
     }
     player.save(function(err, playerSaved) {
+      socket.emit('update character count', getCharactersNotYetVisited(playerSaved))
       callback(playerSaved)
+    })
+  },
+  
+  getCharactersNotYetVisited: function (player) {
+    return getCharactersNotYetVisited(player)
+  },
+  
+  getDocumentsNotYetVisited: function (player) {
+    return getDocumentsNotYetVisited(player)
+  },
+  
+  makeActionPolygon: function(action, callback) {
+    action.lastPerformed = Math.round((new Date()).getTime() / 1000)
+    action.save(function(err, actionSaved) {
+      callback(actionSaved)
     })
   }
   
