@@ -805,7 +805,7 @@
         },
         "properties": {
             "nbActions": 2,
-            "influence": "",
+            "influence": 18,
             "nomsquart": "Quartier 1",
             "character": "9",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
@@ -1370,7 +1370,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 85,
             "nomsquart": "Quartier 2",
             "character": "5",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
@@ -2503,7 +2503,7 @@
         },
         "properties": {
             "nbActions": 2,
-            "influence": "",
+            "influence": 56,
             "nomsquart": "Quartier 3",
             "character": "8",
             "actionsPolygon": ["1","2","3","4","5","6","7","8","9","10"],
@@ -6132,7 +6132,7 @@
         },
         "properties": {
             "nbActions": 4,
-            "influence": "",
+            "influence": 34,
             "nomsquart": "Quartier 4",
             "character": "2",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
@@ -8505,7 +8505,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 78,
             "nomsquart": "Quartier 5",
             "character": "10",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
@@ -9323,7 +9323,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 14,
             "nomsquart": "Quartier 6",
             "character": "4",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
@@ -10360,7 +10360,7 @@
         },
         "properties": {
             "nbActions": 4,
-            "influence": "",
+            "influence": 41,
             "nomsquart": "Quartier 7",
             "character": "3",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
@@ -11045,7 +11045,7 @@
         },
         "properties": {
             "nbActions": 2,
-            "influence": "",
+            "influence": 59,
             "nomsquart": "Quartier 8",
             "character": "7",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
@@ -14671,7 +14671,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 67,
             "nomsquart": "Quartier 9",
             "character": "6",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
@@ -15676,7 +15676,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 24,
             "nomsquart": "Quartier 10",
             "character": "11",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
@@ -17033,7 +17033,7 @@
         },
         "properties": {
             "nbActions": 3,
-            "influence": "",
+            "influence": 78,
             "nomsquart": "Quartier 11",
             "character": "12",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
