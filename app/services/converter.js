@@ -206,6 +206,62 @@ module.exports = {
     } else {
       return null
     }
+  },
+  
+  eventArray: function(events) {
+    if (events != null) {
+      var es = []
+      _.each(events, function(value) {
+        es.push(this.event(value))
+      }, this)
+      return es
+    } else {
+      return null
+    }
+  },
+  
+  event: function(e) {
+    if (e != null) {
+      return {
+        id: e._id,
+        order: e.order,
+        date: e.date,
+        description: e.description,
+        xp: e.xp,
+        documents: this.documentArray(e.documents)
+      }
+    } else {
+      return null
+    }
+  },
+  
+  documentArray: function(documents) {
+    if (documents != null) {
+      var docs = []
+      _.each(documents, function(value) {
+        docs.push(this.document(value))
+      }, this)
+      return docs
+    } else {
+      return null
+    }
+  },
+  
+  document: function(doc) {
+    if (doc != null) {
+      return {
+        id: doc._id,
+        title: doc.title,
+        thumbnail: doc.thumbnail,
+        versionUrl: doc.versionUrl,
+        src: doc.src,
+        type: doc.type,
+        templateHtml: doc.templateHtml,
+        xp: doc.xp
+      }
+    } else {
+      return null
+    }
   }
   
 }

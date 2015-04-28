@@ -164,7 +164,9 @@ module.exports = function (app, http) {
     })
     
     socket.on('get my documents', function(){
-      socket.emit('my documents responce', {})
+      Event.find().where('xp').lte(socket.decoded_token.xp).populate('documents').exec(function(err, res){
+        socket.emit('my documents responce', Converter.eventArray(res))
+      })
     })
     
     
