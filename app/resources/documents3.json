@@ -15,19 +15,6 @@
     "src": "03_01_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"http://...",		
-<<<<<<< Updated upstream
-    "xp": "15"
-=======
     "xp": "700"
-},
-{
-    "title": "Rapport d'autopsie",
-    "thumbnail": "03_01_TXT_FR.jpg",
-    "versionUrl": "03_01_TXT_IT.jpg",
-    "src": "03_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "700"
->>>>>>> Stashed changes
 }
 ]
