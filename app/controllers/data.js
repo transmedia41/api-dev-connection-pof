@@ -9,6 +9,7 @@ var _ = require('underscore'),
         Event = mongoose.model('Event'),
         Rank = mongoose.model('Rank'),
         Document = mongoose.model('Document'),
+        User = mongoose.model('User'),
         fs = require('fs')
 
 
@@ -57,6 +58,7 @@ function populateSectors() {
                 var c = new Character();
  
                 var life = [];
+                c.char_id = characters[i].id;
                 c.status = characters[i].status;
                 c.lastname = characters[i].lastname;
                 c.firstname = characters[i].firstname;
@@ -76,6 +78,7 @@ function populateSectors() {
                 c.body = characters[i].body;
                 c.family = characters[i].family;
                 c.weapon = characters[i].weapon;
+                c.portrait = characters[i].portrait;
                 c.save();
                 //console.log(characters[i])
                 populateSector(characters[i], c, actionPolygon);
@@ -204,9 +207,10 @@ function populateRanks() {
 
 
 function populateDatabase() {
-    populateSectors();
-    populateEvents();
+    populateSectors()
+    populateEvents()
     populateRanks()
+    User.find().remove().exec()
 }
 
 

@@ -1,17 +1,17 @@
 [{
     "title": "Témoignage anonyme",
-    "thumbnail": "17_01_VID_FR.mp4",
+    "thumbnail": "documents/thumbnails/17_01_VID_FR.jpg",
     "versionUrl": "",
-    "src": "17_01_VID_FR.mp4",
+    "src": "https://vimeo.com/126252434",
     "type": "video",
-    "templateHtml":"17_01_HTML_FR.html",		
+    "templateHtml":"sources/17_01_HTML_FR.html",		
     "xp": "610"
 },
 {
     "title": "Transcription du témoignage",
-    "thumbnail": "17_02_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/17_02_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "17_02_TXT_FR.jpg",
+    "src": "documents/17_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "610"

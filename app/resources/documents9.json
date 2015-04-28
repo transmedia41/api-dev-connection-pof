@@ -1,18 +1,18 @@
 [
 {
     "title": "Photo scandaleuse",
-    "thumbnail": "09_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/09_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "09_01_TXT_FR.jpg",
+    "src": "documents/09_01_TXT_FR.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "1130"
 },
 {
     "title": "Article de journal",
-    "thumbnail": "09_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/09_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "09_01_TXT_FR.jpg",
+    "src": "documents/09_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "1130"

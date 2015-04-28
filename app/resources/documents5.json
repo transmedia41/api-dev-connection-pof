@@ -1,18 +1,9 @@
 [
 {
     "title": "Facture de plomberie",
-    "thumbnail": "05_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/05_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "05_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"",		
-    "xp": "850"
-},
-{
-    "title": "Note de la résistance",
-    "thumbnail": "",
-    "versionUrl": "",
-    "src": "",
+    "src": "documents/05_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "850"

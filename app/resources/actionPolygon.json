@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Dénoncer mafieu",
+        "name": "Denoncer mafieu",
         "type": "denoncer",
         "description": "Tente de dénoncer au public le mafieux responsable du secteur. Nous sommes quasi sûr de son identité et nous désirons la révéler au reste de la population. A force peut-être qu'il tombera et que le secteur ne sera plus sous l'influence de la mafia.",
         "icon": "&#xe60e;",
@@ -12,7 +12,7 @@
     },
     {
         "id": "2",
-        "name": "Contrôle des canalisations",
+        "name": "Controle des canalisations",
         "type": "ctrl_canalisation",
         "description": "Reprend le contrôle des canalisations du secteur car la mafia a actuellement la main prise dessus. Cela lui permet de couper l'eau à la population, de la rediriger vers ses points de production et de la revendre pour faire vivre son business.",
         "icon": "&#xe60f;",
@@ -23,7 +23,7 @@
     },
     {
         "id": "3",
-        "name": "Contrôle des installations hydroliques",
+        "name": "Controle des installations hydroliques",
         "type": "ctrl_instal_hydro",
         "description": "Reprend le contrôle installations hydroliques du secteur car la mafia a actuellement la main prise dessus. Cela lui permet de supprimer le traitements des eaux, d'augmenter les prix et d'engendrer de l'argent.",
         "icon": "&#xe610;",
@@ -34,7 +34,7 @@
     },
     {
         "id": "4",
-        "name": "Contrôle des canaux",
+        "name": "Controle des canaux",
         "type": "ctrl_canaux",
         "description": "Reprend le contrôle des canaux du secteur car la mafia a actuellement la main prise dessus. Cela lui permet de rediriger l'eau vers ses installations privées, de privée la ville de ces irrigations et d'assécher le lac.",
         "icon": "&#xe611;",
@@ -45,7 +45,7 @@
     },
     {
         "id": "5",
-        "name": "Contrôle de la step",
+        "name": "Controle de la step",
         "type": "ctrl_step",
         "description": "Reprend le contrôle de la step car la mafia a actuellement la main prise dessus. Cela lui permet de couper le filtrage des eaux ou d'augmenter les taxes pour que les traitements d'épurations se fassent bien.",
         "icon": "&#xe612;",
@@ -100,7 +100,7 @@
     },
     {
         "id": "10",
-        "name": "Label éco eau",
+        "name": "Label eco eau",
         "type": "label",
         "description": "Lance une campagne de publicité pour promouvoir un label éco eau dans ce secteur. La mafia ne gère pas sa production de manière écologique. La population sera sensible à cela et fera perdre des parts de marché à la mafia.",
         "icon": "&#xe617;",

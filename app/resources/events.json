@@ -3,168 +3,168 @@
       "order":1,
       "date":"06/01/2042",
       "description":"Naissance de Paolo Salvatore",
-      "xp":"",
+      "xp":330,
       "documents":"documents1.json"
   },
   {
       "order":2,
       "date":"15/10/2049",
       "description":"Emprisonnement de Daniele Salvatore",
-      "xp":"",
+      "xp":460,
       "documents":"documents2.json"
   },
   {
       "order":3,
       "date":"06/01/2052",
       "description":"Mort de Julia Salvatore",
-      "xp":"",
+      "xp":700,
       "documents":"documents3.json"
   },
   {
       "order":4,
       "date":"08/03/2052",
       "description":"Départ de Paolo Salvatore à Yverdon",
-      "xp":"",
+      "xp":770,
       "documents":"documents4.json"
   },
   {
       "order":5,
       "date":"17/02/2058",
       "description":"Paolo Salvatore travaille dans la plomberie de son oncle",
-      "xp":"",
+      "xp":850,
       "documents":"documents5.json"
   },
   {
       "order":6,
       "date":"23/11/2061",
       "description":"Arrestation d'Alberto Salvatore",
-      "xp":"",
+      "xp":940,
       "documents":"documents6.json"
   },
   {
       "order":7,
       "date":"01/07/2064",
       "description":"Reprise de la plomberie Salvatore par Paolo et Antonio",
-      "xp":"",
+      "xp":1050,
       "documents":"documents7.json"
   },
   {
       "order":8,
       "date":"10/10/2067",
       "description":"Paolo et Antonio Salvatore reprennent le trafic d'héroïne",
-      "xp":"",
+      "xp":940,
       "documents":"documents8.json"
   },
   {
       "order":9,
       "date":"01/06/2069",
       "description":"Ouverture du Due Puledri",
-      "xp":"",
+      "xp":1130,
       "documents":"documents9.json"
   },
   {
       "order":10,
       "date":"05/09/2074",
       "description":"Mariage de Paolo et Olivia",
-      "xp":"",
+      "xp":770,
       "documents":"documents10.json"
   },
   {
       "order":11,
       "date":"04/07/2074 - 07/03/2076",
       "description":"Naissance de Lucas et Alessandra Salvatore",
-      "xp":"",
+      "xp":210,
       "documents":"documents11.json"
   },
   {
       "order":24,
       "date":"01/01/2107",
       "description":"Introduction dans la résistance",
-      "xp":"",
+      "xp":0,
       "documents":"documents24.json"
   },
   {
       "order":23,
       "date":"2099",
       "description":"Campagne de propagande en réponse aux actions de la résistance",
-      "xp":"",
+      "xp":100,
       "documents":"documents23.json"
   },
   {
       "order":22,
       "date":"13/05/2091",
       "description":"Plan d'extension du contrôle des installations",
-      "xp":"",
+      "xp":210,
       "documents":"documents22.json"
   },
   {
       "order":21,
       "date":"2087",
       "description":"Des voix s'élèvent contre le monopole d'Hydromerta",
-      "xp":"",
+      "xp":100,
       "documents":"documents21.json"
   },
   {
       "order":20,
       "date":"2085",
       "description":"Plan d'expansion au canton de Vaud",
-      "xp":"",
+      "xp":460,
       "documents":"documents20.json"
   },
   {
       "order":19,
       "date":"05/08/2082",
       "description":"Lancement d'Hydromerta",
-      "xp":"",
+      "xp":400,
       "documents":"documents19.json"
   },
   {
       "order":18,
       "date":"29/10/2080",
       "description":"ccords commerciaux pour le lancement d'Hydromerta",
-      "xp":"",
+      "xp":330,
       "documents":"documents18.json"
   },
   {
       "order":17,
       "date":"2079",
       "description":"Chantage auprès des citoyens",
-      "xp":"",
+      "xp":610,
       "documents":"documents17.json"
   },
   {
       "order":16,
       "date":"02/11/2079",
       "description":"Détournement des canalisations",
-      "xp":"",
+      "xp":550,
       "documents":"documents16.json"
   },
   {
       "order":15,
       "date":"01/07/2078",
       "description":"Recherche d'un nouveau business",
-      "xp":"",
+      "xp":1550,
       "documents":"documents15.json"
   },
   {
       "order":14,
       "date":"13/05/2078",
       "description":"Adoption de Lucas et Alessandra",
-      "xp":"",
+      "xp":1200,
       "documents":"documents14.json"
   },
   {
       "order":13,
       "date":"03/10/2077",
       "description":"Internement de Mathilda Salvatore",
-      "xp":"",
+      "xp":1130,
       "documents":"documents13.json"
   },
   {
       "order":12,
       "date":"25/08/2077",
       "description":"Mort d'Antonio suite à une overdose d'héroïne",
-      "xp":"",
+      "xp":1330,
       "documents":"documents12.json"
   }
 ]

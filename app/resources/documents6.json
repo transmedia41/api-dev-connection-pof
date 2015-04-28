@@ -1,19 +1,10 @@
 [
 {
     "title": "Article de journal",
-    "thumbnail": "06_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/06_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "06_01_TXT_FR.jpg",
+    "src": "documents/06_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"",		
-    "xp": "940"
-},
-{
-    "title": "Photo de l'arrestation",
-    "thumbnail": "",
-    "versionUrl": "",
-    "src": "",
-    "type": "photo",
     "templateHtml":"",		
     "xp": "940"
 }

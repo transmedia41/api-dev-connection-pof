@@ -118,6 +118,17 @@ module.exports = function (app, http) {
     })
     
     
+    
+    socket.on('get my character', function(){
+      // ...
+    })
+    
+    socket.on('get my documents', function(){
+      // ...
+    })
+    
+    
+    
     /*socket.emit('update nav bar', {document: 3, mafia: 1})
     
 
@@ -128,14 +139,14 @@ module.exports = function (app, http) {
     
     socket.on('make action', function(data){
       
-      Sector.find().exec(function(err, data){
+      /*Sector.find().exec(function(err, data){
         var s = data[0]
         var ap = s.properties.actionsPolygon[0]
         
         var data = {
           id : ap,
           sector_id : s._id
-        }
+        }*/
         
         
         ActionPolygon.findById(data.id).exec(function(err, resAction){
@@ -185,7 +196,7 @@ module.exports = function (app, http) {
                                   .populate('properties.actionsPoint')
                                   .populate(' properties.actionsPolygon')
                                   .exec(function(err, resSector){
-                                    console.log(resSector)
+                                    //console.log(resSector)
                                     io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
                                 })
                                 
@@ -212,7 +223,7 @@ module.exports = function (app, http) {
         })
         
         
-        })
+        //})
       
       
       })

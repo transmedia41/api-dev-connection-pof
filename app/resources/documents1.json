@@ -1,18 +1,18 @@
 [
 {
     "title": "Photo de naissance",
-    "thumbnail": "01_02_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/documents/thumbnails/01_02_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "01_02_IMG_FR.jpg",
+    "src": "documents/01_02_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "330"
 },
 {
     "title": "Acte de naissance",
-    "thumbnail": "01_01_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/01_01_TXT_IT.jpg",
     "versionUrl": "01_01_TXT_FR.jpg",
-    "src": "01_01_TXT_IT.jpg",
+    "src": "documents/01_01_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "330"

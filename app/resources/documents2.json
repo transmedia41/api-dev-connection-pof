@@ -1,18 +1,18 @@
 [
 {
     "title": "Mugshot Daniele",
-    "thumbnail": "02_01_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/02_01_IMG_NA.jpg",
     "versionUrl": "",
-    "src": "02_01_IMG_NA.jpg",
+    "src": "documents/02_01_IMG_NA.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "460"
 },
 {
     "title": "Rapport de police",
-    "thumbnail": "02_02_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/02_02_TXT_IT.jpg",
     "versionUrl": "02_02_TXT_FR.jpg",
-    "src": "02_02_TXT_IT.jpg",
+    "src": "documents/02_02_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "460"
