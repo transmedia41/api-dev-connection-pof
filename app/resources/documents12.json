@@ -4,7 +4,7 @@
     "versionUrl": "",
     "src": "12_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "1330"
 },
 {
@@ -13,7 +13,7 @@
     "versionUrl": "",
     "src": "12_02_IMG_FR.jpg",
     "type": "photo",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "1330"
 }
 

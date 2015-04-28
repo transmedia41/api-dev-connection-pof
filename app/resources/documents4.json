@@ -5,7 +5,7 @@
     "versionUrl": "",
     "src": "04_01_IMG_NA.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "770"
 },
 {
@@ -14,7 +14,7 @@
     "versionUrl": "04_02_TXT_FR.jpg",
     "src": "04_02_TXT_IT.jpg",
     "type": "image",
-    "templateHtml":"http://...",		
+    "templateHtml":"",		
     "xp": "770"
 }
 ]

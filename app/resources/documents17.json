@@ -4,7 +4,7 @@
     "versionUrl": "",
     "src": "17_01_VID_FR.mp4",
     "type": "video",
-    "templateHtml":"http://",		
+    "templateHtml":"17_01_HTML_NA.html",		
     "xp": "610"
 },
 {
@@ -13,7 +13,7 @@
     "versionUrl": "",
     "src": "17_02_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "610"
 }
 ]

@@ -5,16 +5,16 @@
     "versionUrl": "",
     "src": "06_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "940"
 },
 {
     "title": "Photo de l'arrestation",
     "thumbnail": "",
     "versionUrl": "",
-    "src": "http://...",
+    "src": "",
     "type": "photo",
-    "templateHtml":"http://...",		
+    "templateHtml":"",		
     "xp": "940"
 }
 ]

@@ -4,8 +4,8 @@
     "versionUrl": "",
     "src": "24_01_VID_FR.mp4",
     "type": "video",
-    "templateHtml":"http://",		
-    "xp": ""
+    "templateHtml":"",		
+    "xp": "0"
 },
 {
     "title": "Transcription de la vidéo",
@@ -13,7 +13,7 @@
     "versionUrl": "",
     "src": "24_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
+    "templateHtml":"",		
     "xp": "0"
 }
 ]
