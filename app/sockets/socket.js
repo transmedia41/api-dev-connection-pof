@@ -6,6 +6,7 @@ var config = require('../../config/config'),
     Event = mongoose.model('Event'),
     ActionPolygon = mongoose.model('ActionPolygon'),
     Character = mongoose.model('Character'),
+    ActionPoint = mongoose.model('ActionPoint'),
     Converter = require('../services/converter'),
     GameCore = require('../services/gameCore'),
     socketioJwt = require('socketio-jwt')
@@ -86,6 +87,13 @@ module.exports = function (app, http) {
       Sector.find().populate('properties.character properties.actionsPoint properties.actionsPolygon').exec(function(err, res){
         if(!err) socket.emit('sectors responce', Converter.sector(res))
         else socket.emit('sectors responce 404')
+      })
+    })
+    
+    socket.on('get action point', function(){
+      ActionPoint.find().exec(function(err, res){
+        if(!err) socket.emit('action point responce', Converter.actionPointArray(res))
+        else socket.emit('action point responce 404')
       })
     })
     

@@ -3,66 +3,66 @@
 		"level": 1,
 		"rankName": "Soldat",
 		"xp": 0,
-		"xpMax": 89
+		"xpMax": 99
 	},
 	{
 		"level": 2,
 		"rankName": "Premiere classe",
-		"xp": 90,
-		"xpMax": 189
+		"xp": 100,
+		"xpMax": 209
 	},
 	{
 		"level": 3,
 		"rankName": "Caporal",
-		"xp": 190,
-		"xpMax": 299
+		"xp": 210,
+		"xpMax": 329
 	},
 	{
 		"level": 4,
 		"rankName": "Sergent",
-		"xp": 300,
-		"xpMax": 419
+		"xp": 330,
+		"xpMax": 459
 	},
 	{
 		"level": 5,
 		"rankName": "Sergent-chef",
-		"xp": 420,
-		"xpMax": 549
+		"xp": 460,
+		"xpMax": 609
 	},
 	{
 		"level": 6,
 		"rankName": "Adjudant",
-		"xp": 550,
-		"xpMax": 689
+		"xp": 610,
+		"xpMax": 769
 	},
 	{
 		"level": 7,
 		"rankName": "Major",
-		"xp": 690,
-		"xpMax": 839
+		"xp": 770,
+		"xpMax": 939
 	},
 	{
 		"level": 8,
 		"rankName": "Lieutenant",
-		"xp": 840,
-		"xpMax": 999
+		"xp": 940,
+		"xpMax": 1129
 	},
 	{
 		"level": 9,
 		"rankName": "Capitaine",
-		"xp": 1000,
-		"xpMax": 1169
+		"xp": 1130,
+		"xpMax": 1329
 	},
 	{
 		"level": 10,
 		"rankName": "Colonel",
-		"xp": 1170,
-		"xpMax": 1349
+		"xp": 1330,
+		"xpMax": 1549
 	},
 	{
 		"level": 11,
 		"rankName": "General",
-		"xp": 1350,
-		"xpMax": 999999
+		"xp": 1550,
+		"xpMax": 1800
 	}
 ]

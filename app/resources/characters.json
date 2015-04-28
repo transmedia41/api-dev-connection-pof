@@ -57,7 +57,8 @@
         "distinctive": "Ressemble énormément à son défunt père.",
         "body": "Bien bâti, même plutôt fort, il déteste que les gens fassent des allusions à son physique.",
         "family": "Fils adoptif de 'Don Pellegrino', frère de 'Coscienza'. C'est aussi l'ex-petit ami de 'Lena Deux Lames' et une ancienne connaissance de 'Ragazzina'.",
-        "weapon": "Vieux Colt 1911 gravé et sa crosse en bois précieux appartenant à son père. Il s'en sert comme d'une relique."
+        "weapon": "Vieux Colt 1911 gravé et sa crosse en bois précieux appartenant à son père. Il s'en sert comme d'une relique.",
+        "sectorDescription": "Activité(s): Gestion de la production. (A valider et décrire)" 
     },
     {
         "id": 3,
@@ -80,7 +81,8 @@
         "distinctive": "Ses tâches de rousseurs au visage.",
         "body": "Grande et mince, elle possède un visage anguleux, lui donnant un air peu engagrant. Elle a la peau d'une teinte très clair orné de taches de rousseurs et arbore une chevelure rousse.",
         "family": "Fille adoptive de 'Don Pellegrino', soeur de 'Chicco'.",
-        "weapon": "Aucune, la connaissance c'est le pouvoir."
+        "weapon": "Aucune, la connaissance c'est le pouvoir.",
+        "sectorDescription": "Activité(s): Gestion des stratégies et conseil pour des choix particuliers. (A valider et décrire)" 
     },
     {
         "id": 4,
@@ -104,7 +106,8 @@
         "distinctive": "A les cheveux excessivement gominés en permanence, ce qui rend ses doigts toujours brillants de graisse.",
         "body": "La quarantaine, déjà grisonnant sur les tempes. Des yeux gris-bleus perçants. Carrure athlétique mais on sent qu'il aura un bide à bière d'ici quelques années. Sa cravate est toujours accordée à ses chaussettes.",
         "family": "Cousin de 'Don Pellegrino'. Ami avec 'La Gâchette' et 'Le Dé'.",
-        "weapon": "Il délègue le sale boulot à 'La Gâchette'."
+        "weapon": "Il délègue le sale boulot à 'La Gâchette'.",
+        "sectorDescription": "Activité(s): Gestion commerciale. (A valider et décrire)" 
     },
     {
         "id": 5,
@@ -127,7 +130,8 @@
         "distinctive": "Choisit le sort de ses ennemis en jetant un dé.",
         "body": "Grand et élancé, le nez brisé par des parieurs mécontents par le passé. C'est une espèce d’asperge dégingandée.",
         "family": "Ami avec ‘Luigi Gras Doigts’.",
-        "weapon": "Son dé : 1 - 'T'as du bol' / 2 - Mort par électrocution / 3 - Balle dans la tête / 4 - Pétage de rotules à coups de batte de baseball / 5 - Noyade / 6 - Il te fait croire que tu peux t'enfuir et te tire dans le dos"
+        "weapon": "Son dé : 1 - 'T'as du bol' / 2 - Mort par électrocution / 3 - Balle dans la tête / 4 - Pétage de rotules à coups de batte de baseball / 5 - Noyade / 6 - Il te fait croire que tu peux t'enfuir et te tire dans le dos",
+        "sectorDescription": "Activité(s): Contrôle des canalisations et des installations hydroliques. (A valider et décrire)" 
     },
     {
         "id": 6,
@@ -149,7 +153,8 @@
         "distinctive": "On peut négocier avec elle sous les couvertures, mais il faut savoir y faire…",
         "body": "Allure très sexy, elle s'habille avec des tailleurs très moulants, et est toujours extrêmement séduisante. Cheveux longs, blonds, yeux azurs.",
         "family": "Petite amie actuelle du 'Duc' et ex-petite amie de 'Chicco'.",
-        "weapon": "Une paire de couteaux à crans d'arrêt."
+        "weapon": "Une paire de couteaux à crans d'arrêt.",
+        "sectorDescription": "Activité(s): Gestion de la fortune et de la comptabilité. (A valider et décrire)" 
     },
     {
         "id": 7,
@@ -172,7 +177,8 @@
         "distinctive": "Tatouage sur l'avant-bras droit : 'Si vis pacem, para bellum' (Qui veut la paix prépare la guerre).",
         "body": "32 ans, 1m75, fort, cheveux courts, silhouette normal.",
         "family": "Marié à 'Ragazzina'.",
-        "weapon": "Un Beretta 92 (et son silencieux) ainsi qu'un fusil de sniper pour les éliminations à distance."
+        "weapon": "Un Beretta 92 (et son silencieux) ainsi qu'un fusil de sniper pour les éliminations à distance.",
+        "sectorDescription": "Activité(s): Tueur à gage. (A valider et décrire)" 
     },
     {
         "id": 8,
@@ -196,7 +202,8 @@
         "distinctive": "",
         "body": "Grand, fort, beau, élégant. Pas loin du 'bogoss' parfait, donc.",
         "family": "Employé du Due Puledri et petit ami de 'Lena Deux Lames'.",
-        "weapon": "Un poing américain."
+        "weapon": "Un poing américain.",
+        "sectorDescription": "Activité(s): Gestion du lac contrôle de la step. (A valider et décrire)" 
     },
     {
         "id": 9,
@@ -218,7 +225,8 @@
         "distinctive": "Ne quitte jamais son chien.",
         "body": "54 ans, résistant, endurant, petit.",
         "family": "Ancienne connaissance de travail de 'Coscienza'.",
-        "weapon": "Matraque télescopique électrique. Utilise plus souvent ses belles paroles."
+        "weapon": "Matraque télescopique électrique. Utilise plus souvent ses belles paroles.",
+        "sectorDescription": "Activité(s): Gestion des relations publiques et gestion politique (A valider et décrire)" 
     },
     {
         "id": 10,
@@ -242,7 +250,8 @@
         "distinctive": "Une mèche de cheveux blancs un peu détournée.",
         "body": "Vieux, un peu gros, de taille moyenne, ridé.",
         "family": "Ancien ami de l'oncle du 'Don'.",
-        "weapon": "Pas d'arme si ce n'est son autorité."
+        "weapon": "Pas d'arme si ce n'est son autorité.",
+        "sectorDescription": "Activité(s): Contrôle des canaux. (A valider et décrire)" 
     },
     {
         "id": 11,
@@ -267,7 +276,8 @@
         "distinctive": "Porte toujours un collier en forme de tête de chat.",
         "body": "28 ans, belle fille, élancée, élégante. A toujours les cheveux détachés et tombants.",
         "family": "Ancienne connaissance de 'Chicco' et femme de 'La Gâchette'.",
-        "weapon": "La loi. Sinon son petit Revolver (offert par son mari) gravé d'une fleur de cerisier sur la crosse, toujours fourré dans son sac à main."
+        "weapon": "La loi. Sinon son petit Revolver (offert par son mari) gravé d'une fleur de cerisier sur la crosse, toujours fourré dans son sac à main.",
+        "sectorDescription": "Activité(s): Gestion légale. (A valider et décrire)" 
     },
     {
         "id": 12,
@@ -290,6 +300,7 @@
         "distinctive": "Une trace d'un marqueur résistant à l'eau sur le dos dont il a horreur.",
         "body": "47 ans, de taille et corpulence moyenne. possède néanmoins un visage rongé par la drogue.",
         "family": "Ancien client de 'Don Pellegrino'.",
-        "weapon": "Un rasoir à lame droite."
+        "weapon": "Un rasoir à lame droite.",
+        "sectorDescription": "Activité(s): Nettoyeur et brouille les traces. (A valider et décrire)" 
     }
 ]
