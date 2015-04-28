@@ -47,6 +47,9 @@ module.exports = {
     if (sector != null) {
       var sectors = []
       _.each(sector, function(value) {
+        
+        console.log(value)
+        
         sectors.push({
           id: value._id,
           type: value.type,
@@ -65,6 +68,29 @@ module.exports = {
         })
       }, this)
       return sectors
+    } else {
+      return null
+    }
+  },
+  
+  sectorUnique: function(sector) {
+    if (sector != null) {
+      return {
+        id: sector._id,
+        type: sector.type,
+        geometry: {
+          type: sector.geometry.atype,
+          coordinates: sector.geometry.coordinates
+        },
+        properties: {
+          nbActions: sector.properties.nbActions,
+          influence: sector.properties.influence,
+          nomsquart: sector.properties.nomsquart,
+          character: this.character(sector.properties.character),
+          actionsPolygon: this.actionPolygonArray(sector.properties.actionsPolygon),
+          actionsPoint: this.actionPointArray(sector.properties.actionsPoint)
+        }
+      }
     } else {
       return null
     }

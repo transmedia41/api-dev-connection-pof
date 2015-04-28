@@ -172,7 +172,14 @@ module.exports = function (app, http) {
 
                               GameCore.makeActionPolygon(resAction, function(actionPerformed){
                                 //...
-                                io.sockets.emit('action polygon performed', actionPerformed)
+                                Sector.findById(data.sector_id)
+                                  .populate('properties.character')
+                                  .populate('properties.actionsPoint')
+                                  .populate(' properties.actionsPolygon')
+                                  .exec(function(err, resSector){
+                                    console.log(resSector)
+                                    io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
+                                })
                                 
                                 User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
                                   socket.emit('user update', Converter.userFull(resPlayer))
