@@ -806,7 +806,7 @@
         "properties": {
             "nbActions": 2,
             "influence": 85,
-            "nomsquart": "Quartier 1",
+            "nomsquart": "Quartier Cheminet nord",
             "character": "9",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
             "actionsPoint": ["points1.json"]
@@ -1371,7 +1371,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 95,
-            "nomsquart": "Quartier 2",
+            "nomsquart": "Quartier des Cygnes",
             "character": "5",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
             "actionsPoint": ["points2.json"]
@@ -2504,7 +2504,7 @@
         "properties": {
             "nbActions": 2,
             "influence": 82,
-            "nomsquart": "Quartier 3",
+            "nomsquart": "Quartier du Lac",
             "character": "8",
             "actionsPolygon": ["1","2","3","4","5","6","7","8","9","10"],
             "actionsPoint": ["points3.json"]
@@ -6133,7 +6133,7 @@
         "properties": {
             "nbActions": 4,
             "influence": 89,
-            "nomsquart": "Quartier 4",
+            "nomsquart": "Quartier du Centre ville",
             "character": "2",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
             "actionsPoint": ["points4.json"]
@@ -8506,7 +8506,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 91,
-            "nomsquart": "Quartier 5",
+            "nomsquart": "Quartier du Général-Guisan et des Moulins",
             "character": "10",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
             "actionsPoint": ["points5.json"]
@@ -9324,7 +9324,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 88,
-            "nomsquart": "Quartier 6",
+            "nomsquart": "Quartier des Isles et Pierre-de-Savoie",
             "character": "4",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
             "actionsPoint": ["points6.json"]
@@ -10361,7 +10361,7 @@
         "properties": {
             "nbActions": 4,
             "influence": 81,
-            "nomsquart": "Quartier 7",
+            "nomsquart": "Quartier des Bains et des Quatre-Marronniers",
             "character": "3",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
             "actionsPoint": ["points7.json"]
@@ -11046,7 +11046,7 @@
         "properties": {
             "nbActions": 2,
             "influence": 93,
-            "nomsquart": "Quartier 8",
+            "nomsquart": "Quartier de la Villette",
             "character": "7",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
             "actionsPoint": ["points8.json"]
@@ -14672,7 +14672,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 87,
-            "nomsquart": "Quartier 9",
+            "nomsquart": "Quartier des Floreyres",
             "character": "6",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
             "actionsPoint": ["points9.json"]
@@ -15677,7 +15677,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 82,
-            "nomsquart": "Quartier 10",
+            "nomsquart": "Quartier des Champs-Lovats - PST et Calamin",
             "character": "11",
             "actionsPolygon": ["1","2","3","6","7","8","9","10"],
             "actionsPoint": ["points10.json"]
@@ -17034,7 +17034,7 @@
         "properties": {
             "nbActions": 3,
             "influence": 90,
-            "nomsquart": "Quartier 11",
+            "nomsquart": "Quartier Cheminet sud",
             "character": "12",
             "actionsPolygon": ["1","2","3","4","6","7","8","9","10"],
             "actionsPoint": ["points11.json"]
