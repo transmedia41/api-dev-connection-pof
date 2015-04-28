@@ -120,14 +120,14 @@ module.exports = function (app, http) {
     
     socket.on('make action', function(data){
       
-      Sector.find().exec(function(err, data){
+      /*Sector.find().exec(function(err, data){
         var s = data[0]
         var ap = s.properties.actionsPolygon[0]
         
         var data = {
           id : ap,
           sector_id : s._id
-        }
+        }*/
         
         
         ActionPolygon.findById(data.id).exec(function(err, resAction){
@@ -204,7 +204,7 @@ module.exports = function (app, http) {
         })
         
         
-        })
+        //})
       
       
       })
