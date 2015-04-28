@@ -5,7 +5,7 @@
     "src": "24_01_VID_FR.mp4",
     "type": "video",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": ""
 },
 {
     "title": "Transcription de la vidéo",
@@ -14,6 +14,6 @@
     "src": "24_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "0"
 }
 ]

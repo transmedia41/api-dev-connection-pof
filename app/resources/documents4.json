@@ -5,8 +5,13 @@
     "versionUrl": "",
     "src": "04_01_IMG_NA.jpg",
     "type": "image",
+<<<<<<< Updated upstream
     "templateHtml":"http://...",		
     "xp": "15"
+=======
+    "templateHtml":"http://",		
+    "xp": "770"
+>>>>>>> Stashed changes
 },
 {
     "title": "Lettre Alberto",
@@ -15,6 +20,19 @@
     "src": "04_02_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"http://...",		
+<<<<<<< Updated upstream
     "xp": "15"
+=======
+    "xp": "770"
+},
+{
+    "title": "Lettre Alberto",
+    "thumbnail": "04_02_TXT_FR.jpg",
+    "versionUrl": "04_02_TXT_IT.jpg",
+    "src": "04_02_TXT_FR.jpg",
+    "type": "image",
+    "templateHtml":"http://...",		
+    "xp": "770"
+>>>>>>> Stashed changes
 }
 ]

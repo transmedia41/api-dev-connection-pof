@@ -5,7 +5,7 @@
     "src": "17_01_VID_FR.mp4",
     "type": "video",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "610"
 },
 {
     "title": "Transcription du témoignage",
@@ -14,6 +14,6 @@
     "src": "17_02_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"http://",		
-    "xp": "15"
+    "xp": "610"
 }
 ]
