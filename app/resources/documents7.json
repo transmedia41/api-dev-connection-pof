@@ -5,8 +5,8 @@
     "versionUrl": "",
     "src": "07_01_IMG_FR.jpg",
     "type": "photo",
-    "templateHtml":"http://",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "1050"
 },
 {
     "title": "Cartes de visite",
@@ -14,7 +14,7 @@
     "versionUrl": "",
     "src": "07_02_IMG_FR.jpg",
     "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "1050"
 }
 ]

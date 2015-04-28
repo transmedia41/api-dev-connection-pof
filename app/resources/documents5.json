@@ -5,16 +5,16 @@
     "versionUrl": "",
     "src": "05_01_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "850"
 },
 {
     "title": "Note de la résistance",
     "thumbnail": "",
     "versionUrl": "",
-    "src": "http://...",
+    "src": "",
     "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "850"
 }
 ]

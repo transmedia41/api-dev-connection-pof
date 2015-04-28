@@ -6,7 +6,7 @@ var CharacterSchema = new Schema({
     lastname: String,
     firstname: String,
     nickname: String,
-    life: String,
+    life: [String],
     personality: String,
     twitch: String,
     vice: String,

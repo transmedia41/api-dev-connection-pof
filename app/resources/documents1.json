@@ -5,8 +5,8 @@
     "versionUrl": "",
     "src": "01_02_IMG_FR.jpg",
     "type": "photo",
-    "templateHtml":"http://",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "330"
 },
 {
     "title": "Acte de naissance",
@@ -14,16 +14,7 @@
     "versionUrl": "01_01_TXT_FR.jpg",
     "src": "01_01_TXT_IT.jpg",
     "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
-},
-{
-    "title": "Acte de naissance",
-    "thumbnail": "01_01_TXT_FR.jpg",
-    "versionUrl": "01_01_TXT_IT.jpg",
-    "src": "01_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "330"
 }
 ]

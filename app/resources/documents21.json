@@ -4,8 +4,8 @@
     "versionUrl": "",
     "src": "21_02_TXT_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "100"
 },
 {
     "title": "Flyer résistance",
@@ -13,7 +13,7 @@
     "versionUrl": "",
     "src": "21_01_IMG_FR.jpg",
     "type": "image",
-    "templateHtml":"http://",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "100"
 }
 ]

@@ -5,8 +5,8 @@
     "versionUrl": "",
     "src": "03_02_IMG_NA.jpg",
     "type": "photo",
-    "templateHtml":"http://...",		
-    "xp": "15"
+    "templateHtml":"",		
+    "xp": "700"
 },
 {
     "title": "Rapport d'autopsie",
@@ -14,16 +14,7 @@
     "versionUrl": "03_01_TXT_FR.jpg",
     "src": "03_01_TXT_IT.jpg",
     "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
-},
-{
-    "title": "Rapport d'autopsie",
-    "thumbnail": "03_01_TXT_FR.jpg",
-    "versionUrl": "03_01_TXT_IT.jpg",
-    "src": "03_01_TXT_FR.jpg",
-    "type": "image",
-    "templateHtml":"http://...",		
-    "xp": "15"
+    "templateHtml":"03_01_HTML_FR.html",		
+    "xp": "700"
 }
 ]
