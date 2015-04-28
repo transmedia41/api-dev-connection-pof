@@ -1,7 +1,7 @@
 [
     {
-        "id":"1",
-        "portrait": "donpellegrino.png",
+        "id": 1,
+        "portrait": "portraits/donpellegrino.png",
         "status": "Boss",
         "lastname": "Salvatore",
         "firstname": "Paolo",
@@ -33,11 +33,12 @@
         "distinctive": "Ne porte jamais de chapeau. Trop cliché.",
         "body": "Toujours nickel dans son costume trois pièces bien taillé. Rasé de près en toute occasion. Il est grand, fin, athlétique.",
         "family": "Père adoptif de Lucas 'Chicco' et Alessandra 'Coscienza' Salvatore",
-        "weapon": "Pas d'arme, il ne se salit pas les mains."
+        "weapon": "Pas d'arme, il ne se salit pas les mains.",
+        "sectorDescription": "" 
     },
     {
-        "id":"2",
-        "portrait": "chicco.png",
+        "id": 2,
+        "portrait": "portraits/chicco.png",
         "status": "Underboss",
         "lastname": "Salvatore",
         "firstname": "Lucas",
@@ -59,8 +60,8 @@
         "weapon": "Vieux Colt 1911 gravé et sa crosse en bois précieux appartenant à son père. Il s'en sert comme d'une relique."
     },
     {
-        "id":"3",
-        "portrait": "coscienza.png",
+        "id": 3,
+        "portrait": "portraits/coscienza.png",
         "status": "Conseillère",
         "lastname": "Salvatore",
         "firstname": "Alessandra",
@@ -82,8 +83,8 @@
         "weapon": "Aucune, la connaissance c'est le pouvoir."
     },
     {
-        "id":"4",
-        "portrait": "luigigrasdoigts.png",
+        "id": 4,
+        "portrait": "portraits/luigigrasdoigts.png",
         "status": "Capo",
         "lastname": "Salvatore",
         "firstname": "Luigi",
@@ -106,8 +107,8 @@
         "weapon": "Il délègue le sale boulot à 'La Gâchette'."
     },
     {
-        "id":"5",
-        "portrait": "lede.png",
+        "id": 5,
+        "portrait": "portraits/lede.png",
         "status": "Capo",
         "lastname": "Drucci",
         "firstname": "Tino",
@@ -129,8 +130,8 @@
         "weapon": "Son dé : 1 - 'T'as du bol' / 2 - Mort par électrocution / 3 - Balle dans la tête / 4 - Pétage de rotules à coups de batte de baseball / 5 - Noyade / 6 - Il te fait croire que tu peux t'enfuir et te tire dans le dos"
     },
     {
-        "id":"6",
-        "portrait": "lenadeuxlames.png",
+        "id": 6,
+        "portrait": "portraits/lenadeuxlames.png",
         "status": "Capo",
         "lastname": "Gambino",
         "firstname": "Eleonora",
@@ -151,8 +152,8 @@
         "weapon": "Une paire de couteaux à crans d'arrêt."
     },
     {
-        "id":"7",
-        "portrait": "lagachette.png",
+        "id": 7,
+        "portrait": "portraits/lagachette.png",
         "status": "Soldat",
         "lastname": "Ferlichi",
         "firstname": "Ruccio",
@@ -174,8 +175,8 @@
         "weapon": "Un Beretta 92 (et son silencieux) ainsi qu'un fusil de sniper pour les éliminations à distance."
     },
     {
-        "id":"8",
-        "portrait": "leduc.png",
+        "id": 8,
+        "portrait": "portraits/leduc.png",
         "status": "Soldat",
         "lastname": "Delua",
         "firstname": "Pietro",
@@ -198,8 +199,8 @@
         "weapon": "Un poing américain."
     },
     {
-        "id":"9",
-        "portrait": "leparleur.png",
+        "id": 9,
+        "portrait": "portraits/leparleur.png",
         "status": "Soldat",
         "lastname": "Agnello",
         "firstname": "Emilio",
@@ -220,8 +221,8 @@
         "weapon": "Matraque télescopique électrique. Utilise plus souvent ses belles paroles."
     },
     {
-        "id":"10",
-        "portrait": "lasalamandre.png",
+        "id": 10,
+        "portrait": "portraits/lasalamandre.png",
         "status": "Associé",
         "lastname": "Pravadelli",
         "firstname": "Hector",
@@ -244,8 +245,8 @@
         "weapon": "Pas d'arme si ce n'est son autorité."
     },
     {
-        "id":"11",
-        "portrait": "ragazzina.png",
+        "id": 11,
+        "portrait": "portraits/ragazzina.png",
         "status": "Associé",
         "lastname": "Ferlichi (ex Melda)",
         "firstname": "Marina",
@@ -269,8 +270,8 @@
         "weapon": "La loi. Sinon son petit Revolver (offert par son mari) gravé d'une fleur de cerisier sur la crosse, toujours fourré dans son sac à main."
     },
     {
-        "id":"12",
-        "portrait": "lindo.png",
+        "id": 12,
+        "portrait": "portraits/lindo.png",
         "status": "Associé",
         "lastname": "Berazino",
         "firstname": "Fabio",
