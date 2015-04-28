@@ -1,17 +1,17 @@
 [{
     "title": "Extrait du journal du Don",
-    "thumbnail": "12_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/12_01_TXT_FR.jpg",
     "versionUrl": "",
-    "src": "12_01_TXT_FR.jpg",
+    "src": "documents/12_01_TXT_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "1330"
 },
 {
     "title": "Photo du Don sur la tombe",
-    "thumbnail": "12_02_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/12_02_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "12_02_IMG_FR.jpg",
+    "src": "documents/12_02_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "1330"

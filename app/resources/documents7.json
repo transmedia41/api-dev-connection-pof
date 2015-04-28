@@ -1,18 +1,18 @@
 [
 {
     "title": "Photo fourgonette avec noms",
-    "thumbnail": "07_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/07_01_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "07_01_IMG_FR.jpg",
+    "src": "documents/07_01_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "1050"
 },
 {
     "title": "Cartes de visite",
-    "thumbnail": "07_02_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/07_02_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "07_02_IMG_FR.jpg",
+    "src": "documents/07_02_IMG_FR.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "1050"

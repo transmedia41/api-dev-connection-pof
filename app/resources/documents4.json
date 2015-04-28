@@ -1,18 +1,18 @@
 [
 {
     "title": "Billet de train sur carte",
-    "thumbnail": "04_01_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/04_01_IMG_NA.jpg",
     "versionUrl": "",
-    "src": "04_01_IMG_NA.jpg",
+    "src": "documents/04_01_IMG_NA.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "770"
 },
 {
     "title": "Lettre Alberto",
-    "thumbnail": "04_02_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/04_02_TXT_IT.jpg",
     "versionUrl": "04_02_TXT_FR.jpg",
-    "src": "04_02_TXT_IT.jpg",
+    "src": "documents/04_02_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "770"

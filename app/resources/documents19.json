@@ -1,17 +1,17 @@
 [{
     "title": "Affiche publicitaire",
-    "thumbnail": "19_02_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/19_02_IMG_NA.jpg",
     "versionUrl": "",
-    "src": "19_02_IMG_NA.jpg",
+    "src": "documents/19_02_IMG_NA.jpg",
     "type": "image",
     "templateHtml":"",		
     "xp": "400"
 },
 {
     "title": "Photo camion livraison",
-    "thumbnail": "19_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/19_01_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "19_01_IMG_FR.jpg",
+    "src": "documents/19_01_IMG_FR.jpg",
     "type": "photo",
     "templateHtml":"",		
     "xp": "400"

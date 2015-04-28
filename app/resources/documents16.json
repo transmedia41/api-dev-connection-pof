@@ -1,10 +1,10 @@
 [{
     "title": "Photo d'un mafieux à l'oeuvre",
-    "thumbnail": "16_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/16_01_IMG_FR.jpg",
     "versionUrl": "",
-    "src": "16_01_IMG_FR.jpg",
+    "src": "documents/16_01_IMG_FR.jpg",
     "type": "photo",
-    "templateHtml":"16_01_HTML_FR.html",		
+    "templateHtml":"sources/16_01_HTML_FR.html",		
     "xp": "550"
 }
 ]
