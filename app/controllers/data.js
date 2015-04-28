@@ -9,6 +9,7 @@ var _ = require('underscore'),
         Event = mongoose.model('Event'),
         Rank = mongoose.model('Rank'),
         Document = mongoose.model('Document'),
+        User = mongoose.model('User'),
         fs = require('fs')
 
 
@@ -204,9 +205,10 @@ function populateRanks() {
 
 
 function populateDatabase() {
-    populateSectors();
-    populateEvents();
+    populateSectors()
+    populateEvents()
     populateRanks()
+    User.find().remove().exec()
 }
 
 
