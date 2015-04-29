@@ -129,6 +129,14 @@ module.exports = function (app, http) {
       })
     })
     
+    socket.on('has new document', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) { 
+          GameCore.hasNewDocuments(res, socket, function(playerSaved){})
+        } else { socket.emit('has new document 404') }
+      })
+    })
+
     socket.on('document vu', function(data) {
       User.findById(socket.decoded_token.id).exec(function(err, res){
           _.each(res.documents, function(v) {
@@ -174,10 +182,10 @@ module.exports = function (app, http) {
             characters.push(char.character_id)
           }
         }
-        if (counter > 11) {
+        if (res.xp >= 1550) {
           characters = _.sortBy(characters, 'char_id')
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
-            characters[11] = res
+            characters[10] = res
             socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {

@@ -73,7 +73,7 @@
 		"level": 11,
 		"rankName": "General",
 		"xp": 1550,
-		"xpMax": 1800,
+		"xpMax": 9999,
                 "msg": "Félicitations Colonel ! Ton nouveau rang de Général fais de toi l'un des membres les plus importants de notre organisation."
 	}
 ]
