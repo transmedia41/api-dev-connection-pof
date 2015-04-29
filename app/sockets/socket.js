@@ -111,17 +111,6 @@ module.exports = function (app, http) {
       })
     })
     
-    socket.on('character vu', function(data) {
-      User.findById(socket.decoded_token.id).exec(function(err, res){
-          _.each(res.characters, function(v) {
-            if (v.character_id.toString() == data) v.yetVisited = true
-          })
-          res.save()
-          if (!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
-          else socket.emit('character count 404')
-      })
-    })
-    
     socket.on('get document count', function(){
       User.findById(socket.decoded_token.id).exec(function(err, res){
         if(!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
@@ -136,7 +125,18 @@ module.exports = function (app, http) {
         } else { socket.emit('has new document 404') }
       })
     })
-
+    
+    socket.on('character vu', function(data) {
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+          _.each(res.characters, function(v) {
+            if (v.character_id.toString() == data) v.yetVisited = true
+          })
+          res.save()
+          if (!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
+          else socket.emit('character count 404')
+      })
+    })
+    
     socket.on('document vu', function(data) {
       User.findById(socket.decoded_token.id).exec(function(err, res){
           _.each(res.documents, function(v) {
@@ -147,12 +147,12 @@ module.exports = function (app, http) {
           else socket.emit('document count 404')
       })
     })
-    
+
     socket.on('get my characters', function(){
       User.findById(socket.decoded_token.id).populate('characters.character_id').exec(function(err, res){
         var characters = []
         var counter = 0
-        for(var i = 1; i <= 12; i++) {
+        for(var i = 2; i <= 12; i++) {
           if (!_.find(res.characters, function(char){ return char.character_id.char_id == i })) {
             characters.push({
               char_id: i,
@@ -182,10 +182,14 @@ module.exports = function (app, http) {
             characters.push(char.character_id)
           }
         }
+        console.log(res.xp)
         if (res.xp >= 1550) {
-          characters = _.sortBy(characters, 'char_id')
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
-            characters[10] = res
+            var tab = []
+            res.available = true
+            tab[0] = res
+            characters = _.union(tab, characters)
+            characters = _.sortBy(characters, 'char_id')
             socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {
@@ -344,4 +348,3 @@ module.exports = function (app, http) {
   }
   
 }
-
