@@ -155,10 +155,10 @@ module.exports = function (app, http) {
           characters = _.sortBy(characters, 'char_id')
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
             characters[11] = res
-            socket.emit('my character responce', Converter.characterArray(characters))
+            socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {
-          socket.emit('my character responce', Converter.characterArray(characters))
+          socket.emit('my characters responce', Converter.characterArray(characters))
         }
       })
     })
