@@ -18,6 +18,7 @@ var _ = require('underscore'),
     Event = mongoose.model('Event'),
     Document = mongoose.model('Document'),
     Rank = mongoose.model('Rank'),
+    Character = mongoose.model('Character'),
     Converter = require('./converter')
 
 
@@ -199,6 +200,15 @@ module.exports = {
         }
         player.characters.push(newCharacter)
         socket.emit('new character')
+      } else if (player.xp >= 1550) {
+        Character.findOne().where('char_id').equals(1).exec(function(err, res){
+          var newCharacter = {
+            character_id: res._id,
+            yetVisited: false
+          }
+          player.characters.push(newCharacter)
+          socket.emit('new character')
+        })
       }
     }
     player.save(function(err, playerSaved) {
