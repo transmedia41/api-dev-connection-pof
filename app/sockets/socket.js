@@ -111,13 +111,6 @@ module.exports = function (app, http) {
       })
     })
     
-    socket.on('get document count', function(){
-      User.findById(socket.decoded_token.id).exec(function(err, res){
-        if(!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
-        else socket.emit('document count 404')
-      })
-    })
-    
     socket.on('character vu', function(data) {
       User.findById(socket.decoded_token.id).exec(function(err, res){
           _.each(res.characters, function(v) {
@@ -126,6 +119,24 @@ module.exports = function (app, http) {
           res.save()
           if (!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
           else socket.emit('character count 404')
+      })
+    })
+    
+    socket.on('get document count', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
+        else socket.emit('document count 404')
+      })
+    })
+    
+    socket.on('document vu', function(data) {
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+          _.each(res.documents, function(v) {
+            if (v.document_id.toString() == data) v.yetVisited = true
+          })
+          res.save()
+          if (!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
+          else socket.emit('document count 404')
       })
     })
     
