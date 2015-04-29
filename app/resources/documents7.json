@@ -1,7 +1,7 @@
 [
 {
-    "title": "Photo fourgonette avec noms",
-    "thumbnail": "documents/thumbnails/07_01_IMG_FR.png",
+    "title": "Photo de la nouvelle fourgonette",
+    "thumbnail": "documents/thumbnails/07_01_IMG_FR.jpg",
     "versionUrl": "",
     "src": "documents/07_01_IMG_FR.jpg",
     "type": "photo",
@@ -9,8 +9,8 @@
     "xp": "1050"
 },
 {
-    "title": "Cartes de visite",
-    "thumbnail": "documents/thumbnails/07_02_IMG_FR.png",
+    "title": "Nouvelles cartes de visite",
+    "thumbnail": "documents/thumbnails/07_02_IMG_FR.jpg",
     "versionUrl": "",
     "src": "documents/07_02_IMG_FR.jpg",
     "type": "image",

@@ -1,6 +1,6 @@
 [{
-    "title": "Affiche publicitaire",
-    "thumbnail": "documents/thumbnails/19_02_IMG_NA.png",
+    "title": "Photo d'une affiche Hydromerta a Yverdon",
+    "thumbnail": "documents/thumbnails/19_02_IMG_NA.jpg",
     "versionUrl": "",
     "src": "documents/19_02_IMG_NA.jpg",
     "type": "image",
@@ -8,8 +8,8 @@
     "xp": "400"
 },
 {
-    "title": "Photo camion livraison",
-    "thumbnail": "documents/thumbnails/19_01_IMG_FR.png",
+    "title": "Photo d'un camion de livraison Hydromerta",
+    "thumbnail": "documents/thumbnails/19_01_IMG_FR.jpg",
     "versionUrl": "",
     "src": "documents/19_01_IMG_FR.jpg",
     "type": "photo",

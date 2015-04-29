@@ -1,7 +1,7 @@
 [
 {
-    "title": "Mugshot Daniele",
-    "thumbnail": "documents/thumbnails/02_01_IMG_NA.png",
+    "title": "Photo de Daniele au poste",
+    "thumbnail": "documents/thumbnails/02_01_IMG_NA.jpg",
     "versionUrl": "",
     "src": "documents/02_01_IMG_NA.jpg",
     "type": "photo",
@@ -10,7 +10,7 @@
 },
 {
     "title": "Rapport de police",
-    "thumbnail": "documents/thumbnails/02_02_TXT_IT.png",
+    "thumbnail": "documents/thumbnails/02_02_TXT_IT.jpg",
     "versionUrl": "02_02_TXT_FR.jpg",
     "src": "documents/02_02_TXT_IT.jpg",
     "type": "image",

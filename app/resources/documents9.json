@@ -1,16 +1,7 @@
 [
 {
-    "title": "Photo scandaleuse",
-    "thumbnail": "documents/thumbnails/09_01_TXT_FR.png",
-    "versionUrl": "",
-    "src": "documents/09_01_TXT_FR.jpg",
-    "type": "photo",
-    "templateHtml":"",		
-    "xp": "1130"
-},
-{
-    "title": "Article de journal",
-    "thumbnail": "documents/thumbnails/09_01_TXT_FR.png",
+    "title": "Article sur la soiree d'inauguration",
+    "thumbnail": "documents/thumbnails/09_01_TXT_FR.jpg",
     "versionUrl": "",
     "src": "documents/09_01_TXT_FR.jpg",
     "type": "image",

@@ -1,6 +1,6 @@
 [{
     "title": "Temoignage anonyme",
-    "thumbnail": "documents/thumbnails/17_01_VID_FR.png",
+    "thumbnail": "documents/thumbnails/17_01_VID_FR.jpg",
     "versionUrl": "",
     "src": "https://vimeo.com/126252434",
     "type": "video",
@@ -8,8 +8,8 @@
     "xp": "610"
 },
 {
-    "title": "Transcription du temoignage",
-    "thumbnail": "documents/thumbnails/17_02_TXT_FR.png",
+    "title": "Transcription du temoignage anonyme",
+    "thumbnail": "documents/thumbnails/17_02_TXT_FR.jpg",
     "versionUrl": "",
     "src": "documents/17_02_TXT_FR.jpg",
     "type": "image",

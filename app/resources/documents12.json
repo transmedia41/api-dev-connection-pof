@@ -1,6 +1,6 @@
 [{
-    "title": "Extrait du journal du Don",
-    "thumbnail": "documents/thumbnails/12_01_TXT_FR.png",
+    "title": "Extrait du journal de Don Pellegrino",
+    "thumbnail": "documents/thumbnails/12_01_TXT_FR.jpg",
     "versionUrl": "",
     "src": "documents/12_01_TXT_FR.jpg",
     "type": "image",
@@ -8,8 +8,8 @@
     "xp": "1330"
 },
 {
-    "title": "Photo du Don sur la tombe",
-    "thumbnail": "documents/thumbnails/12_02_IMG_FR.png",
+    "title": "Photo de Paolo Salvatore au cimetiere",
+    "thumbnail": "documents/thumbnails/12_02_IMG_FR.jpg",
     "versionUrl": "",
     "src": "documents/12_02_IMG_FR.jpg",
     "type": "photo",

@@ -1,6 +1,6 @@
 [{
-    "title": "Video chef de la résistance",
-    "thumbnail": "documents/thumbnails/24_01_VID_FR.png",
+    "title": "Video d'introduction du chef de la resistance",
+    "thumbnail": "documents/thumbnails/24_01_VID_FR.jpg",
     "versionUrl": "",
     "src": "https://vimeo.com/126252432",
     "type": "video",
@@ -8,8 +8,8 @@
     "xp": "0"
 },
 {
-    "title": "Transcription de la video",
-    "thumbnail": "documents/thumbnails/24_01_TXT_FR.png",
+    "title": "Transcription de la video d'introduction",
+    "thumbnail": "documents/thumbnails/24_01_TXT_FR.jpg",
     "versionUrl": "",
     "src": "documents/24_01_TXT_FR.jpg",
     "type": "image",
