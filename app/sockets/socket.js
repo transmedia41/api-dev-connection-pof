@@ -143,11 +143,14 @@ module.exports = function (app, http) {
               body: 'Inconnu',
               family: 'Inconnu',
               weapon: 'Inconnu',
-              portrait: 'portraits/unknown.png'
+              portrait: 'portraits/unknown.png',
+              sectorDescription: 'Inconnu',
+              available: false
             })
           } else {
             counter++
             var char = _.find(res.characters, function(char){ return char.character_id.char_id == i })
+            char.character_id.available = true
             characters.push(char.character_id)
           }
         }

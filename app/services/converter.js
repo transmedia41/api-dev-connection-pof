@@ -129,7 +129,8 @@ module.exports = {
         family: character.family,
         weapon: character.weapon,
         portrait: character.portrait,
-        sectorDescription: character.sectorDescription
+        sectorDescription: character.sectorDescription,
+        available: character.available
       }
     } else {
       return null
