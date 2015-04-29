@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Denoncer mafieu",
+        "name": "Denoncer mafieux",
         "type": "denoncer",
         "description": "Tente de dénoncer au public le mafieux responsable du secteur. Nous sommes quasi sûr de son identité et nous désirons la révéler au reste de la population. A force peut-être qu'il tombera et que le secteur ne sera plus sous l'influence de la mafia.",
         "icon": "&#xe60e;",

@@ -1,6 +1,6 @@
 [{
     "title": "Carte de la ville",
-    "thumbnail": "documents/thumbnails/15_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/15_01_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/15_01_IMG_FR.jpg",
     "type": "image",
@@ -9,7 +9,7 @@
 },
 {
     "title": "Extrait de journal du Don",
-    "thumbnail": "documents/thumbnails/15_02_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/15_02_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/15_02_TXT_FR.jpg",
     "type": "image",

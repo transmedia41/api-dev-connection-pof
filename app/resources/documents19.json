@@ -1,6 +1,6 @@
 [{
     "title": "Affiche publicitaire",
-    "thumbnail": "documents/thumbnails/19_02_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/19_02_IMG_NA.png",
     "versionUrl": "",
     "src": "documents/19_02_IMG_NA.jpg",
     "type": "image",
@@ -9,7 +9,7 @@
 },
 {
     "title": "Photo camion livraison",
-    "thumbnail": "documents/thumbnails/19_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/19_01_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/19_01_IMG_FR.jpg",
     "type": "photo",

@@ -1,7 +1,7 @@
 [
 {
     "title": "Photo scandaleuse",
-    "thumbnail": "documents/thumbnails/09_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/09_01_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/09_01_TXT_FR.jpg",
     "type": "photo",
@@ -10,7 +10,7 @@
 },
 {
     "title": "Article de journal",
-    "thumbnail": "documents/thumbnails/09_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/09_01_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/09_01_TXT_FR.jpg",
     "type": "image",

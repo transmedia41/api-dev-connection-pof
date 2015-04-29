@@ -1,6 +1,6 @@
 [{
     "title": "Article de presse sur l'apparition de 'vandales'",
-    "thumbnail": "documents/thumbnails/21_02_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/21_02_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/21_02_TXT_FR.jpg",
     "type": "image",
@@ -9,7 +9,7 @@
 },
 {
     "title": "Flyer resistance",
-    "thumbnail": "documents/thumbnails/21_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/21_01_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/21_01_IMG_FR.jpg",
     "type": "image",
