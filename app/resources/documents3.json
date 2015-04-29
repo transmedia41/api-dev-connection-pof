@@ -11,7 +11,7 @@
 {
     "title": "Rapport de medecin legiste",
     "thumbnail": "documents/thumbnails/03_01_TXT_IT.png",
-    "versionUrl": "03_01_TXT_FR.jpg",
+    "versionUrl": "documents/03_01_TXT_FR.jpg",
     "src": "documents/03_01_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"sources/03_01_HTML_FR.html",		
