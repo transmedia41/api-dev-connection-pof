@@ -63,7 +63,7 @@
     {
         "id": 3,
         "portrait": "portraits/coscienza.png",
-        "status": "Conseillère",
+        "status": "Conseillere",
         "lastname": "Salvatore",
         "firstname": "Alessandra",
         "nickname": "Coscienza",
@@ -231,7 +231,7 @@
     {
         "id": 10,
         "portrait": "portraits/lasalamandre.png",
-        "status": "Associé",
+        "status": "Associe",
         "lastname": "Pravadelli",
         "firstname": "Hector",
         "nickname": "La Salamandre",
@@ -256,7 +256,7 @@
     {
         "id": 11,
         "portrait": "portraits/ragazzina.png",
-        "status": "Associé",
+        "status": "Associe",
         "lastname": "Ferlichi (ex Melda)",
         "firstname": "Marina",
         "nickname": "Ragazzina",
@@ -282,7 +282,7 @@
     {
         "id": 12,
         "portrait": "portraits/lindo.png",
-        "status": "Associé",
+        "status": "Associe",
         "lastname": "Berazino",
         "firstname": "Fabio",
         "nickname": "Lindo",
