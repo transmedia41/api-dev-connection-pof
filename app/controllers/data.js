@@ -38,9 +38,69 @@ function populateSectors() {
     Character.find().remove().exec();
     ActionPoint.find().remove().exec();
     ActionPolygon.find().remove().exec();
+
+    readJSONFile('app/resources/characters.json', function (err, characters) {
+        for (var i = 0; i < _.size(characters); i++) {
+            var c = new Character();
+
+            var life = [];
+            c.char_id = characters[i].id;
+            c.status = characters[i].status;
+            c.lastname = characters[i].lastname;
+            c.firstname = characters[i].firstname;
+            c.nickname = characters[i].nickname;
+            for (var j = 0; j < characters[i].life.length; j++) {
+                c.life[j] = characters[i].life[j];
+            }
+
+            c.personality = characters[i].personality;
+            c.twitch = characters[i].twitch;
+            c.vice = characters[i].vice;
+            c.drink = characters[i].drink;
+            c.strength = characters[i].strength;
+            c.weakness = characters[i].weakness;
+            c.distinctive = characters[i].distinctive;
+            c.body = characters[i].body;
+            c.family = characters[i].family;
+            c.weapon = characters[i].weapon;
+            c.portrait = characters[i].portrait;
+            c.sectorDescription = characters[i].sectorDescription;
+            c.save();
+            populateSector(characters[i], c);
+        }
+
+    });
+
+
+}
+
+function populateSector(character, c) {
+
+
+    readJSONFile('app/resources/sectors.json', function (err, sectors) {
+
+        for (var i = 0; i < _.size(sectors); i++) {
+
+            if (sectors[i].properties.character == character.id) {
+
+                var s = new Sector()
+                s.geometry = {}
+                s.geometry.atype = sectors[i].geometry.type
+                s.geometry.coordinates = sectors[i].geometry.coordinates
+
+                s.type = sectors[i].type
+                populateActionSectors(sectors[i], s, c)
+
+            }
+        }
+    });
+
+}
+
+function populateActionSectors(sector, s, c) {
     readJSONFile('app/resources/actionPolygon.json', function (err, polygons) {
         var actionPolygon = [];
-        for (var k = 0; k < _.size(polygons); k++) {
+        for (var k = 0; k < sector.properties.actionsPolygon.length; k++) {
             var apoly = new ActionPolygon();
             apoly.type = polygons[k].type;
             apoly.name = polygons[k].name;
@@ -53,65 +113,14 @@ function populateSectors() {
             apoly.save();
             actionPolygon.push(apoly);
         }
-        readJSONFile('app/resources/characters.json', function (err, characters) {
-            for (var i = 0; i < _.size(characters); i++) {
-                var c = new Character();
- 
-                var life = [];
-                c.char_id = characters[i].id;
-                c.status = characters[i].status;
-                c.lastname = characters[i].lastname;
-                c.firstname = characters[i].firstname;
-                c.nickname = characters[i].nickname;
-                console.log(characters[i].life.length)
-                for (var j = 0; j < characters[i].life.length; j++) {
-                    c.life[j] = characters[i].life[j];
-                }
 
-                c.personality = characters[i].personality;
-                c.twitch = characters[i].twitch;
-                c.vice = characters[i].vice;
-                c.drink = characters[i].drink;
-                c.strength = characters[i].strength;
-                c.weakness = characters[i].weakness;
-                c.distinctive = characters[i].distinctive;
-                c.body = characters[i].body;
-                c.family = characters[i].family;
-                c.weapon = characters[i].weapon;
-                c.portrait = characters[i].portrait;
-                c.sectorDescription = characters[i].sectorDescription;
-                c.save();
-                //console.log(characters[i])
-                populateSector(characters[i], c, actionPolygon);
-            }
+        populateActionPoints(sector, s, c, actionPolygon)
 
-        });
     });
-
 }
 
-function populateSector(character, c, actionPolygon) {
-    
-  
-    readJSONFile('app/resources/sectors.json', function (err, sectors) {
-        
-        for (var i = 0; i < _.size(sectors); i++) {
-            
-            if (sectors[i].properties.character == character.id) {
-                
-                var s = new Sector()
-                s.geometry = {}
-                s.geometry.atype = sectors[i].geometry.type
-                s.geometry.coordinates = sectors[i].geometry.coordinates
-                
-                s.type = sectors[i].type
-                populateActionPoints(sectors[i], s, c, actionPolygon)
 
-            }
-        }
-    });
 
-}
 
 function populateActionPoints(sector, s, c, actionPolygon) {
     readJSONFile('app/resources/' + sector.properties.actionsPoint[0], function (err, points) {
@@ -140,7 +149,6 @@ function populateActionPoints(sector, s, c, actionPolygon) {
         s.properties.nbActions = sector.properties.nbActions;
         s.properties.influence = sector.properties.influence;
         s.properties.nomsquart = sector.properties.nomsquart;
-        //console.log(s)
         s.save();
     });
 }
@@ -149,9 +157,9 @@ function populateEvents() {
     Document.find().remove().exec();
     Event.find().remove().exec();
     readJSONFile('app/resources/events.json', function (err, events) {
-    
+
         for (var i = 0; i < events.length; i++) {
-            populateDocuments(events[i]);     
+            populateDocuments(events[i]);
         }
 
     });
@@ -159,7 +167,7 @@ function populateEvents() {
 }
 
 function populateDocuments(event) {
-    readJSONFile('app/resources/'+event.documents, function (err, documents) {
+    readJSONFile('app/resources/' + event.documents, function (err, documents) {
         var documentList = [];
         for (var i = 0; i < documents.length; i++) {
             var document = new Document();
@@ -180,12 +188,12 @@ function populateDocuments(event) {
         e.xp = event.xp;
         e.documents = documentList;
         e.save();
-       
-    
+
+
 
 
     });
-    
+
 }
 
 
@@ -193,14 +201,14 @@ function populateRanks() {
     Rank.find().remove().exec()
     readJSONFile('app/resources/ranks.json', function (err, ranks) {
         for (var i = 0; i < ranks.length; i++) {
-          
+
             var rank = new Rank()
             rank.level = ranks[i].level
             rank.rankName = ranks[i].rankName
             rank.xp = ranks[i].xp
             rank.xpMax = ranks[i].xpMax
             rank.save()
-            
+
         }
     })
 }

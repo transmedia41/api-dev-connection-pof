@@ -2,168 +2,168 @@
   {
       "order":1,
       "date":"06/01/2042",
-      "description":"Naissance de Paolo Salvatore",
+      "description":"Commencons notre enquête sur Paolo Salvatore par le début : sa naissance.",
       "xp":330,
       "documents":"documents1.json"
   },
   {
       "order":2,
       "date":"15/10/2049",
-      "description":"Emprisonnement de Daniele Salvatore",
+      "description":"En creusant le passé de Paolo, nous avons découvert ce qui est arrivé à son père, Daniele.",
       "xp":460,
       "documents":"documents2.json"
   },
   {
       "order":3,
       "date":"06/01/2052",
-      "description":"Mort de Julia Salvatore",
+      "description":"Nous avonc continué à creuser le passé de Paolo. Ce gars n'a pas eu de chance. Sa mère est morte quand il était très jeune...",
       "xp":700,
       "documents":"documents3.json"
   },
   {
       "order":4,
       "date":"08/03/2052",
-      "description":"Départ de Paolo Salvatore à Yverdon",
+      "description":"Après la perte de ses parents, Paolo a visiblement quitté sa ville d'origine pour venir à Yverdon.",
       "xp":770,
       "documents":"documents4.json"
   },
   {
       "order":5,
       "date":"17/02/2058",
-      "description":"Paolo Salvatore travaille dans la plomberie de son oncle",
+      "description":"Paolo a travaillé dans la plomberie de son oncle Alberto. Tout n'y était pas très légal...",
       "xp":850,
       "documents":"documents5.json"
   },
   {
       "order":6,
       "date":"23/11/2061",
-      "description":"Arrestation d'Alberto Salvatore",
+      "description":"L'oncle de Paolo, Alberto, s'est fait prendre à cause de ses magouilles.",
       "xp":940,
       "documents":"documents6.json"
   },
   {
       "order":7,
       "date":"01/07/2064",
-      "description":"Reprise de la plomberie Salvatore par Paolo et Antonio",
+      "description":"Après l'arrestation de son oncle, Paolo a repris la plomberie avec son cousin Antonio.",
       "xp":1050,
       "documents":"documents7.json"
   },
   {
       "order":8,
       "date":"10/10/2067",
-      "description":"Paolo et Antonio Salvatore reprennent le trafic d'héroïne",
+      "description":"La vidéo n'est pas d'excellente qualité, mais nous avons l'impression que l'un des deux est Paolo Salvatore. Il n'est décidément pas aussi blanc qu'il veut nous le faire croire.",
       "xp":940,
       "documents":"documents8.json"
   },
   {
       "order":9,
       "date":"01/06/2069",
-      "description":"Ouverture du Due Puledri",
+      "description":"Antonio et Paolo ont ouvert le Due Puledri ensemble.",
       "xp":1130,
       "documents":"documents9.json"
   },
   {
       "order":10,
       "date":"05/09/2074",
-      "description":"Mariage de Paolo et Olivia",
+      "description":"L'invitation au mariage de Paolo Salvatore avec sa femme Olivia.",
       "xp":770,
       "documents":"documents10.json"
   },
   {
       "order":11,
       "date":"04/07/2074 - 07/03/2076",
-      "description":"Naissance de Lucas et Alessandra Salvatore",
+      "description":"Notre source anonyme nous a recontactés. Cette fois, elle nous a donné les faire-parts de naissance de Lucas et Alessandra Salvatore.",
       "xp":210,
       "documents":"documents11.json"
   },
   {
       "order":24,
       "date":"01/01/2107",
-      "description":"Introduction dans la résistance",
+      "description":"Le discours d'introduction de notre Chef.",
       "xp":0,
       "documents":"documents24.json"
   },
   {
       "order":23,
       "date":"2099",
-      "description":"Campagne de propagande en réponse aux actions de la résistance",
+      "description":"Le PDG du groupe Salvatore répond à nos actions.",
       "xp":100,
       "documents":"documents23.json"
   },
   {
       "order":22,
       "date":"13/05/2091",
-      "description":"Plan d'extension du contrôle des installations",
+      "description":"Une source anonyme nous a fourni cette conversation entre Don Pellegrino et un certain Le Dé, qu'elle aurait capté à leur insu.",
       "xp":210,
       "documents":"documents22.json"
   },
   {
       "order":21,
       "date":"2087",
-      "description":"Des voix s'élèvent contre le monopole d'Hydromerta",
+      "description":"Pour information, voici les débuts de notre organisation.",
       "xp":100,
       "documents":"documents21.json"
   },
   {
       "order":20,
       "date":"2085",
-      "description":"Plan d'expansion au canton de Vaud",
+      "description":"Notre source anonyme nous a encore aidé. Elle a apparemment des  liens très forts avec l'organisation mafieuse puisque ce document est une carte stratégique de leurs plans à long terme.",
       "xp":460,
       "documents":"documents20.json"
   },
   {
       "order":19,
       "date":"05/08/2082",
-      "description":"Lancement d'Hydromerta",
+      "description":"Quelques photos d'archive sur la lancement de l'eau Hydromerta.",
       "xp":400,
       "documents":"documents19.json"
   },
   {
       "order":18,
       "date":"29/10/2080",
-      "description":"ccords commerciaux pour le lancement d'Hydromerta",
+      "description":"Nous avons retrouvé cet extrait de journal. Il parle des premiers accords commerciaux effectués par Paolo Salvatore avant le lancement de son eau Hydromerta.",
       "xp":330,
       "documents":"documents18.json"
   },
   {
       "order":17,
       "date":"2079",
-      "description":"Chantage auprès des citoyens",
+      "description":"Nous avons un témoin ! Il a accepté de nous parler du chantage dont il a été victime. Peut-être peut-on relier ça à la photo du sabotage ?",
       "xp":610,
       "documents":"documents17.json"
   },
   {
       "order":16,
       "date":"02/11/2079",
-      "description":"Détournement des canalisations",
+      "description":"Un de nos détective sur le terrain nous a envoyé cette photo. On dirait les premières action de la mafia.",
       "xp":550,
       "documents":"documents16.json"
   },
   {
       "order":15,
       "date":"01/07/2078",
-      "description":"Recherche d'un nouveau business",
+      "description":"Encore un extrait du journal de Don Pellegrino. C'est enfin la clé de toute l'histoire !",
       "xp":1550,
       "documents":"documents15.json"
   },
   {
       "order":14,
       "date":"13/05/2078",
-      "description":"Adoption de Lucas et Alessandra",
+      "description":"Notre indic' nous a envoyé ça ! Paolo a adopté ses enfants ?",
       "xp":1200,
       "documents":"documents14.json"
   },
   {
       "order":13,
       "date":"03/10/2077",
-      "description":"Internement de Mathilda Salvatore",
+      "description":"Notre source au sein de la mafia nous a fourni ce document. Mais qui est Mathilda Salvatore ?",
       "xp":1130,
       "documents":"documents13.json"
   },
   {
       "order":12,
       "date":"25/08/2077",
-      "description":"Mort d'Antonio suite à une overdose d'héroïne",
+      "description":"Nous avons mis la main sur un extrait du journal de Don Pellegrino grâce à notre source. Les informations qui s'y trouvent sont... perturbantes. Antonio est aussi lié au Don ?",
       "xp":1330,
       "documents":"documents12.json"
   }

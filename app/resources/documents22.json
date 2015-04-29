@@ -1,6 +1,6 @@
 [{
-    "title": "Transcription de la conversation",
-    "thumbnail": "documents/thumbnails/22_02_TXT_FR.jpg",
+    "title": "Transcription de la conversation telephonique",
+    "thumbnail": "documents/thumbnails/22_02_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/22_02_TXT_FR.jpg",
     "type": "image",
@@ -8,8 +8,8 @@
     "xp": "210"
 },
 {
-    "title": "Conversation entre Don et Le Dé",
-    "thumbnail": "documents/thumbnails/22_01_AUD_FR.jpg",
+    "title": "Conversation telephonique entre Don Pellegrino et Le De",
+    "thumbnail": "documents/thumbnails/22_01_AUD_FR.png",
     "versionUrl": "",
     "src": "documents/22_01_AUD_FR.mp3",
     "type": "audio",
