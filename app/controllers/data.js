@@ -63,7 +63,6 @@ function populateSectors() {
                 c.lastname = characters[i].lastname;
                 c.firstname = characters[i].firstname;
                 c.nickname = characters[i].nickname;
-                console.log(characters[i].life.length)
                 for (var j = 0; j < characters[i].life.length; j++) {
                     c.life[j] = characters[i].life[j];
                 }
@@ -81,7 +80,6 @@ function populateSectors() {
                 c.portrait = characters[i].portrait;
                 c.sectorDescription = characters[i].sectorDescription;
                 c.save();
-                //console.log(characters[i])
                 populateSector(characters[i], c, actionPolygon);
             }
 
