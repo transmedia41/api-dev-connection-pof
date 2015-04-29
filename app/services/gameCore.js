@@ -17,7 +17,8 @@ var _ = require('underscore'),
     Sector = mongoose.model('Sector'),
     Event = mongoose.model('Event'),
     Document = mongoose.model('Document'),
-    Rank = mongoose.model('Rank')
+    Rank = mongoose.model('Rank'),
+    Converter = require('./converter')
 
 
 
@@ -220,7 +221,30 @@ module.exports = {
     action.save(function(err, actionSaved) {
       callback(actionSaved)
     })
-  }
+  },
   
+  
+  /**
+   * Met à jour l'influence des secteurs
+   * Cette fonction est appelée par un set interval
+   *
+   */
+  updateSectorsInfluence: function() {
+    Sector.find()
+      .exec(function(err, res){
+        _.each(res, function(sector, key){
+          var newInfluence = Math.min(sector.properties.influence+1, 100)
+          sector.properties.influence = newInfluence
+          sector.save()
+        })
+      Sector.find()
+        .populate('properties.character')
+        .populate('properties.actionsPoint')
+        .populate(' properties.actionsPolygon').exec(function(err, res){
+          io.sockets.emit('update sectors influence', Converter.sector(res))
+          console.log('update sectors')
+      })
+    })
+  }
   
 }
