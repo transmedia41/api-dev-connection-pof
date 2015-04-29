@@ -174,7 +174,6 @@ module.exports = {
    * Peut emmetre 'new character'
    */
   updateNbActionToPerformedInSector: function(action, sector, player, socket, callback) {
-    console.log(socket)
     var test = _.find(player.sectors, function(sectorPlayer){
       return sectorPlayer.sector_id.toString() == sector._id.toString()
     })
@@ -242,7 +241,6 @@ module.exports = {
         .populate('properties.actionsPoint')
         .populate(' properties.actionsPolygon').exec(function(err, res){
           io.sockets.emit('update sectors influence', Converter.sector(res))
-          console.log('update sectors')
       })
     })
   },
