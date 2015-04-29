@@ -171,10 +171,10 @@ module.exports = function (app, http) {
             characters.push(char.character_id)
           }
         }
-        if (counter > 11) {
+        if (res.xp >= 1550) {
           characters = _.sortBy(characters, 'char_id')
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
-            characters[11] = res
+            characters[10] = res
             socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {
