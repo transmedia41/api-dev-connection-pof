@@ -1,6 +1,6 @@
 [{
     "title": "Extrait du journal de Don Pellegrino",
-    "thumbnail": "documents/thumbnails/12_01_TXT_FR.jpg",
+    "thumbnail": "documents/thumbnails/12_01_TXT_FR.png",
     "versionUrl": "",
     "src": "documents/12_01_TXT_FR.jpg",
     "type": "image",
@@ -9,7 +9,7 @@
 },
 {
     "title": "Photo de Paolo Salvatore au cimetiere",
-    "thumbnail": "documents/thumbnails/12_02_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/12_02_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/12_02_IMG_FR.jpg",
     "type": "photo",
