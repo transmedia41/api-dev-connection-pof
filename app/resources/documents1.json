@@ -11,7 +11,7 @@
 {
     "title": "Acte de naissance",
     "thumbnail": "documents/thumbnails/01_01_TXT_IT.png",
-    "versionUrl": "01_01_TXT_FR.jpg",
+    "versionUrl": "documents/01_01_TXT_FR.jpg",
     "src": "documents/01_01_TXT_IT.jpg",
     "type": "image",
     "templateHtml":"",		

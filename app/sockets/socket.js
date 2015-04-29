@@ -126,7 +126,16 @@ module.exports = function (app, http) {
       })
     })
     
-    
+    socket.on('character vu', function(data) {
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+          _.each(res.characters, function(v) {
+            if (v.character_id.toString() == data) v.yetVisited = true
+          })
+          res.save()
+          if (!err) socket.emit('character count responce', GameCore.getCharactersNotYetVisited(res))
+          else socket.emit('character count 404')
+      })
+    })
     
     socket.on('get my characters', function(){
       User.findById(socket.decoded_token.id).populate('characters.character_id').exec(function(err, res){
