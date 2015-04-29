@@ -1,7 +1,7 @@
 [
 {
     "title": "Photo veillee funebre de Julia",
-    "thumbnail": "documents/thumbnails/03_02_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/03_02_IMG_NA.png",
     "versionUrl": "",
     "src": "documents/03_02_IMG_NA.jpg",
     "type": "photo",
@@ -10,7 +10,7 @@
 },
 {
     "title": "Rapport de medecin legiste",
-    "thumbnail": "documents/thumbnails/03_01_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/03_01_TXT_IT.png",
     "versionUrl": "03_01_TXT_FR.jpg",
     "src": "documents/03_01_TXT_IT.jpg",
     "type": "image",

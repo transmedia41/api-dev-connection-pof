@@ -1,7 +1,7 @@
 [
 {
     "title": "Photo de la nouvelle fourgonette",
-    "thumbnail": "documents/thumbnails/07_01_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/07_01_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/07_01_IMG_FR.jpg",
     "type": "photo",
@@ -10,7 +10,7 @@
 },
 {
     "title": "Nouvelles cartes de visite",
-    "thumbnail": "documents/thumbnails/07_02_IMG_FR.jpg",
+    "thumbnail": "documents/thumbnails/07_02_IMG_FR.png",
     "versionUrl": "",
     "src": "documents/07_02_IMG_FR.jpg",
     "type": "image",

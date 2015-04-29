@@ -30,4 +30,5 @@ http.listen(3000, function(){
 require('./app/sockets/socket')(app, http)
 require('./config/express')(app, config)
 
-
+var GameCore = require('./app/services/gameCore')
+setInterval(GameCore.updateSectorsInfluence, 60000)

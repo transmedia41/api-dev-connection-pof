@@ -1,7 +1,7 @@
 [
 {
     "title": "Carte de la Suisse avec le billet de train",
-    "thumbnail": "documents/thumbnails/04_01_IMG_NA.jpg",
+    "thumbnail": "documents/thumbnails/04_01_IMG_NA.png",
     "versionUrl": "",
     "src": "documents/04_01_IMG_NA.jpg",
     "type": "image",
@@ -10,7 +10,7 @@
 },
 {
     "title": "Lettre d'Alberto a Paolo",
-    "thumbnail": "documents/thumbnails/04_02_TXT_IT.jpg",
+    "thumbnail": "documents/thumbnails/04_02_TXT_IT.png",
     "versionUrl": "04_02_TXT_FR.jpg",
     "src": "documents/04_02_TXT_IT.jpg",
     "type": "image",

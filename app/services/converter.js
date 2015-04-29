@@ -50,9 +50,6 @@ module.exports = {
     if (sector != null) {
       var sectors = []
       _.each(sector, function(value) {
-        
-        console.log(value)
-        
         sectors.push({
           id: value._id,
           type: value.type,
