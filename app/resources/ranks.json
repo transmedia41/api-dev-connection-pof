@@ -3,66 +3,77 @@
 		"level": 1,
 		"rankName": "Soldat",
 		"xp": 0,
-		"xpMax": 99
+		"xpMax": 99,
+                "msg": ""
 	},
 	{
 		"level": 2,
 		"rankName": "Premiere classe",
 		"xp": 100,
-		"xpMax": 209
+		"xpMax": 209,
+                "msg": "Bravo Soldat. Tu as fait tes preuves. Tu es promu Première classe !"
 	},
 	{
 		"level": 3,
 		"rankName": "Caporal",
 		"xp": 210,
-		"xpMax": 329
+		"xpMax": 329,
+                "msg": "Bravo Première classe. Tu sembles t'intéresser à notre cause et ça te vaut la grade de Caporal."
 	},
 	{
 		"level": 4,
 		"rankName": "Sergent",
 		"xp": 330,
-		"xpMax": 459
+		"xpMax": 459,
+                "msg": "Bravo Caporal. Ton intérêt certain pour la résistance mérite que tu sois promu au rang de Sergent."
 	},
 	{
 		"level": 5,
 		"rankName": "Sergent-chef",
 		"xp": 460,
-		"xpMax": 609
+		"xpMax": 609,
+                "msg": "Bravo Sergent. Grâce à ton dévouement au combat nous te gratifions du grade de Sergent-chef."
 	},
 	{
 		"level": 6,
 		"rankName": "Adjudant",
 		"xp": 610,
-		"xpMax": 769
+		"xpMax": 769,
+                "msg": "Bravo Sergent-chef. Tu deviens très important pour notre organisation et nous te nommons Adjudant."
 	},
 	{
 		"level": 7,
 		"rankName": "Major",
 		"xp": 770,
-		"xpMax": 939
+		"xpMax": 939,
+                "msg": "Bravo Adjudant. Ta participation à la lutte contre la mafia te donne accès au grade de Major."
 	},
 	{
 		"level": 8,
 		"rankName": "Lieutenant",
 		"xp": 940,
-		"xpMax": 1129
+		"xpMax": 1129,
+                "msg": "Bravo Major, tu deviens de plus en plus important. Profite bien de ton nouveau rang de Lieutenant."
 	},
 	{
 		"level": 9,
 		"rankName": "Capitaine",
 		"xp": 1130,
-		"xpMax": 1329
+		"xpMax": 1329,
+                "msg": "Bravo Lieutenant. Ta loyauté envers notre cause est impressionnante. Tu mérites d'être désormais Capitaine."
 	},
 	{
 		"level": 10,
 		"rankName": "Colonel",
 		"xp": 1330,
-		"xpMax": 1549
+		"xpMax": 1549,
+                "msg": "Bravo Capitaine. Ta participation est indispensable pour nous. Pour te le prouver, nous te nommons Colonel !"
 	},
 	{
 		"level": 11,
 		"rankName": "General",
 		"xp": 1550,
-		"xpMax": 1800
+		"xpMax": 1800,
+                "msg": "Félicitations Colonel ! Ton nouveau rang de Général fais de toi l'un des membres les plus importants de notre organisation."
 	}
 ]
