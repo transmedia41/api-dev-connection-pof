@@ -141,7 +141,7 @@ module.exports = function (app, http) {
       User.findById(socket.decoded_token.id).populate('characters.character_id').exec(function(err, res){
         var characters = []
         var counter = 0
-        for(var i = 1; i <= 12; i++) {
+        for(var i = 2; i <= 12; i++) {
           if (!_.find(res.characters, function(char){ return char.character_id.char_id == i })) {
             characters.push({
               char_id: i,
@@ -171,10 +171,14 @@ module.exports = function (app, http) {
             characters.push(char.character_id)
           }
         }
+        console.log(res.xp)
         if (res.xp >= 1550) {
-          characters = _.sortBy(characters, 'char_id')
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
-            characters[10] = res
+            var tab = []
+            res.available = true
+            tab[0] = res
+            characters = _.union(tab, characters)
+            characters = _.sortBy(characters, 'char_id')
             socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {
