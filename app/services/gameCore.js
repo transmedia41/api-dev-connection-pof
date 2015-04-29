@@ -245,6 +245,10 @@ module.exports = {
           console.log('update sectors')
       })
     })
+  },
+  
+  hasNewDocuments: function(player, socket, callback) {
+    hasNewDocuments(player, socket, callback)
   }
   
 }

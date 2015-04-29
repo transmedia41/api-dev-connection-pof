@@ -118,6 +118,14 @@ module.exports = function (app, http) {
       })
     })
     
+    socket.on('has new document', function(){
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        if(!err) { 
+          GameCore.hasNewDocuments(res, socket, function(playerSaved){})
+        } else { socket.emit('has new document 404') }
+      })
+    })
+    
     
     
     socket.on('get my characters', function(){
