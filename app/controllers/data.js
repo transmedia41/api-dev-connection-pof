@@ -223,7 +223,7 @@ function populateDatabase() {
 }
 
 
-populateDatabase();
+//populateDatabase();
 
 
 router.route('/populate')
