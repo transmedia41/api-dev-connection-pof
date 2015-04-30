@@ -16,9 +16,9 @@ var ActionPointSchema = new Schema({
         maxXp: {type: Number},
         influence: {type: Number},
         coolDown: {type: Number},
-        lastPerformed: {type: Date},
+        lastPerformed: {type: Number},
         actionRadius: {type: Number}
     }
 });
 
-mongoose.model('ActionPoint', ActionPointSchema);
+mongoose.model('ActionPoint', ActionPointSchema)
