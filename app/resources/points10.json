@@ -1,163 +1,166 @@
-[{
-        "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64441755402, 46.7604970785
-            ]
-        }
-    },
-{
-        "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64138441146, 46.7622732431
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64045534077, 46.7632296394
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64149371389, 46.7654976649
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-          "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64299662237, 46.7642953381
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64742337097, 46.7616447541
-            ]
-        }
-    },
-
-{
+[
+    {
         "type": "Feature",
         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-                6.64529197349, 46.7638034772
+                6.64441755402,
+                46.7604970785
             ]
         }
     },
-
-{
+    {
         "type": "Feature",
         "properties": {
-            "type":"Fontaine",
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64138441146,
+                46.7622732431
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64045534077,
+                46.7632296394
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64149371389,
+                46.7654976649
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64299662237,
+                46.7642953381
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64742337097,
+                46.7616447541
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64529197349,
+                46.7638034772
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "Fontaine",
             "name": "Liberer la fontaine",
             "description": "Libère cette fontaine que la mafia a détournée pour récupérer l'eau et la commercialiser. Cette eau appartient autant à toi qu'à elle et comme c'est un bien qui se fait de plus en plus rare, elle en profite pour la récupérer à la revendre à la population.",
-            "influence":3,
+            "influence": 3,
+            "icon": "&#xe60b;",
             "accessLevel": 34,
             "maxXp": 50,
             "coolDown": 1200,
@@ -167,199 +170,208 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                6.64428092597, 46.7660168515
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-        "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                6.64698616123, 46.7649784784
-            ]
-        }
-    },
-
-{
-        "type": "Feature",
-       "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-               6.64982802453, 46.7647325479
+                6.64428092597,
+                46.7660168515
             ]
         }
     },
     {
         "type": "Feature",
         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-               6.65130360739, 46.7673831319
+                6.64698616123,
+                46.7649784784
             ]
         }
     },
     {
         "type": "Feature",
-       "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-               6.65368093534, 46.7685581331
+                6.64982802453,
+                46.7647325479
             ]
         }
     },
     {
         "type": "Feature",
-       "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-             6.65589430964, 46.7674651087
+                6.65130360739,
+                46.7673831319
             ]
         }
     },
     {
         "type": "Feature",
-       "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-               6.64982802453, 46.7647325479
+                6.65368093534,
+                46.7685581331
             ]
         }
     },
     {
         "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-              6.65559372795, 46.7694325526
+                6.65589430964,
+                46.7674651087
             ]
         }
     },
-     {
+    {
         "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-              6.64775127827, 46.7659622003
+                6.64982802453,
+                46.7647325479
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.65559372795,
+                46.7694325526
+            ]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                6.64775127827,
+                46.7659622003
             ]
         }
     }
     ,
-     {
+    {
         "type": "Feature",
-         "properties": {
-        "type": "hydrante",
-        "name": "Proteger les bouches hydrantes",
-        "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
-        "influence":1,
-        "icon":"&#xe618;",
-        "accessLevel": 37,
-        "maxXp": 46,
-        "coolDown": 600,
-        "lastPerformed": "",
-        "actionRadius": 30
-    },
+        "properties": {
+            "type": "hydrante",
+            "name": "Proteger les bouches hydrantes",
+            "description": "Protège cette bouche hydrante car la mafia s'en empare pour récupérer l'eau et accroître son trafic. Grâce à cette eau qu'elle n'a pas droit de consommer, elle produit plus d'eau et sans coûts supplémentaires. Et ce sont tes impôts qui comblent les manques.",
+            "influence": 1,
+            "icon": "&#xe618;",
+            "accessLevel": 37,
+            "maxXp": 46,
+            "coolDown": 600,
+            "lastPerformed": "",
+            "actionRadius": 30
+        },
         "geometry": {
             "type": "Point",
             "coordinates": [
-              6.64656261429, 46.766959585
+                6.64656261429,
+                46.766959585
             ]
         }
-    }]
+    }
+]
