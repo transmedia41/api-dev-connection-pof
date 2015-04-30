@@ -85,9 +85,6 @@ module.exports = {
           geometry: {
             type: value.geometry.atype,
             coordinates: value.geometry.coordinates
-          },
-          properties: {
-            actionsPoint: this.actionPointArray(value.properties.actionsPoint)
           }
         })
       }, this)
