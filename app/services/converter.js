@@ -4,12 +4,13 @@ var _ = require('underscore')
 
 module.exports = {
   
-  user: function(user) {
+  user: function(user, platform) {
     if (user != null) {
       return {
         id: user._id,
         username: user.name,
-        xp: user.xp
+        xp: user.xp,
+        plateform: platform
       }
     } else {
       return null
@@ -65,6 +66,25 @@ module.exports = {
             character: this.character(value.properties.character),
             actionsPolygon: this.actionPolygonArray(value.properties.actionsPolygon),
             actionsPoint: this.actionPointArray(value.properties.actionsPoint)
+          }
+        })
+      }, this)
+      return sectors
+    } else {
+      return null
+    }
+  },
+  
+  sectorLight: function(sector) {
+    if (sector != null) {
+      var sectors = []
+      _.each(sector, function(value) {
+        sectors.push({
+          id: value._id,
+          type: value.type,
+          geometry: {
+            type: value.geometry.atype,
+            coordinates: value.geometry.coordinates
           }
         })
       }, this)
