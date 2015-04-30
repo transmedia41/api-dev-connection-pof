@@ -2,6 +2,7 @@
 	{
 		"level": 1,
 		"rankName": "Soldat",
+		"icone": "soldat", 
 		"xp": 0,
 		"xpMax": 99,
                 "msg": ""
@@ -9,6 +10,7 @@
 	{
 		"level": 2,
 		"rankName": "Premiere classe",
+		"icone": "premiere_classe", 
 		"xp": 100,
 		"xpMax": 209,
                 "msg": "Bravo Soldat. Tu as fait tes preuves. Tu es promu Première classe !"
@@ -16,6 +18,7 @@
 	{
 		"level": 3,
 		"rankName": "Caporal",
+		"icone": "caporal", 
 		"xp": 210,
 		"xpMax": 329,
                 "msg": "Bravo Première classe. Tu sembles t'intéresser à notre cause et ça te vaut la grade de Caporal."
@@ -23,6 +26,7 @@
 	{
 		"level": 4,
 		"rankName": "Sergent",
+		"icone": "sergent", 
 		"xp": 330,
 		"xpMax": 459,
                 "msg": "Bravo Caporal. Ton intérêt certain pour la résistance mérite que tu sois promu au rang de Sergent."
@@ -30,6 +34,7 @@
 	{
 		"level": 5,
 		"rankName": "Sergent-chef",
+		"icone": "sergent_chef", 
 		"xp": 460,
 		"xpMax": 609,
                 "msg": "Bravo Sergent. Grâce à ton dévouement au combat nous te gratifions du grade de Sergent-chef."
@@ -37,6 +42,7 @@
 	{
 		"level": 6,
 		"rankName": "Adjudant",
+		"icone": "adjudant", 
 		"xp": 610,
 		"xpMax": 769,
                 "msg": "Bravo Sergent-chef. Tu deviens très important pour notre organisation et nous te nommons Adjudant."
@@ -44,6 +50,7 @@
 	{
 		"level": 7,
 		"rankName": "Major",
+		"icone": "major", 
 		"xp": 770,
 		"xpMax": 939,
                 "msg": "Bravo Adjudant. Ta participation à la lutte contre la mafia te donne accès au grade de Major."
@@ -51,6 +58,7 @@
 	{
 		"level": 8,
 		"rankName": "Lieutenant",
+		"icone": "lieutenant", 
 		"xp": 940,
 		"xpMax": 1129,
                 "msg": "Bravo Major, tu deviens de plus en plus important. Profite bien de ton nouveau rang de Lieutenant."
@@ -58,6 +66,7 @@
 	{
 		"level": 9,
 		"rankName": "Capitaine",
+		"icone": "capitaine", 
 		"xp": 1130,
 		"xpMax": 1329,
                 "msg": "Bravo Lieutenant. Ta loyauté envers notre cause est impressionnante. Tu mérites d'être désormais Capitaine."
@@ -65,6 +74,7 @@
 	{
 		"level": 10,
 		"rankName": "Colonel",
+		"icone": "colonel", 
 		"xp": 1330,
 		"xpMax": 1549,
                 "msg": "Bravo Capitaine. Ta participation est indispensable pour nous. Pour te le prouver, nous te nommons Colonel !"
@@ -72,6 +82,7 @@
 	{
 		"level": 11,
 		"rankName": "General",
+		"icone": "general", 
 		"xp": 1550,
 		"xpMax": 9999,
                 "msg": "Félicitations Colonel ! Ton nouveau rang de Général fais de toi l'un des membres les plus importants de notre organisation."
