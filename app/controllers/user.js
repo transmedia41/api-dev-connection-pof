@@ -25,7 +25,8 @@ router.post('/login', function (req, res, next) {
     if(_.size(user) > 0) {
       u = user[0]
       if(u.password == sha1(req.body.password)) {
-        var token = jwt.sign(Converter.user(u), config.jwtSecret, { expiresInMinutes: 60*5 });
+        //u.platform = req.body.plateform
+        var token = jwt.sign(Converter.user(u, req.body.plateform), config.jwtSecret, { expiresInMinutes: 60*5 });
         res.json({token: token});
       } else {
         res.status(401).end()
@@ -54,7 +55,7 @@ router.post('/register', function (req, res, next) {
 router.post("/logout", function(req, res, next){
   if(jwt.decode(req.body.token)) {
     var decoded = jwt.decode(req.body.token)
-    io.disconnectUser(decoded.id)
+    io.disconnectUser(decoded)
     res.status(200).end()
   } else {
     res.status(200).end()

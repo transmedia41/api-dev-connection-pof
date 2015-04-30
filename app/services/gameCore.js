@@ -32,7 +32,7 @@ var _ = require('underscore'),
 function hasNewDocuments (player, socket, callback) {
   getDocuments(player, function(err, data){
     if(err) console.log(err)
-    console.log(player)
+    //console.log(player)
     var listPlayerDocuments = _.map(player.documents, function(doc){ return doc.document_id })
     var listDocuments = _.map(data, function(doc){ return doc._id })
     _.each(listDocuments, function(newDocPossible){
@@ -170,7 +170,7 @@ module.exports = {
       if(err) console.log(err)
       if(player.level.level != rank.level) {
         player.level = rank._id
-        socket.emit('new rank')
+        socket.emit('new rank', rank.msg)
       }
       player.save(function(err, playerSaved) {
         hasNewDocuments(playerSaved, socket, function(playerUpdated){
@@ -242,6 +242,13 @@ module.exports = {
   
   makeActionPolygon: function(action, callback) {
     action.lastPerformed = Math.round((new Date()).getTime() / 1000)
+    action.save(function(err, actionSaved) {
+      callback(actionSaved)
+    })
+  },
+  
+  makeActionPoint: function(action, callback) {
+    action.properties.lastPerformed = Math.round((new Date()).getTime() / 1000)
     action.save(function(err, actionSaved) {
       callback(actionSaved)
     })

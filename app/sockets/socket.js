@@ -39,7 +39,9 @@ io.sockets.socket(socketid).emit('message', 'for your eyes only');
 module.exports = function (app, http) {
   
   var clients = []
-  var users = []
+  var desktop = []
+  var mobile = []
+  //var users = []
   
   io = require('socket.io')(http)
   
@@ -47,16 +49,40 @@ module.exports = function (app, http) {
     secret: config.jwtSecret,
     handshake: true
   }))
+  
 
   // io represente toute les sockets
   io.on('connection', function(socket){
     // la socket recue represente le client qui vient de se connecte
-    console.log(socket.decoded_token.username, ' connected! (id=' + socket.id + ')')
-    clients[socket.decoded_token.id] = socket
-    
-    if(typeof _.findWhere(users, {_id: socket.decoded_token.id}) == 'undefined') {
-      users.push(socket.decoded_token)
+    console.log(socket.decoded_token.username, ' connected on '+socket.decoded_token.plateform+'! (id=' + socket.id + ')')
+    //clients[socket.decoded_token.id][socket.decoded_token.plateform] = socket
+    if(typeof clients[socket.decoded_token.id] == 'undefined') {
+      clients[socket.decoded_token.id] = []
+      clients[socket.decoded_token.id][socket.decoded_token.plateform] = socket
+    } else {
+      clients[socket.decoded_token.id][socket.decoded_token.plateform] = socket
     }
+    if(socket.decoded_token.plateform == 'desktop'){
+      desktop.push(socket)
+    } else {
+      mobile.push(socket)
+    }
+    
+    function broadcastDesktop(name, data) {
+      _.each(desktop, function(socket){
+        socket.emit(name, data)
+      })
+    }
+    
+    function broadcastMobil(name, data) {
+      _.each(mobile, function(socket){
+        socket.emit(name, data)
+      })
+    }
+    
+    /*if(typeof _.findWhere(users, {_id: socket.decoded_token.id}) == 'undefined') {
+      users.push(socket.decoded_token)
+    }*/
     
     //socket.broadcast.emit('membre connect', socket.decoded_token)
     
@@ -87,6 +113,13 @@ module.exports = function (app, http) {
       Sector.find().populate('properties.character properties.actionsPoint properties.actionsPolygon').exec(function(err, res){
         if(!err) socket.emit('sectors responce', Converter.sector(res))
         else socket.emit('sectors responce 404')
+      })
+    })
+    
+    socket.on('get sectors light', function(){
+      Sector.find().exec(function(err, res){
+        if(!err) socket.emit('sectors light responce', Converter.sectorLight(res))
+        else socket.emit('sectors light responce 404')
       })
     })
     
@@ -284,8 +317,10 @@ module.exports = function (app, http) {
                                   .populate(' properties.actionsPolygon')
                                   .exec(function(err, resSector){
                                     //console.log(resSector)
-                                    io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
+                                    //io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
+                                    broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
                                 })
+                                
                                 
                                 User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
                                   socket.emit('user update', Converter.userFull(resPlayer))
@@ -331,7 +366,7 @@ module.exports = function (app, http) {
           }
         }
         
-        console.log(data)
+        //console.log(data)
         
         ActionPoint.findById(data.id).exec(function(err, resActionPoint){
           if(err) {
@@ -352,23 +387,19 @@ module.exports = function (app, http) {
                       if(false) {
                         // geoloc
                         socket.emit('not near action')
-                      } else if ((resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)) {
-                        //(resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)
+                      } else if ((resAction.properties.lastPerformed + resAction.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
                         socket.emit('action in cooldown')
                       } else {
                         
-                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
+                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){ // ok
                           
 
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
-                            // ...
-                            //console.log(updatedPlayer)
-                            //io.sockets.emit('user update', updatedPlayer)
-
-                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
+                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){ // ok
+                            
+                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){ // ok
                               //...
-
-                              GameCore.makeActionPolygon(resAction, function(actionPerformed){
+                              
+                              /*GameCore.makeActionPolygon(resAction, function(actionPerformed){
                                 //...
                                 Sector.findById(data.sector_id)
                                   .populate('properties.character')
@@ -383,7 +414,12 @@ module.exports = function (app, http) {
                                   socket.emit('user update', Converter.userFull(resPlayer))
                                 })
                                 
+                              })*/
+                              
+                              GameCore.makeActionPoint(resAction, function(actionPerformed){
+                                // ...
                               })
+                              
 
                             })
 
@@ -435,15 +471,21 @@ module.exports = function (app, http) {
       }
       console.info(_.size(clients))*/
       io.emit('membre disconnect', socket.decoded_token)
-      console.log(socket.decoded_token.username, ' disconnect! (id=' + socket.id + ')')
+      console.log(socket.decoded_token.username, ' disconnect on '+socket.decoded_token.plateform+'! (id=' + socket.id + ')')
 
     })
   })
   
-  io.disconnectUser = function(id){
-    clients[id].disconnect()
-    delete clients[id]
-    users.splice(users.indexOf(_.findWhere(users, {_id: id})), 1)
+  io.disconnectUser = function(decodedTocken){
+    clients[decodedTocken.id][decodedTocken.plateform].disconnect()
+    delete clients[decodedTocken.id][decodedTocken.plateform]
+    //users.splice(users.indexOf(_.findWhere(users, {_id: id})), 1)
+    
+    
+    /*var sock = _.find(io.sockets.clients(), function(socket){ 
+      return (socket.decoded_token.id == decodedTocken.id && socket.decoded_token.plateform == decodedTocken.plateform) 
+    })
+    sock.disconnect()*/
   }
   
 }
