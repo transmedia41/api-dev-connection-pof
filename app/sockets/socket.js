@@ -209,8 +209,10 @@ module.exports = function (app, http) {
     })
     
     socket.on('get my documents', function(){
-      Event.find().where('xp').lte(socket.decoded_token.xp).populate('documents').sort({order: 'asc'}).exec(function(err, res){
-        socket.emit('my documents responce', Converter.eventArray(res))
+      User.findById(socket.decoded_token.id).exec(function(err, res){
+        Event.find().where('xp').lte(res.xp).populate('documents').sort({order: 'asc'}).exec(function(err, res){
+          socket.emit('my documents responce', Converter.eventArray(res))
+        })
       })
     })
     
