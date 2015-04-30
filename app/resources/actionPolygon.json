@@ -18,7 +18,7 @@
         "icon": "&#xe60f;",
         "accessLevel": 14,
         "maxXp": 23,
-        "coolDown": 16200,
+        "coolDown": 10800,
         "influence": 2
     },
     {
@@ -29,7 +29,7 @@
         "icon": "&#xe610;",
         "accessLevel": 14,
         "maxXp": 23,
-        "coolDown": 16200,
+        "coolDown": 9000,
         "influence": 2
     },
     {
@@ -40,7 +40,7 @@
         "icon": "&#xe611;",
         "accessLevel": 14,
         "maxXp": 23,
-        "coolDown": 16200,
+        "coolDown": 7200,
         "influence": 2
     },
     {
@@ -51,7 +51,7 @@
         "icon": "&#xe612;",
         "accessLevel": 16,
         "maxXp": 26,
-        "coolDown": 18000,
+        "coolDown": 12600,
         "influence": 3
     },
     {
@@ -73,7 +73,7 @@
         "icon": "&#xe614;",
         "accessLevel": 13,
         "maxXp": 21,
-        "coolDown": 14400,
+        "coolDown": 5400,
         "influence": 3
     },
     {
@@ -84,7 +84,7 @@
         "icon": "&#xe615;",
         "accessLevel": 18,
         "maxXp": 29,
-        "coolDown": 19800,
+        "coolDown": 18000,
         "influence": 2
     },
     {
@@ -95,7 +95,7 @@
         "icon": "&#xe616;",
         "accessLevel": 16,
         "maxXp": 26,
-        "coolDown": 18000,
+        "coolDown": 16200,
         "influence": 2
     },
     {
@@ -106,7 +106,7 @@
         "icon": "&#xe617;",
         "accessLevel": 16,
         "maxXp": 26,
-        "coolDown": 18000,
+        "coolDown": 14400,
         "influence": 2
     }
 ]
