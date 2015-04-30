@@ -355,18 +355,18 @@ module.exports = function (app, http) {
     
     socket.on('make action point', function(data){
       
-      Sector.find().exec(function(err, data){
-        var s = data[0]
-        var ap = s.properties.actionsPoint[0]
-        
-        var data = {
-          id: ap,
-          sector_id: s._id,
-          position: {
-            latitude: 6.6649664117000000,
-            longitude: 46.7760726754999960
-          }
-        }
+//      Sector.find().exec(function(err, data){
+//        var s = data[0]
+//        var ap = s.properties.actionsPoint[0]
+//        
+//        var data = {
+//          id: ap,
+//          sector_id: s._id,
+//          position: {
+//            latitude: 6.6649664117000000,
+//            longitude: 46.7760726754999960
+//          }
+//        }
         
         //console.log(data)
         
@@ -382,23 +382,23 @@ module.exports = function (app, http) {
                   if(err) {
                     socket.emit('action error')
                   } else {
-                    if(resAction == null || resSector == null || resPlayer == null) {
+                    if(resActionPoint == null || resSector == null || resPlayer == null) {
                       socket.emit('action error')
                     } else {
                       
                       if(false) {
                         // geoloc
                         socket.emit('not near action')
-                      } else if ((resAction.properties.lastPerformed + resAction.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
+                      } else if ((resActionPoint.properties.lastPerformed + resActionPoint.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
                         socket.emit('action in cooldown')
                       } else {
                         
-                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){ // ok
+                        GameCore.updateInfluence(resActionPoint, resSector, resPlayer, function(updatedSector){ // ok
                           
 
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){ // ok
+                          GameCore.updateXP(resActionPoint, resSector, resPlayer, socket, function(updatedPlayer){ // ok
                             
-                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){ // ok
+                            GameCore.updateNbActionToPerformedInSector(resActionPoint, resSector, resPlayer, socket, function(){ // ok
                               //...
                               
                               /*GameCore.makeActionPolygon(resAction, function(actionPerformed){
@@ -418,7 +418,7 @@ module.exports = function (app, http) {
                                 
                               })*/
                               
-                              GameCore.makeActionPoint(resAction, function(actionPerformed){
+                              GameCore.makeActionPoint(resActionPoint, function(actionPerformed){
                                 
                                 broadcastMobile('action point performed', actionPerformed)
                                 
@@ -454,7 +454,7 @@ module.exports = function (app, http) {
           }
         })
         
-      })
+//      })
       
     })
     
