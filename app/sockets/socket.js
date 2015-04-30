@@ -41,7 +41,6 @@ module.exports = function (app, http) {
   var clients = []
   var desktop = []
   var mobile = []
-  //var users = []
   
   io = require('socket.io')(http)
   
@@ -50,12 +49,8 @@ module.exports = function (app, http) {
     handshake: true
   }))
   
-
-  // io represente toute les sockets
   io.on('connection', function(socket){
-    // la socket recue represente le client qui vient de se connecte
     console.log(socket.decoded_token.username, ' connected on '+socket.decoded_token.plateform+'! (id=' + socket.id + ')')
-    //clients[socket.decoded_token.id][socket.decoded_token.plateform] = socket
     if(typeof clients[socket.decoded_token.id] == 'undefined') {
       clients[socket.decoded_token.id] = []
       clients[socket.decoded_token.id][socket.decoded_token.plateform] = socket
@@ -79,28 +74,6 @@ module.exports = function (app, http) {
         socket.emit(name, data)
       })
     }
-    
-    /*if(typeof _.findWhere(users, {_id: socket.decoded_token.id}) == 'undefined') {
-      users.push(socket.decoded_token)
-    }*/
-    
-    //socket.broadcast.emit('membre connect', socket.decoded_token)
-    
-    /*
-    clients.push(socket);
-    console.info(_.size(clients))
-    */
-    /*var data = {
-      _id: socket.decoded_token._id,
-      name: socket.decoded_token.name
-    }
-    io.emit('membre connect', data)
-    */
-    
-    //console.log(clients)
-      /*_.each(users, function(data) {
-        console.log(data)
-      })*/
     
     socket.on('get user', function(){
       User.findById(socket.decoded_token.id).populate('level').exec(function(err, res){
@@ -249,232 +222,126 @@ module.exports = function (app, http) {
       })
     })
     
-    
-    
-    /*socket.emit('update nav bar', {document: 3, mafia: 1})
-    
-
-    User.findById(socket.decoded_token.id).populate('level').exec(function(err, res){
-      if(!err) socket.emit('update user', Converter.userFull(res))
-      else socket.emit('user responce 404')
-    })*/
-    
     socket.on('make action', function(data){
-      
-      /*Sector.find().exec(function(err, data){
-        var s = data[0]
-        var ap = s.properties.actionsPolygon[0]
-        
-        var data = {
-          id : ap,
-          sector_id : s._id
-        }*/
-        
-        
-        ActionPolygon.findById(data.id).exec(function(err, resAction){
-          if(err) {
-            socket.emit('action error')
-          } else {
-            Sector.findById(data.sector_id).exec(function(err, resSector){
-              if(err) {
-                socket.emit('action error')
-              } else {
-                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                  if(err) {
+      ActionPolygon.findById(data.id).exec(function(err, resAction){
+        if(err) {
+          socket.emit('action error')
+        } else {
+          Sector.findById(data.sector_id).exec(function(err, resSector){
+            if(err) {
+              socket.emit('action error')
+            } else {
+              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                if(err) {
+                  socket.emit('action error')
+                } else {
+                  if(resAction == null || resSector == null || resPlayer == null) {
                     socket.emit('action error')
                   } else {
-                    if(resAction == null || resSector == null || resPlayer == null) {
-                      socket.emit('action error')
+                    if ((resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)) {
+                      socket.emit('action in cooldown')
                     } else {
-                      if(false) {
-                        // resPlayer.level.level < resAction.accessLevel
-                        socket.emit('not access level')
-                      } else if ((resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)) {
-                        //(resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)
-                        socket.emit('action in cooldown')
-                      } else {
-                        
-                        // have infos
-                        // make process
-
-                        // Modifier influence
-                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
-                          // socket broadcast all client updatedSector on 'sector update'
-                          //console.log(updatedSector)
-                          //io.sockets.emit('message', updatedSector)
-
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
-                            // ...
-                            //console.log(updatedPlayer)
-                            //io.sockets.emit('user update', updatedPlayer)
-
-                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
-                              //...
-
-                              GameCore.makeActionPolygon(resAction, function(actionPerformed){
-                                //...
-                                Sector.findById(data.sector_id)
-                                  .populate('properties.character')
-                                  .populate('properties.actionsPoint')
-                                  .populate(' properties.actionsPolygon')
-                                  .exec(function(err, resSector){
-                                    //console.log(resSector)
-                                    //io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
-                                    broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
-                                })
-                                
-                                
-                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                                  socket.emit('user update', Converter.userFull(resPlayer))
-                                })
-                                
+                      GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
+                        GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
+                          GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
+                            GameCore.makeActionPolygon(resAction, function(actionPerformed){
+                              Sector.findById(data.sector_id)
+                                .populate('properties.character')
+                                .populate('properties.actionsPoint')
+                                .populate(' properties.actionsPolygon')
+                                .exec(function(err, resSector){
+                                  broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
                               })
-
+                              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                                socket.emit('user update', Converter.userFull(resPlayer))
+                              })
                             })
-
                           })
-
                         })
-
-                        // return res
-                      }
+                      })
                     }
                   }
-                })
-              }
-            })
-          }
-        })
-        
-        
-        //})
-      
-      
+                }
+              })
+            }
+          })
+        }
+      })
     })
     
     
     socket.on('make action point', function(data){
-      
-//      Sector.find().exec(function(err, data){
-//        var s = data[0]
-//        var ap = s.properties.actionsPoint[0]
-//        
-//        var data = {
-//          id: ap,
-//          sector_id: s._id,
-//          position: {
-//            latitude: 6.6649664117000000,
-//            longitude: 46.7760726754999960
-//          }
-//        }
-        
-        ActionPoint.findById(data.id).exec(function(err, resActionPoint){
-          if(err) {
-            socket.emit('action error')
-          } else {
-            Sector.findById(data.sector_id).exec(function(err, resSector){
-              if(err) {
-                socket.emit('action error')
-              } else {
-                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                  if(err) {
+      ActionPoint.findById(data.id).exec(function(err, resActionPoint){
+        if(err) {
+          socket.emit('action error')
+        } else {
+          Sector.findById(data.sector_id).exec(function(err, resSector){
+            if(err) {
+              socket.emit('action error')
+            } else {
+              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                if(err) {
+                  socket.emit('action error')
+                } else {
+                  if(resActionPoint == null || resSector == null || resPlayer == null) {
                     socket.emit('action error')
                   } else {
-                    if(resActionPoint == null || resSector == null || resPlayer == null) {
-                      socket.emit('action error')
+                    console.log("resActionPoint", resActionPoint)
+                    var latlng = data.position
+                    console.log("latlng", latlng)
+                    var center = {
+                      longitude: resActionPoint.geometry.coordinates[0],
+                      latitude: resActionPoint.geometry.coordinates[1]
+                    }
+                    console.log('center', center)
+                    var radius = resActionPoint.properties.actionRadius
+                    console.log('radius', radius)
+                    var pointIsInCircle = Geolib.isPointInCircle(latlng, center, radius)
+                    console.log('pointIsInCircle', pointIsInCircle)
+                    if(!pointIsInCircle) {
+                      socket.emit('not near action')
+                    } else if ((resActionPoint.properties.lastPerformed + resActionPoint.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
+                      socket.emit('action in cooldown')
                     } else {
-                      console.log("resActionPoint", resActionPoint)
-                      var latlng = data.position
-                      console.log("latlng", latlng)
-                      var center = {
-                        longitude: resActionPoint.geometry.coordinates[0],
-                        latitude: resActionPoint.geometry.coordinates[1]
-                      }
-                      console.log('center', center)
-                      var radius = resActionPoint.properties.actionRadius
-                      console.log('radius', radius)
-                      var pointIsInCircle = Geolib.isPointInCircle(latlng, center, radius)
-                      console.log('pointIsInCircle', pointIsInCircle)
-                      if(!pointIsInCircle) {
-                        // geoloc
-                        socket.emit('not near action')
-                      } else if ((resActionPoint.properties.lastPerformed + resActionPoint.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
-                        socket.emit('action in cooldown')
-                      } else {
-                        GameCore.updateInfluence(resActionPoint, resSector, resPlayer, function(updatedSector){
-                          GameCore.updateXP(resActionPoint, resSector, resPlayer, socket, function(updatedPlayer){
-                            GameCore.updateNbActionToPerformedInSector(resActionPoint, resSector, resPlayer, socket, function(){
-                              GameCore.makeActionPoint(resActionPoint, function(actionPerformed){
-                                broadcastMobile('action point performed', Converter.actionPoint(actionPerformed))
-                                Sector.findById(data.sector_id)
-                                  .populate('properties.character')
-                                  .populate('properties.actionsPoint')
-                                  .populate(' properties.actionsPolygon')
-                                  .exec(function(err, resSector){
-                                    broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
-                                })
-                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                                  socket.emit('user update', Converter.userFull(resPlayer))
-                                })
+                      GameCore.updateInfluence(resActionPoint, resSector, resPlayer, function(updatedSector){
+                        GameCore.updateXP(resActionPoint, resSector, resPlayer, socket, function(updatedPlayer){
+                          GameCore.updateNbActionToPerformedInSector(resActionPoint, resSector, resPlayer, socket, function(){
+                            GameCore.makeActionPoint(resActionPoint, function(actionPerformed){
+                              broadcastMobile('action point performed', Converter.actionPoint(actionPerformed))
+                              Sector.findById(data.sector_id)
+                                .populate('properties.character')
+                                .populate('properties.actionsPoint')
+                                .populate(' properties.actionsPolygon')
+                                .exec(function(err, resSector){
+                                  broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
+                              })
+                              User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                                socket.emit('user update', Converter.userFull(resPlayer))
                               })
                             })
                           })
                         })
-                      }
+                      })
                     }
                   }
-                })
-              }
-            })
-          }
-        })
+                }
+              })
+            }
+          })
+        }
       })
-    
-    
-
-    /*
-    socket.on('chat message', function(msg){
-      io.emit('chat message', msg);
-      console.info(msg)
-    });
-    socket.on('action perso', function(id){
-      console.info('action perso (id='+id+')')
     })
-    */
-/*
-    socket.on('want close', function(){
-      var data = {
-        _id: socket.decoded_token._id,
-        name: socket.decoded_token.name
-      }
-      io.emit('membre disconnect', data)
-      socket.disconnect()
-    })*/
-
-    // When socket disconnects, remove it from the list:
+    
     socket.on('disconnect', function() {
-      // remove socket from clients
-      /*var index = clients.indexOf(socket);
-      if (index > -1) {
-        clients.splice(index, 1);
-      }
-      console.info(_.size(clients))*/
       io.emit('membre disconnect', socket.decoded_token)
       console.log(socket.decoded_token.username, ' disconnect on '+socket.decoded_token.plateform+'! (id=' + socket.id + ')')
-
     })
+    
   })
   
   io.disconnectUser = function(decodedTocken){
     clients[decodedTocken.id][decodedTocken.plateform].disconnect()
     delete clients[decodedTocken.id][decodedTocken.plateform]
-    //users.splice(users.indexOf(_.findWhere(users, {_id: id})), 1)
-    
-    
-    /*var sock = _.find(io.sockets.clients(), function(socket){ 
-      return (socket.decoded_token.id == decodedTocken.id && socket.decoded_token.plateform == decodedTocken.plateform) 
-    })
-    sock.disconnect()*/
   }
   
 }
