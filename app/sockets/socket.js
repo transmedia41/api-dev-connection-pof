@@ -139,12 +139,15 @@ module.exports = function (app, http) {
     
     socket.on('document vu', function(data) {
       User.findById(socket.decoded_token.id).exec(function(err, res){
-          _.each(res.documents, function(v) {
-            if (v.document_id.toString() == data) v.yetVisited = true
-          })
-          res.save()
-          if (!err) socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
-          else socket.emit('document count 404')
+          if (err) {
+            socket.emit('document count 404')
+          } else {
+            _.each(res.documents, function(v) {
+              if (v.document_id.toString() == data) v.yetVisited = true
+            })
+            res.save()
+            socket.emit('document count responce', GameCore.getDocumentsNotYetVisited(res))
+          }
       })
     })
 
