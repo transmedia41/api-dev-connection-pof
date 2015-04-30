@@ -405,7 +405,7 @@ module.exports = function (app, http) {
                           GameCore.updateXP(resActionPoint, resSector, resPlayer, socket, function(updatedPlayer){
                             GameCore.updateNbActionToPerformedInSector(resActionPoint, resSector, resPlayer, socket, function(){
                               GameCore.makeActionPoint(resActionPoint, function(actionPerformed){
-                                broadcastMobile('action point performed', actionPerformed)
+                                broadcastMobile('action point performed', Converter.actionPoint(actionPerformed))
                                 Sector.findById(data.sector_id)
                                   .populate('properties.character')
                                   .populate('properties.actionsPoint')
