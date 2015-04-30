@@ -387,8 +387,8 @@ module.exports = function (app, http) {
                       var latlng = data.position
                       console.log("latlng", latlng)
                       var center = {
-                        latitude: resActionPoint.geometry.coordinates[0],
-                        longitude: resActionPoint.geometry.coordinates[1]
+                        longitude: resActionPoint.geometry.coordinates[0],
+                        latitude: resActionPoint.geometry.coordinates[1]
                       }
                       console.log('center', center)
                       var radius = resActionPoint.properties.actionRadius
