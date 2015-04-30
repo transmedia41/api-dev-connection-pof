@@ -38,6 +38,21 @@ router.post('/login', function (req, res, next) {
 })
 
 router.post('/register', function (req, res, next) {
+  var userExist = User.find({name: req.body.username}).exec(function(err, user) {
+    if(err) res.status(401).end()
+    if(_.size(user) > 0) {
+      u = user[0]
+      if(u.password == sha1(req.body.password)) {
+        //u.platform = req.body.plateform
+        var token = jwt.sign(Converter.user(u, req.body.plateform), config.jwtSecret, { expiresInMinutes: 60*5 });
+        res.json({token: token});
+      } else {
+        res.status(401).end()
+      }
+    } else {
+      res.status(401).end()
+    }
+  })
   var user = new User({
     name: req.body.username,
     password: sha1(req.body.password),

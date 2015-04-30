@@ -385,8 +385,19 @@ module.exports = function (app, http) {
                     if(resActionPoint == null || resSector == null || resPlayer == null) {
                       socket.emit('action error')
                     } else {
-                      
-                      if(false) {
+                      console.log("resActionPoint", resActionPoint)
+                      var latlng = data.position
+                      console.log("latlng", latlng)
+                      var center = {
+                        latitude: resActionPoint.geometry.coordinates[0],
+                        longitude: resActionPoint.geometry.coordinates[1]
+                      }
+                      console.log('center', center)
+                      var radius = resActionPoint.properties.actionRadius
+                      console.log('radius', radius)
+                      var pointIsInCircle = Geolib.isPointInCircle(latlng, center, radius)
+                      console.log('pointIsInCircle', pointIsInCircle)
+                      if(!pointIsInCircle) {
                         // geoloc
                         socket.emit('not near action')
                       } else if ((resActionPoint.properties.lastPerformed + resActionPoint.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
