@@ -87,7 +87,7 @@ module.exports = {
             coordinates: value.geometry.coordinates
           },
           properties: {
-            actionsPoint: this.actionPointArray(value.properties.actionsPoint)
+            actionsPoint: value.properties.actionsPoint
           }
         })
       }, this)
