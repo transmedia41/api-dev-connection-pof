@@ -30,11 +30,14 @@ var _ = require('underscore'),
  * Peut emmetre 'new documents'
  */
 function hasNewDocuments (player, socket, callback) {
+  console.log("hasNewDocuments est appelée")
   getDocuments(player, function(err, data){
     if(err) console.log(err)
     //console.log(player)
     var listPlayerDocuments = _.map(player.documents, function(doc){ return doc.document_id })
+    console.log("listPlayerDocuments", listPlayerDocuments)
     var listDocuments = _.map(data, function(doc){ return doc._id })
+    console.log("listDocuments", listDocuments)
     _.each(listDocuments, function(newDocPossible){
       var test = _.find(listPlayerDocuments, function(docAlreadyAdded) {
         return docAlreadyAdded.toString() == newDocPossible.toString()
@@ -45,6 +48,7 @@ function hasNewDocuments (player, socket, callback) {
           yetVisited: false
         }
         player.documents.push(newDoc)
+        console.log("pushed new doc in player document list ")
         socket.emit('new documents')
       }
     })

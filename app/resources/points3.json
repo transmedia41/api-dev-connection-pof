@@ -212,7 +212,7 @@
         "properties": {
             "type": "affiche",
             "name": "Affiche de la resistance",
-            "description": "Remplace une affiche de propagande mafia par une affiche de la résistance sur les panneau public. C'est notre devoir de lever le voile sur les agissements de la mafia et d'avertir les habitants des mensonges qui sont communiqués.",
+            "description": "Remplace une affiche de propagande mafia par une affiche de la résistance sur les panneaux public. C'est notre devoir de lever le voile sur les agissements de la mafia et d'avertir les habitants des mensonges qui sont communiqués.",
             "icon":"&#xe606;",
             "accessLevel": 34,
             "maxXp": 52,
