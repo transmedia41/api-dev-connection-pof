@@ -150,6 +150,30 @@ module.exports = function (app, http) {
           }
       })
     })
+    
+    function createUnknownChar(i, isAvailable) {
+      return {
+        char_id: i,
+        status: 'Inconnu',
+        lastname: 'Inconnu',
+        firstname: 'Inconnu',
+        nickname: 'Inconnu',
+        life: [],
+        personality: 'Inconnu',
+        twitch: 'Inconnu',
+        vice: 'Inconnu',
+        drink: 'Inconnu',
+        strength: 'Inconnu',
+        weakness: 'Inconnu',
+        distinctive: 'Inconnu',
+        body: 'Inconnu',
+        family: 'Inconnu',
+        weapon: 'Inconnu',
+        portrait: 'portraits/unknown.png',
+        sectorDescription: 'Inconnu',
+        available: isAvailable
+      }
+    }
 
     socket.on('get my characters', function(){
       User.findById(socket.decoded_token.id).populate('characters.character_id').exec(function(err, res){
@@ -157,27 +181,7 @@ module.exports = function (app, http) {
         var counter = 0
         for(var i = 2; i <= 12; i++) {
           if (!_.find(res.characters, function(char){ return char.character_id.char_id == i })) {
-            characters.push({
-              char_id: i,
-              status: 'Inconnu',
-              lastname: 'Inconnu',
-              firstname: 'Inconnu',
-              nickname: 'Inconnu',
-              life: [],
-              personality: 'Inconnu',
-              twitch: 'Inconnu',
-              vice: 'Inconnu',
-              drink: 'Inconnu',
-              strength: 'Inconnu',
-              weakness: 'Inconnu',
-              distinctive: 'Inconnu',
-              body: 'Inconnu',
-              family: 'Inconnu',
-              weapon: 'Inconnu',
-              portrait: 'portraits/unknown.png',
-              sectorDescription: 'Inconnu',
-              available: false
-            })
+            characters.push(createUnknownChar(i, true))
           } else {
             counter++
             var char = _.find(res.characters, function(char){ return char.character_id.char_id == i })
@@ -196,6 +200,10 @@ module.exports = function (app, http) {
             socket.emit('my characters responce', Converter.characterArray(characters))
           })
         } else {
+          var tab = []
+          tab[0] = createUnknownChar(1, false)
+          characters = _.union(tab, characters)
+          characters = _.sortBy(characters, 'char_id')
           socket.emit('my characters responce', Converter.characterArray(characters))
         }
       })
