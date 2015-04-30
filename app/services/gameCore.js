@@ -32,6 +32,7 @@ var _ = require('underscore'),
 function hasNewDocuments (player, socket, callback) {
   getDocuments(player, function(err, data){
     if(err) console.log(err)
+    console.log(player)
     var listPlayerDocuments = _.map(player.documents, function(doc){ return doc.document_id })
     var listDocuments = _.map(data, function(doc){ return doc._id })
     _.each(listDocuments, function(newDocPossible){
@@ -97,11 +98,25 @@ function getCharactersNotYetVisited (player) {
 module.exports = {
   
   _getInfluence: function(action, sector, player) {
-    return 5
+    var influence;
+    if (action.type === "Feature") {
+      influence = action.properties.influence
+    } else {
+      influence = action.influence
+    }
+    console.log(influence)
+    return influence
   },
   
   _getXP: function(action, sector, player) {
-    return 15
+    var xpMin;
+    if (action.type === "Feature") {
+      xpMin = action.properties.accessLevel
+    } else {
+      xpMin = action.accessLevel
+    }
+    var influence = sector.properties.influence
+    return Math.ceil(xpMin * ( 1 + (influence * 0.6 / 100)))
   },
   
   
