@@ -368,8 +368,6 @@ module.exports = function (app, http) {
           }
         }
         
-        //console.log(data)
-        
         ActionPoint.findById(data.id).exec(function(err, resActionPoint){
           if(err) {
             socket.emit('action error')
@@ -382,46 +380,20 @@ module.exports = function (app, http) {
                   if(err) {
                     socket.emit('action error')
                   } else {
-                    if(resAction == null || resSector == null || resPlayer == null) {
+                    if(resActionPoint == null || resSector == null || resPlayer == null) {
                       socket.emit('action error')
                     } else {
-                      
                       if(false) {
-                        // geoloc
+                        // ...
                         socket.emit('not near action')
-                      } else if ((resAction.properties.lastPerformed + resAction.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
+                      } else if ((resActionPoint.properties.lastPerformed + resActionPoint.properties.coolDown) > Math.round((new Date()).getTime() / 1000)) {
                         socket.emit('action in cooldown')
                       } else {
-                        
-                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){ // ok
-                          
-
-                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){ // ok
-                            
-                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){ // ok
-                              //...
-                              
-                              /*GameCore.makeActionPolygon(resAction, function(actionPerformed){
-                                //...
-                                Sector.findById(data.sector_id)
-                                  .populate('properties.character')
-                                  .populate('properties.actionsPoint')
-                                  .populate(' properties.actionsPolygon')
-                                  .exec(function(err, resSector){
-                                    //console.log(resSector)
-                                    io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
-                                })
-                                
-                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
-                                  socket.emit('user update', Converter.userFull(resPlayer))
-                                })
-                                
-                              })*/
-                              
-                              GameCore.makeActionPoint(resAction, function(actionPerformed){
-                                
+                        GameCore.updateInfluence(resActionPoint, resSector, resPlayer, function(updatedSector){
+                          GameCore.updateXP(resActionPoint, resSector, resPlayer, socket, function(updatedPlayer){
+                            GameCore.updateNbActionToPerformedInSector(resActionPoint, resSector, resPlayer, socket, function(){
+                              GameCore.makeActionPoint(resActionPoint, function(actionPerformed){
                                 broadcastMobile('action point performed', actionPerformed)
-                                
                                 Sector.findById(data.sector_id)
                                   .populate('properties.character')
                                   .populate('properties.actionsPoint')
@@ -429,22 +401,13 @@ module.exports = function (app, http) {
                                   .exec(function(err, resSector){
                                     broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
                                 })
-                                
-                                
                                 User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
                                   socket.emit('user update', Converter.userFull(resPlayer))
                                 })
-                                
                               })
-                              
-
                             })
-
                           })
-
                         })
-                        
-                        
                       }
                     }
                   }
@@ -453,9 +416,7 @@ module.exports = function (app, http) {
             })
           }
         })
-        
       })
-      
     })
     
     
