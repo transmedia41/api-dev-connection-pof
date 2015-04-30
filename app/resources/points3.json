@@ -216,6 +216,7 @@
             "icon":"&#xe606;",
             "accessLevel": 34,
             "maxXp": 52,
+            "influence": 2,
             "coolDown": 600,
             "lastPerformed": "",
             "actionRadius": 50
