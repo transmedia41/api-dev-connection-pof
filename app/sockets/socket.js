@@ -151,7 +151,7 @@ module.exports = function (app, http) {
       })
     })
     
-    function createUnknownChar(i, isAvailable) {
+    function createUnknownChar(i) {
       return {
         char_id: i,
         status: 'Inconnu',
@@ -171,7 +171,7 @@ module.exports = function (app, http) {
         weapon: 'Inconnu',
         portrait: 'portraits/unknown.png',
         sectorDescription: 'Inconnu',
-        available: isAvailable
+        available: false
       }
     }
 
@@ -181,7 +181,7 @@ module.exports = function (app, http) {
         var counter = 0
         for(var i = 2; i <= 12; i++) {
           if (!_.find(res.characters, function(char){ return char.character_id.char_id == i })) {
-            characters.push(createUnknownChar(i, true))
+            characters.push(createUnknownChar(i))
           } else {
             counter++
             var char = _.find(res.characters, function(char){ return char.character_id.char_id == i })
@@ -189,7 +189,6 @@ module.exports = function (app, http) {
             characters.push(char.character_id)
           }
         }
-        console.log(res.xp)
         if (res.xp >= 1550) {
           Character.findOne().where('char_id').equals(1).exec(function(err, res){
             var tab = []
@@ -201,7 +200,7 @@ module.exports = function (app, http) {
           })
         } else {
           var tab = []
-          tab[0] = createUnknownChar(1, false)
+          tab[0] = createUnknownChar(1)
           characters = _.union(tab, characters)
           characters = _.sortBy(characters, 'char_id')
           socket.emit('my characters responce', Converter.characterArray(characters))
