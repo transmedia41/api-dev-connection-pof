@@ -74,7 +74,7 @@ module.exports = function (app, http) {
       })
     }
     
-    function broadcastMobil(name, data) {
+    function broadcastMobile(name, data) {
       _.each(mobile, function(socket){
         socket.emit(name, data)
       })
@@ -419,7 +419,22 @@ module.exports = function (app, http) {
                               })*/
                               
                               GameCore.makeActionPoint(resAction, function(actionPerformed){
-                                // ...
+                                
+                                broadcastMobile('action point performed', actionPerformed)
+                                
+                                Sector.findById(data.sector_id)
+                                  .populate('properties.character')
+                                  .populate('properties.actionsPoint')
+                                  .populate(' properties.actionsPolygon')
+                                  .exec(function(err, resSector){
+                                    broadcastDesktop('action polygon performed', Converter.sectorUnique(resSector))
+                                })
+                                
+                                
+                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                                  socket.emit('user update', Converter.userFull(resPlayer))
+                                })
+                                
                               })
                               
 
