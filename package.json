@@ -6,6 +6,7 @@
     "body-parser": "^1.12.3",
     "cors": "^2.5.3",
     "express": "4.10.2",
+    "geolib": "^2.0.14",
     "glob": "^5.0.5",
     "jsonwebtoken": "^5.0.0",
     "mongoose": "^4.0.1",

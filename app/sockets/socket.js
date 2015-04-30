@@ -9,8 +9,8 @@ var config = require('../../config/config'),
     ActionPoint = mongoose.model('ActionPoint'),
     Converter = require('../services/converter'),
     GameCore = require('../services/gameCore'),
-    socketioJwt = require('socketio-jwt')
-
+    socketioJwt = require('socketio-jwt'),
+    Geolib = require('geolib')
 
 
 
@@ -254,7 +254,7 @@ module.exports = function (app, http) {
                       if(false) {
                         // resPlayer.level.level < resAction.accessLevel
                         socket.emit('not access level')
-                      } else if (false) {
+                      } else if ((resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)) {
                         //(resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)
                         socket.emit('action in cooldown')
                       } else {
@@ -313,9 +313,30 @@ module.exports = function (app, http) {
         //})
       
       
+    })
+    
+    
+    socket.on('make action point', function(data){
+      
+      Sector.find().exec(function(err, data){
+        var s = data[0]
+        var ap = s.properties.actionsPoint[0]
+        
+        var data = {
+          id: ap,
+          sector_id: s._id,
+          position: {
+            latitude: 6.6649664117000000,
+            longitude: 46.7760726754999960
+          }
+        }
+        
+        console.log(data)
+        
       })
       
-      
+    })
+    
     
 
     /*
