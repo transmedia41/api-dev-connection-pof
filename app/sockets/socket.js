@@ -333,6 +333,74 @@ module.exports = function (app, http) {
         
         console.log(data)
         
+        ActionPoint.findById(data.id).exec(function(err, resActionPoint){
+          if(err) {
+            socket.emit('action error')
+          } else {
+            Sector.findById(data.sector_id).exec(function(err, resSector){
+              if(err) {
+                socket.emit('action error')
+              } else {
+                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                  if(err) {
+                    socket.emit('action error')
+                  } else {
+                    if(resAction == null || resSector == null || resPlayer == null) {
+                      socket.emit('action error')
+                    } else {
+                      
+                      if(false) {
+                        // geoloc
+                        socket.emit('not near action')
+                      } else if ((resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)) {
+                        //(resAction.lastPerformed + resAction.coolDown) > Math.round((new Date()).getTime() / 1000)
+                        socket.emit('action in cooldown')
+                      } else {
+                        
+                        GameCore.updateInfluence(resAction, resSector, resPlayer, function(updatedSector){
+                          
+
+                          GameCore.updateXP(resAction, resSector, resPlayer, socket, function(updatedPlayer){
+                            // ...
+                            //console.log(updatedPlayer)
+                            //io.sockets.emit('user update', updatedPlayer)
+
+                            GameCore.updateNbActionToPerformedInSector(resAction, resSector, resPlayer, socket, function(){
+                              //...
+
+                              GameCore.makeActionPolygon(resAction, function(actionPerformed){
+                                //...
+                                Sector.findById(data.sector_id)
+                                  .populate('properties.character')
+                                  .populate('properties.actionsPoint')
+                                  .populate(' properties.actionsPolygon')
+                                  .exec(function(err, resSector){
+                                    //console.log(resSector)
+                                    io.sockets.emit('action polygon performed', Converter.sectorUnique(resSector))
+                                })
+                                
+                                User.findById(socket.decoded_token.id).populate('level').exec(function(err, resPlayer){
+                                  socket.emit('user update', Converter.userFull(resPlayer))
+                                })
+                                
+                              })
+
+                            })
+
+                          })
+
+                        })
+                        
+                        
+                      }
+                    }
+                  }
+                })
+              }
+            })
+          }
+        })
+        
       })
       
     })
