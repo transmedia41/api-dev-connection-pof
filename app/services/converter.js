@@ -41,7 +41,8 @@ module.exports = {
         xp: rank.xp,
         xpMax: rank.xpMax,
         level: rank.level,
-        msg: rank.msg
+        msg: rank.msg,
+        icon: rank.icon
       }
     } else {
       return null

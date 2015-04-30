@@ -208,6 +208,7 @@ function populateRanks() {
             rank.xp = ranks[i].xp
             rank.xpMax = ranks[i].xpMax
             rank.msg = ranks[i].msg
+            rank.icon = ranks[i].icon
             rank.save()
 
         }

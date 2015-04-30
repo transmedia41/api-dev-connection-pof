@@ -8,7 +8,8 @@ var RankSchema = new Schema({
   rankName: String,
   xp: Number,
   xpMax: Number,
-  msg: String
+  msg: String,
+  icon: String
 })
 
 mongoose.model('Rank', RankSchema)
