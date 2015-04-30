@@ -117,7 +117,7 @@ module.exports = function (app, http) {
     })
     
     socket.on('get sectors light', function(){
-      Sector.find().exec(function(err, res){
+      Sector.find().populate('properties.actionsPoint').exec(function(err, res){
         if(!err) socket.emit('sectors light responce', Converter.sectorLight(res))
         else socket.emit('sectors light responce 404')
       })
