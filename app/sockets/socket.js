@@ -355,18 +355,18 @@ module.exports = function (app, http) {
     
     socket.on('make action point', function(data){
       
-      Sector.find().exec(function(err, data){
-        var s = data[0]
-        var ap = s.properties.actionsPoint[0]
-        
-        var data = {
-          id: ap,
-          sector_id: s._id,
-          position: {
-            latitude: 6.6649664117000000,
-            longitude: 46.7760726754999960
-          }
-        }
+//      Sector.find().exec(function(err, data){
+//        var s = data[0]
+//        var ap = s.properties.actionsPoint[0]
+//        
+//        var data = {
+//          id: ap,
+//          sector_id: s._id,
+//          position: {
+//            latitude: 6.6649664117000000,
+//            longitude: 46.7760726754999960
+//          }
+//        }
         
         ActionPoint.findById(data.id).exec(function(err, resActionPoint){
           if(err) {
