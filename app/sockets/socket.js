@@ -83,11 +83,14 @@ module.exports = function (app, http) {
     })
     
     socket.on('get users', function(){
-      User.find().populate('level').exec(function(err, res){
+      User.find().populate('level').sort('xp').exec(function(err, res){
         if(!err) { 
           var users = Converter.userFullArray(res)
           _.each(users, function(user, key){
-            if(typeof clients[user.id] != 'undefined') {
+            if(
+              typeof clients[user.id] != 'undefined'
+              && (typeof clients[user.id]['desktop'] != 'undefined' || typeof clients[user.id]['mobile'] != 'undefined')
+            ) {
               users[key]['connected'] = true
             } else {
               users[key]['connected'] = false
