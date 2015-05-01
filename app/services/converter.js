@@ -33,6 +33,18 @@ module.exports = {
     }
   },
   
+  userFullArray: function(user) {
+    if (user != null) {
+      var users = []
+      _.each(user, function(value) {
+        users.push(this.userFull(value))
+      }, this)
+      return users
+    } else {
+      return null
+    }
+  },
+  
   rank: function(rank) {
     if (rank != null) {
       return {

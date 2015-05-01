@@ -82,6 +82,13 @@ module.exports = function (app, http) {
       })
     })
     
+    socket.on('get users', function(){
+      User.find().populate('level').exec(function(err, res){
+        if(!err) socket.emit('users responce', Converter.userFullArray(res))
+        else socket.emit('users responce 404')
+      })
+    })
+    
     socket.on('get sectors', function(){
       Sector.find().populate('properties.character properties.actionsPoint properties.actionsPolygon').exec(function(err, res){
         if(!err) socket.emit('sectors responce', Converter.sector(res))
