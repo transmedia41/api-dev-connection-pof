@@ -84,8 +84,19 @@ module.exports = function (app, http) {
     
     socket.on('get users', function(){
       User.find().populate('level').exec(function(err, res){
-        if(!err) socket.emit('users responce', Converter.userFullArray(res))
-        else socket.emit('users responce 404')
+        if(!err) { 
+          var users = Converter.userFullArray(res)
+          _.each(users, function(user, key){
+            if(typeof clients[user.id] != 'undefined') {
+              users[key]['connected'] = true
+            } else {
+              users[key]['connected'] = false
+            }
+          })
+          socket.emit('users responce', users)
+        } else { 
+          socket.emit('users responce 404')
+        }
       })
     })
     
