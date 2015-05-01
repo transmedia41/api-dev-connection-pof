@@ -83,7 +83,7 @@ module.exports = function (app, http) {
     })
     
     socket.on('get users', function(){
-      User.find().populate('level').sort('xp').exec(function(err, res){
+      User.find().populate('level').sort('-xp').exec(function(err, res){
         if(!err) { 
           var users = Converter.userFullArray(res)
           _.each(users, function(user, key){
