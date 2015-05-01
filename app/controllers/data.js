@@ -228,7 +228,7 @@ function populateDatabase() {
 //populateDatabase();
 
 
-router.route('/populate')
-        .post(function (req, res, next) {
-            res.json(populateDatabase());
-        });
+//router.route('/populate')
+//        .post(function (req, res, next) {
+//            res.json(populateDatabase());
+//        });
