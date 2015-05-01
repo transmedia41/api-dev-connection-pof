@@ -268,7 +268,7 @@ module.exports = {
     Sector.find()
       .exec(function(err, res){
         _.each(res, function(sector, key){
-          var newInfluence = Math.min(sector.properties.influence+1, 100)
+          var newInfluence = Math.min(sector.properties.influence+2, 100)
           sector.properties.influence = newInfluence
           sector.save()
         })
